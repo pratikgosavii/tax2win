@@ -1,0 +1,425 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?Sfamily=Material+Icons">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link type="text/css" rel="stylesheet" href="{% static 'common.css' %}" />
+<link
+  type="text/css"
+  rel="stylesheet"
+  href="{% static 'source_of_income.css' %}"
+/>
+
+
+<style>
+
+
+
+  .icon-box {
+    color: #fff;		
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -70px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    z-index: 9;
+    background: #82ce34;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  .icon-box i {
+    font-size: 58px;
+    position: relative;
+    top: 3px;
+  }
+
+
+
+</style>
+
+
+
+{% endblock head %} 
+
+{% block content %}
+<section class="source-of-income">
+  <div class="banner inner-banner">
+    <div class="top-relement"></div>
+    <div class="left-element hidden-xs"></div>
+    <div class="right-element hidden-xs"></div>
+    <div class="container text-center">
+      <div class="txt">
+        <h1>
+          File your <strong>Income Tax Return By <b>eCA</b></strong>
+        </h1>
+        <p>
+          Namaste Ventures has made Online Tax Filing super easy! Take the first step
+          towards filing your income tax return. Select all the sources of your
+          income <strong>(to accurately e-file)</strong> and click on
+          <strong>Continue</strong> to experience Namaste Ventures's customized &amp; the
+          easiest e-filing process.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="myform" class="container select-plan">
+
+     
+    
+    {% csrf_token %}
+
+
+    <div class="row">
+      <div class="col-md-4 col-sm-6 col-xs-12 caAstBox">
+        <div class="checkbox">
+          <input
+            type="checkbox"
+            name="s_salary_income"
+            data-id="1"
+            data-income="salary"
+            id="salary_income"
+            class=""
+          />
+          <label for="salary_income"
+            ><img
+              src="https://tax2win.in/assets-new/img/source-of-income/salary_income.png"
+              alt="Salary Income"
+              title="Salary Income"
+            /><span>Income from <strong>Salary/Pension</strong></span
+            ><bold class="chang-txt"
+              >Select<i>ed</i> <i class="fa fa-check"></i
+            ></bold>
+            <div class="clearfix"></div>
+          </label>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12 caAstBox">
+        <div class="checkbox">
+          <input
+            type="checkbox"
+            name="s_presumptive_income"
+            data-id="2"
+            data-income="presumptive_income"
+            id="presumptive_income"
+            class=""
+          />
+          <label for="presumptive_income"
+            ><img
+              src="https://tax2win.in/assets-new/img/source-of-income/presumptive_income.png"
+              alt="Business Income"
+              title="Business Income"
+            /><span>Income from <strong>Business/Profession</strong></span
+            ><bold class="chang-txt"
+              >Select<i>ed</i> <i class="fa fa-check"></i
+            ></bold>
+            <div class="clearfix"></div>
+          </label>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12 caAstBox">
+        <div class="checkbox">
+          <input
+            type="checkbox"
+            name="s_house_property_income"
+            data-id="3"
+            data-income="house_property_income"
+            id="house_property_income"
+            class=""
+          />
+          <label for="house_property_income"
+            ><img
+              src="https://tax2win.in/assets-new/img/source-of-income/house_property_income.png"
+              alt="House Property Income"
+              title="House Property Income"
+            /><span
+              >Income from <strong>House Property</strong> or
+              <strong>Home Loan</strong></span
+            ><bold class="chang-txt"
+              >Select<i>ed</i> <i class="fa fa-check"></i
+            ></bold>
+            <div class="clearfix"></div>
+          </label>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12 caAstBox">
+        <div class="checkbox">
+          <input
+            type="checkbox"
+            name="s_other_sources_income"
+            data-id="4"
+            data-income="other_sources_income"
+            id="other_sources_income"
+            class=""
+          />
+          <label for="other_sources_income"
+            ><img
+              src="https://tax2win.in/assets-new/img/source-of-income/other_sources_income.png"
+              alt="Other Sources Income"
+              title="Other Sources Income"
+            /><span>Income from <strong>Other Sources</strong></span
+            ><bold class="chang-txt"
+              >Select<i>ed</i> <i class="fa fa-check"></i
+            ></bold>
+            <div class="clearfix"></div>
+          </label>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12 caAstBox">
+        <div class="checkbox">
+          <input
+            type="checkbox"
+            name="s_capital_gain_income"
+            data-id="5"
+            data-income="capital_gain_income"
+            id="capital_gain_income"
+            class=""
+          />
+          <label for="capital_gain_income"
+            ><img
+              src="https://tax2win.in/assets-new/img/source-of-income/capital_gain_income.png"
+              alt="Capital Gains Income"
+              title="Capital Gains Income"
+            /><span>Income from <strong>Capital Gains</strong></span
+            ><bold class="chang-txt"
+              >Select<i>ed</i> <i class="fa fa-check"></i
+            ></bold>
+            <div class="clearfix"></div>
+          </label>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12 caAstBox">
+        <div class="checkbox">
+          <input
+            type="checkbox"
+            name="s_foreign_income"
+            data-id="6"
+            data-income="foreign_income"
+            id="foreign_income"
+            class=""
+          />
+          <label for="foreign_income"
+            ><img
+              src="https://tax2win.in/assets-new/img/source-of-income/foreign_income.png"
+              alt="Foreign Income Income"
+              title="Foreign Income Income"
+            /><span>Income from <strong>Foreign Source</strong> </span
+            ><bold class="chang-txt"
+              >Select<i>ed</i> <i class="fa fa-check"></i
+            ></bold>
+            <div class="clearfix"></div>
+          </label>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="col-md-12 text-center">
+        <button
+            id="exampleModal_button"
+            
+          value="SUBMIT"
+          class="green-btn loading_btn"
+          data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Loading"
+          data-ctid="screen-name-income-normal-w3bk2b82i3"
+        >
+          Continue
+        </button>
+      </div>
+    </div>
+</div>
+
+
+
+<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header pb-0">
+                <div>
+                    <h5 class="modal-title" id="exampleModalLabel">Your details</h5>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+            </div>
+            <div class="modal-body d-flex flex-column gap-2">
+                
+                <div class="form-check">
+
+                    <div class="form-group">
+
+                        <label> Name </label>
+                        <input type="text" style="height: 45px;" id="name" style="margin-bottom: 14px;" class="form-control" placeholder="name">
+                        <br><label> Mobile Number </label>
+                      <input type="text"  style="height: 45px;" id="mobile" style="margin-bottom: 14px;" class="form-control" placeholder="mobile">
+                      <br> <label> Convenient time for call back </label>
+                        <input type="datetime-local"  style="height: 45px;" id="date_time" style="margin-bottom: 14px;" class="form-control" placeholder="pincode">
+                        
+                    
+                    </div>
+                   
+                  </div>
+                  
+            </div>
+            <div class="modal-footer d-flex">
+                <button type="button" style="width: 100%;background: #3d506c;" onclick="ajax_call()" class="btn btn-secondary d-flex justify-content-center align-items-center" data-bs-dismiss="modal">
+                     
+                    <span class="d-block">Submit</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="abcd" tabindex="-1" aria-labelledby="exampleModal_suLabel" aria-hidden="true">
+    <div class="modal-dialog">
+           
+            <div class="modal-body d-flex flex-column gap-2">
+                
+
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <div class="icon-box">
+                        <i class="material-icons"></i>
+                      </div>				
+                      <h4 class="modal-title w-100">Awesome!</h4>	
+                    </div>
+                    <div class="modal-body">
+                      <p class="text-center">Your booking has been confirmed. Our team will call you at your desired time.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                    </div>
+                  </div>
+                  
+           
+    </div>
+</div>
+
+
+
+
+  <br />
+</section>
+
+{% endblock content %}
+
+
+{% block script %}
+
+
+<script>
+
+    var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {})
+    var myModal_su = new bootstrap.Modal(document.getElementById('abcd'), {})
+
+    document.getElementById("exampleModal_button").addEventListener("click", function(event){
+        myModal.show();
+     })
+
+
+    function ajax_call(){
+
+
+
+        let salary_income = 'False'
+        let presumptive_income = 'False'
+        let house_property_income = 'False'
+        let other_sources_income = 'False'
+        let capital_gain_income = 'False'
+        let foreign_income = 'False'
+
+
+        if($("#salary_income").prop('checked') == true){
+
+            salary_income = 'True'
+        }
+        if($("#presumptive_income").prop('checked') == true){
+
+            presumptive_income = 'True'
+        }
+        if($("#house_property_income").prop('checked') == true){
+
+            house_property_income = 'True'
+        }
+        if($("#other_sources_income").prop('checked') == true){
+
+            other_sources_income = 'True'
+        }
+        if($("#capital_gain_income").prop('checked') == true){
+
+            capital_gain_income = 'True'
+        }
+        if($("#foreign_income").prop('checked') == true){
+
+            foreign_income = 'True'
+        }
+
+        name = document.getElementById("name").value
+        mobile = document.getElementById("mobile").value
+        date_time = document.getElementById("date_time").value
+
+
+        alert('here')
+
+
+
+        $.ajax({
+            cache: false, // initialize an AJAX request
+            type: "POST",
+            url: "{% url 'submit_request' %}",
+            data: {
+                csrfmiddlewaretoken:  '{{ csrf_token  }}',
+                name : name,
+                mobile : mobile,
+                date_time : date_time,
+                salary_income : salary_income,
+                presumptive_income : presumptive_income,
+                house_property_income : house_property_income,
+                other_sources_income : other_sources_income,
+                capital_gain_income : capital_gain_income,
+                foreign_income : foreign_income
+            },
+    
+
+
+
+            success: function (data) {
+
+                    alert('done')
+
+                      myModal.hide();
+                      
+                      myModal_su.show();
+
+                     
+
+            }
+
+            
+            });
+
+
+
+      } 
+
+      function show_su(){
+        alert('here')
+        
+
+      }
+
+
+
+    
+
+
+</script>
+
+
+{% endblock script %}
