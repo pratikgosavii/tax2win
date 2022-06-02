@@ -124,13 +124,23 @@ STATIC_URL = '/static/'
 
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+# STATIC_ROOT = "/root/tax2win/static"
 
 
-# AUTH_USER_MODEL = 'users.User'
+# # AUTH_USER_MODEL = 'users.User'
 
 
+# MEDIA_URL = '/media/'
+
+# # Path where media is stored
+# MEDIA_ROOT = '/root/tax2win/media/'
+
+
+
+STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-
-# Path where media is stored
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+# STATICFILES_DIRS =['/root/templates/colorlib-regform-6']
+STATIC_ROOT = '/root/static'
+MEDIA_ROOT = '/root/media'
