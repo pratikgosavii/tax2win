@@ -41,3 +41,6 @@ urllib3==1.26.6
 virtualenv==20.8.0
 whitenoise==5.3.0
 Workon==0.8.2
+reportlab
+python-dateutil
+pdfkit

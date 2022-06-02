@@ -2,7 +2,6 @@ from email import message
 import io
 from multiprocessing import context
 from statistics import variance
-from tkinter.ttk import Style
 from django.contrib import messages
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
