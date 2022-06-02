@@ -142,5 +142,5 @@ STATIC_URL = '/static/'
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 # STATICFILES_DIRS =['/root/templates/colorlib-regform-6']
-STATIC_ROOT = '/root/static'
-MEDIA_ROOT = '/root/media'
+STATIC_ROOT = '/var/www/html/static'
+MEDIA_ROOT = '/var/www/html/media'
