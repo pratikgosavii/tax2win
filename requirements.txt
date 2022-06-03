@@ -22,7 +22,6 @@ idna==3.2
 mccabe==0.6.1
 numpy==1.21.3
 oauthlib==3.1.1
-peewee
 Pillow==8.3.2
 platformdirs==2.3.0
 psycopg2==2.9.1
