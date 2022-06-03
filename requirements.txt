@@ -22,7 +22,7 @@ idna==3.2
 mccabe==0.6.1
 numpy==1.21.3
 oauthlib==3.1.1
-peewee==2.8.8
+peewee
 Pillow==8.3.2
 platformdirs==2.3.0
 psycopg2==2.9.1
@@ -30,7 +30,7 @@ pycodestyle==2.6.0
 pycparser==2.20
 pyflakes==2.2.0
 PyJWT==2.1.0
-python-dateutil==1.5
+python-dateutil
 python3-openid==3.2.0
 pytz==2020.1
 requests==2.26.0
@@ -41,3 +41,5 @@ urllib3==1.26.6
 virtualenv==20.8.0
 whitenoise==5.3.0
 Workon==0.8.2
+reportlab
+pdfkit
