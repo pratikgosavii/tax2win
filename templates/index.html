@@ -228,7 +228,7 @@ update.<br> <a href="guide/crypto-assets-taxation.html" title="Taxation Guide">R
                     <p>
                         Refund Status of income tax return that have been filed this year, must<br> be updated in the Income Tax Department systems.
                     </p>
-                    <a href="income-tax-refund-status.html" class="green-btn" title="Income Tax Return Status" data-ctid="card-clicked-check-refund-status-93c34044a1">Check
+                    <a id="exampleModal_button" class="green-btn" title="Income Tax Return Status" data-ctid="card-clicked-check-refund-status-93c34044a1">Check
 Refund Status</a>
                 </article>
             </div>
@@ -361,11 +361,11 @@ Refund Status</a>
 <section class="home_review">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            {% comment %} <div class="col-md-12">
                 <div class="heading text-center"><span>Our Winni's</span>
                     <hr>
                 </div>
-            </div>
+            </div> {% endcomment %}
             <div class="col-md-12 col-sm-12">
                 <div class="testimonial-content owl-carousel">
 
@@ -542,7 +542,7 @@ Refund Status</a>
 
 
 
-<section class="whyus">
+<section class="whyus" style="padding-top:0px;">
     <div class="container">
         <div class="row">
             <div class="col-md-5 col-sm-4 col-xs-12 col-sm-offset-0">
@@ -556,7 +556,7 @@ Refund Status</a>
                 <p>We have changed the way people do tax filing in India. We don’t just get your tax return filed within minutes but get you maximum refunds in shortest time.
                 </p>
                 <ul>
-                    <li><img src="{% static '' %}img/icons/top-25.png" alt="Top 25 emerging startup of Asia" title="Top 25 emerging startup of Asia" width="25" height="29">Top 25 emerging startup of Asia</li>
+                    {% comment %} <li><img src="{% static '' %}img/icons/top-25.png" alt="Top 25 emerging startup of Asia" title="Top 25 emerging startup of Asia" width="25" height="29">Top 25 emerging startup of Asia</li> {% endcomment %}
                     <li><img src="{% static '' %}img/icons/certifed.png" alt="Authorized by Income Tax Department" title="Authorized by Income Tax Department" width="25" height="29">Authorized by Income Tax Department</li>
                     <li><img src="{% static '' %}img/icons/secure.png" alt="Secure and safe" title="Secure and safe" width="25" height="29">Secure and safe</li>
                     <li><img src="{% static '' %}img/icons/team.png" alt="Team of Chartered Accountants" title="Team of Chartered Accountants" width="28" height="29">Team of Chartered Accountants</li>
@@ -716,6 +716,59 @@ ITR Now”</a> option at Namaste Ventures.in and upload your Form 16. </li>
         </div>
     </div>
 
+
+
+
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header pb-0">
+                    <div>
+                        <h5 class="modal-title" id="exampleModalLabel">Your details</h5>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                </div>
+                <div class="modal-body d-flex flex-column gap-2">
+                    
+                    <div class="form-check">
+    
+                        <div class="form-group">
+    
+                            <label> Name </label>
+                            <input type="text" style="height: 45px;" id="name" style="margin-bottom: 14px;" class="form-control" placeholder="name">
+                            <br><label> Mobile Number </label>
+                          <input type="text"  style="height: 45px;" id="mobile" style="margin-bottom: 14px;" class="form-control" placeholder="mobile">
+                          <br> <label> Convenient time for call back </label>
+                            <input type="datetime-local"  style="height: 45px;" id="date_time" style="margin-bottom: 14px;" class="form-control" placeholder="pincode">
+                            
+                        
+                        </div>
+                       
+                      </div>
+                      
+                </div>
+                <div class="modal-footer d-flex">
+                    <button type="button" style="width: 100%;background: #3d506c;" onclick="ajax_call()" class="btn btn-secondary d-flex justify-content-center align-items-center" data-bs-dismiss="modal">
+                         
+                        <span class="d-block">Submit</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}
+
+
+{% block script %}
+
+
+
+
+
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -727,9 +780,65 @@ ITR Now”</a> option at Namaste Ventures.in and upload your Form 16. </li>
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
     })();
-    </script>
     <!--End of Tawk.to Script-->
+    
+    var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {})
 
     
-{% endblock content %}
+    document.getElementById("exampleModal_button").addEventListener("click", function(event){
+        myModal.show();
+    })
+
+
+
+    
+    function ajax_call(){
+
+        name = document.getElementById("name").value;
+        mobile = document.getElementById("mobile").value;
+        date_time = document.getElementById("date_time").value;
+
+
+        $.ajax({
+            cache: false, // initialize an AJAX request
+            type: "POST",
+            url: "{% url 'refund_status' %}",
+            data: {
+                csrfmiddlewaretoken:  '{{ csrf_token  }}',
+                name : name,
+                mobile : mobile,
+                date_time : date_time,
+               
+            },
+    
+
+
+
+            success: function (data) {
+
+                    alert('done')
+
+                      myModal.hide();
+                      
+                      myModal_su.show();
+
+                     
+
+            }
+
+            
+            });
+
+
+        }
+
+
+
+
+    
+</script>
+
+
+{% endblock script %}
+    
 

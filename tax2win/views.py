@@ -97,3 +97,34 @@ def submit(request):
 
     
 
+def refund_status(request):
+
+
+    
+
+    date_time = request.POST.get('date_time')
+
+    
+    d = dateutil.parser.parse(date_time)
+    from_date_time = d.strftime("%Y-%m-%d %H:%M:%S")
+
+        
+    post = request.POST.copy() 
+    post.update({"date_time" : from_date_time})
+    request.POST = post
+
+
+
+    forms = refund_status_Form(request.POST)
+
+    if forms.is_valid():
+
+       forms.save()
+
+       return JsonResponse({'result' : True})
+
+    
+
+    else:
+
+        print(forms.errors)

@@ -25,6 +25,7 @@ urlpatterns = [
     path('', index, name="index"),
     path('questions', questions, name="questions"),
     path('submit-request', submit, name="submit_request"),
+    path('refund-status', refund_status, name="refund_status"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL,

@@ -13,3 +13,11 @@ class enquire_Form(forms.ModelForm):
         fields = '__all__'
       
        
+
+
+class refund_status_Form(forms.ModelForm):
+    class Meta:
+        model = refund_status
+        fields = '__all__'
+      
+       

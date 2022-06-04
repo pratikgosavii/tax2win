@@ -26,6 +26,18 @@ class enquire(models.Model):
 
 
 
+class refund_status(models.Model):
+
+    name = models.CharField(max_length=50)
+    date_time = models.DateTimeField(auto_now=False, auto_now_add=False)
+    mobile = models.IntegerField()
+    
+
+    def __str__(self):
+        return self.name
+
+
+
 from django.contrib import admin
 from .models import *
 
