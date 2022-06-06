@@ -21,3 +21,11 @@ class refund_status_Form(forms.ModelForm):
         fields = '__all__'
       
        
+
+
+class services_Form(forms.ModelForm):
+    class Meta:
+        model = services
+        fields = '__all__'
+      
+       
