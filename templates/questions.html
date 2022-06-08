@@ -264,7 +264,7 @@
 
 <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <form class="modal-content">
             <div class="modal-header pb-0">
                 <div>
                     <h5 class="modal-title" id="exampleModalLabel">Your details</h5>
@@ -280,11 +280,11 @@
                     <div class="form-group">
 
                         <label> Name </label>
-                        <input type="text" style="height: 45px;" id="name" style="margin-bottom: 14px;" class="form-control" placeholder="name">
-                        <br><label> Mobile Number </label>
-                      <input type="text"  style="height: 45px;" id="mobile" style="margin-bottom: 14px;" class="form-control" placeholder="mobile">
+                        <input type="text" style="height: 45px;" id="name" style="margin-bottom: 14px;" class="form-control" placeholder="name" required>
+                        <br required<label> Mobile Number </label>
+                      <input type="text"  style="height: 45px;" id="mobile" style="margin-bottom: 14px;" class="form-control" placeholder="mobile" required>
                       <br> <label> Convenient time for call back </label>
-                        <input type="datetime-local"  style="height: 45px;" id="date_time" style="margin-bottom: 14px;" class="form-control" placeholder="pincode">
+                        <input type="datetime-local"  style="height: 45px;" id="date_time" style="margin-bottom: 14px;" class="form-control" placeholder="pincode" required>
                         
                     
                     </div>
@@ -293,12 +293,12 @@
                   
             </div>
             <div class="modal-footer d-flex">
-                <button type="button" style="width: 100%;background: #3d506c;" onclick="ajax_call()" class="btn btn-secondary d-flex justify-content-center align-items-center" data-bs-dismiss="modal">
+                <button type="submit" style="width: 100%;background: #3d506c;" onclick="ajax_call()" class="btn btn-secondary d-flex justify-content-center align-items-center" data-bs-dismiss="modal">
                      
                     <span class="d-block">Submit</span>
                 </button>
             </div>
-        </div>
+          </form>
     </div>
 </div>
 
@@ -391,10 +391,6 @@
         date_time = document.getElementById("date_time").value
 
 
-        alert('here')
-
-
-
         $.ajax({
             cache: false, // initialize an AJAX request
             type: "POST",
@@ -417,8 +413,6 @@
 
             success: function (data) {
 
-                    alert('done')
-
                       myModal.hide();
                       
                       myModal_su.show();
@@ -433,12 +427,6 @@
 
 
       } 
-
-      function show_su(){
-        alert('here')
-        
-
-      }
 
 
 
