@@ -23,7 +23,10 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
-    path('questions', questions, name="questions"),
+    path('direct-taxcation-questions', direct_taxcation_questions, name="direct_taxcation_questions"),
+    path('indirect-taxcation-questions', indirect_taxcation_questions, name="indirect_taxcation_questions"),
+    path('virtual-book-keeping-questions', virtual_book_questions, name="virtual_book_questions"),
+    path('company-llp-questions', company_llp_questions, name="company_llp_questions"),
     path('submit-request', submit, name="submit_request"),
     path('refund-status', refund_status, name="refund_status"),
     path('submit-services-request', submit_services_request, name="submit_services_request"),

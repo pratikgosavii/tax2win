@@ -23,9 +23,30 @@ class refund_status_Form(forms.ModelForm):
        
 
 
-class services_Form(forms.ModelForm):
+class direct_taxcation_Form(forms.ModelForm):
     class Meta:
-        model = services
+        model = direct_taxcation
+        fields = '__all__'
+      
+       
+
+class indirect_taxcation_Form(forms.ModelForm):
+    class Meta:
+        model = indirect_taxcation
+        fields = '__all__'
+      
+       
+
+class virtual_book_questions_Form(forms.ModelForm):
+    class Meta:
+        model = virtual_book_questions
+        fields = '__all__'
+      
+       
+
+class company_llp_questions_Form(forms.ModelForm):
+    class Meta:
+        model = company_llp_questions
         fields = '__all__'
       
        

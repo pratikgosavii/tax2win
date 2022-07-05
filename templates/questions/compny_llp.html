@@ -103,15 +103,15 @@
             name="s_salary_income"
             data-id="1"
             data-income="salary"
-            id="salary_income"
+            id="Name_approval_application"
             class=""
           />
-          <label for="salary_income"
+          <label for="Name_approval_application"
             ><img
               src="https://tax2win.in/assets-new/img/source-of-income/salary_income.png"
               alt="Salary Income"
               title="Salary Income"
-            /><span>Income from <strong>Salary/Pension</strong></span
+            /><span> <strong> Name Approval Application </strong></span
             ><bold class="chang-txt"
               >Select<i>ed</i> <i class="fa fa-check"></i
             ></bold>
@@ -127,15 +127,15 @@
             name="s_presumptive_income"
             data-id="2"
             data-income="presumptive_income"
-            id="presumptive_income"
+            id="Company_LLP_registration"
             class=""
           />
-          <label for="presumptive_income"
+          <label for="Company_LLP_registration"
             ><img
               src="https://tax2win.in/assets-new/img/source-of-income/presumptive_income.png"
               alt="Business Income"
               title="Business Income"
-            /><span>Income from <strong>Business/Profession</strong></span
+            /><span> <strong> Company LLP Registration </strong> </span
             ><bold class="chang-txt"
               >Select<i>ed</i> <i class="fa fa-check"></i
             ></bold>
@@ -151,89 +151,16 @@
             name="s_house_property_income"
             data-id="3"
             data-income="house_property_income"
-            id="house_property_income"
+            id="All_other_MCA_compliances"
             class=""
           />
-          <label for="house_property_income"
+          <label for="All_other_MCA_compliances"
             ><img
               src="https://tax2win.in/assets-new/img/source-of-income/house_property_income.png"
               alt="House Property Income"
               title="House Property Income"
             /><span
-              >Income from <strong>House Property</strong> or
-              <strong>Home Loan</strong></span
-            ><bold class="chang-txt"
-              >Select<i>ed</i> <i class="fa fa-check"></i
-            ></bold>
-            <div class="clearfix"></div>
-          </label>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12 caAstBox">
-        <div class="checkbox">
-          <input
-            type="checkbox"
-            name="s_other_sources_income"
-            data-id="4"
-            data-income="other_sources_income"
-            id="other_sources_income"
-            class=""
-          />
-          <label for="other_sources_income"
-            ><img
-              src="https://tax2win.in/assets-new/img/source-of-income/other_sources_income.png"
-              alt="Other Sources Income"
-              title="Other Sources Income"
-            /><span>Income from <strong>Other Sources</strong></span
-            ><bold class="chang-txt"
-              >Select<i>ed</i> <i class="fa fa-check"></i
-            ></bold>
-            <div class="clearfix"></div>
-          </label>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12 caAstBox">
-        <div class="checkbox">
-          <input
-            type="checkbox"
-            name="s_capital_gain_income"
-            data-id="5"
-            data-income="capital_gain_income"
-            id="capital_gain_income"
-            class=""
-          />
-          <label for="capital_gain_income"
-            ><img
-              src="https://tax2win.in/assets-new/img/source-of-income/capital_gain_income.png"
-              alt="Capital Gains Income"
-              title="Capital Gains Income"
-            /><span>Income from <strong>Capital Gains</strong></span
-            ><bold class="chang-txt"
-              >Select<i>ed</i> <i class="fa fa-check"></i
-            ></bold>
-            <div class="clearfix"></div>
-          </label>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12 caAstBox">
-        <div class="checkbox">
-          <input
-            type="checkbox"
-            name="s_foreign_income"
-            data-id="6"
-            data-income="foreign_income"
-            id="foreign_income"
-            class=""
-          />
-          <label for="foreign_income"
-            ><img
-              src="https://tax2win.in/assets-new/img/source-of-income/foreign_income.png"
-              alt="Foreign Income Income"
-              title="Foreign Income Income"
-            /><span>Income from <strong>Foreign Source</strong> </span
+              > <strong>  All Other MCA Compliances </strong> </span
             ><bold class="chang-txt"
               >Select<i>ed</i> <i class="fa fa-check"></i
             ></bold>
@@ -350,38 +277,26 @@
 
 
 
-        let salary_income = 'False'
-        let presumptive_income = 'False'
-        let house_property_income = 'False'
-        let other_sources_income = 'False'
-        let capital_gain_income = 'False'
-        let foreign_income = 'False'
+        let Name_approval_application = 'False'
+        let Company_LLP_registration = 'False'
+        let All_other_MCA_compliances = 'False'
+        
 
 
-        if($("#salary_income").prop('checked') == true){
+        if($("#Name_approval_application").prop('checked') == true){
 
-            salary_income = 'True'
+            Name_approval_application = 'True'
         }
-        if($("#presumptive_income").prop('checked') == true){
+        if($("#Company_LLP_registration").prop('checked') == true){
 
-            presumptive_income = 'True'
+            Company_LLP_registration = 'True'
         }
-        if($("#house_property_income").prop('checked') == true){
+        if($("#All_other_MCA_compliances").prop('checked') == true){
 
-            house_property_income = 'True'
+            All_other_MCA_compliances = 'True'
         }
-        if($("#other_sources_income").prop('checked') == true){
+       
 
-            other_sources_income = 'True'
-        }
-        if($("#capital_gain_income").prop('checked') == true){
-
-            capital_gain_income = 'True'
-        }
-        if($("#foreign_income").prop('checked') == true){
-
-            foreign_income = 'True'
-        }
 
         name = document.getElementById("name").value
         mobile = document.getElementById("mobile").value
@@ -391,18 +306,16 @@
         $.ajax({
             cache: false, // initialize an AJAX request
             type: "POST",
-            url: "{% url 'submit_request' %}",
+            url: "{% url 'company_llp_questions' %}",
             data: {
                 csrfmiddlewaretoken:  '{{ csrf_token  }}',
                 name : name,
                 mobile : mobile,
                 date_time : date_time,
-                salary_income : salary_income,
-                presumptive_income : presumptive_income,
-                house_property_income : house_property_income,
-                other_sources_income : other_sources_income,
-                capital_gain_income : capital_gain_income,
-                foreign_income : foreign_income
+                
+                Name_approval_application : Name_approval_application,
+                Company_LLP_registration : Company_LLP_registration,
+                All_other_MCA_compliances : All_other_MCA_compliances
             },
     
 

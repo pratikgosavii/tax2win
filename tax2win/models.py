@@ -40,32 +40,104 @@ class refund_status(models.Model):
 
 
 
-services_CHOICES =(
-    ("ECA", "ECA"),
-    ("Direct Taxation Advice", "Direct Taxation Advice"),
-    ("ITR Filling", "ITR Filling"),
-    ("File Revised Return", "File Revised Return"),
-    ("Company Formation", "Company Formation"),
-    ("Registration and Formation of LLPs", "Registration and Formation of LLPs"),
-    ("MCA 21 Compilances", "MCA 21 Compilances"),
-    ("GST Registration", "GST Registration"),
-    ("Income Tax Assessment and Appeals", "Income Tax Assessment and Appeals"),
-    ("Virtual CFO Book keeping and Accountancy", "Virtual CFO Book keeping and Accountancy"),
+services_CHOICES1 =(
+    ("Registration on portal", "Registration on portal"),
+    ("Income Tax Return Filings", "Income Tax Return Filings"),
+    ("Income Tax Audit filings", "Income Tax Audit filings"),
+    ("Assesment filings", "Assesment filings"),
+    ("Tax planning", "Tax planning"),
+    ("Advice_Consultancy", "Advice/Consultancy"),
+   
+)
+
+
+services_CHOICES2 =(
+    ("Registration on portal", "Registration on portal"),
+    ("Tax planning", "Tax planning"),
+    ("Advice_Consultancy", "Advice/Consultancy"),
+    
+)
+
+services_CHOICES3 =(
+    ("Name approval application", " Name approval application"),
+    ("Company_LLP registration", "Company/LLP registration"),
+    ("All other MCA compliances", "All other MCA compliances"),
+    
+)
+
+services_CHOICES4 =(
+    ("Book keeping and accountancy", "Book keeping and accountancy"),
+    ("Finalisation of accounts books", "Finalisation of accounts books"),
+    ("MIS reports-Receivables Ageing report", "MIS reports-Receivables Ageing report"),
+    
 )
 
 
 
 
-class services(models.Model):
+class direct_taxcation(models.Model):
 
     name = models.CharField(max_length=50)
     date_time = models.DateTimeField(auto_now=False, auto_now_add=False)
     mobile = models.IntegerField()
-    services = models.CharField(choices = services_CHOICES, max_length = 50)
+
+    Registration_on_portal = models.BooleanField()
+    Income_Tax_Return_Filings = models.BooleanField()
+    Income_Tax_Audit_filings = models.BooleanField()
+    Assesment_filings = models.BooleanField()
+    Tax_planning = models.BooleanField()
+    Advice_Consultancy = models.BooleanField()
     
 
     def __str__(self):
         return self.name
+
+
+class indirect_taxcation(models.Model):
+
+    name = models.CharField(max_length=50)
+    date_time = models.DateTimeField(auto_now=False, auto_now_add=False)
+    mobile = models.IntegerField()
+    
+    Registration_on_portal = models.BooleanField()
+    Tax_planning = models.BooleanField()
+    Advice_Consultancy = models.BooleanField()
+
+    def __str__(self):
+        return self.name
+
+
+
+
+class company_llp_questions(models.Model):
+
+    name = models.CharField(max_length=50)
+    date_time = models.DateTimeField(auto_now=False, auto_now_add=False)
+    mobile = models.IntegerField()
+
+    Name_approval_application = models.BooleanField()
+    Company_LLP_registration = models.BooleanField()
+    All_other_MCA_compliances = models.BooleanField()
+
+    
+    def __str__(self):
+        return self.name
+
+
+
+
+class virtual_book_questions(models.Model):
+
+    name = models.CharField(max_length=50)
+    date_time = models.DateTimeField(auto_now=False, auto_now_add=False)
+    mobile = models.IntegerField()
+    
+    Book_keeping_and_accountancy = models.BooleanField()
+    Finalisation_of_accounts_books = models.BooleanField()
+    All_other_MCA_compliances  = models.BooleanField()
+
+
+
 
 
 
@@ -78,4 +150,7 @@ from .models import *
 
 
 admin.site.register(enquire)
-admin.site.register(services)
+admin.site.register(direct_taxcation)
+admin.site.register(indirect_taxcation)
+admin.site.register(virtual_book_questions)
+admin.site.register(company_llp_questions)
