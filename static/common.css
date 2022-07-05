@@ -13320,7 +13320,7 @@ html {
 }
 
 .banner .banner-carousel {
-    height: auto;
+    height: auto !important;
     text-align: center;
 }
 

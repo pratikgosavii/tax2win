@@ -1,6 +1,33 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block head %}
+
+
+    <style>
+        .banner .banner-carousel {
+            height: auto;
+            
+        }
+
+        @media (min-width:320px)  {
+
+            .banner{
+                padding-top : 65px;
+            }
+
+            .h1mobile{
+                padding: 0px 0px 30px 0px !important;
+                font-size: 14px !important;
+            }
+        }
+
+            
+    </style>
+    {% endblock head %}
+
+
+
 {% block content %}
 
 
@@ -12,7 +39,7 @@
     <div class="container text-center">
         <div class="txt w3-animate-opacity"> <span>Welcome to Namaste Ventures</span>
             <hr>
-            <h1>
+            <h1 class="h1mobile">
                 Easiest Way of e-filing your
                 <br hidden-xs=""> Income Tax Return in India <span></span>
             </h1>
@@ -34,7 +61,7 @@
                             <div class="item active services">
                                 
                                 
-                                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12" style="margin-bottom:10px;">
                                     <div class="ca-assisted clearfix" style="height: fit-content;">
                                         <div class="col-md-3 col-sm-2 col-xs-3">
                                             <img src="{% static '' %}img/self filing.svg" alt="CA Assistance" class="img-responsive" title="CA Assisted ITR Filing" width="87" height="87" /> </div>
