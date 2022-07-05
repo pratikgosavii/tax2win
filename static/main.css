@@ -14169,7 +14169,7 @@ body {
 
 .banner .banner-carousel .item.slide-one {
     padding-top: 60px;
-    height: 190px;
+    height: auto;
 }
 
 .banner .banner-carousel a {

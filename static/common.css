@@ -13399,7 +13399,7 @@ html {
 
 .banner .banner-carousel .item.slide-one {
     padding-top: 60px;
-    height: 190px;
+    height: auto;
 }
 
 .banner .banner-carousel a {
@@ -16471,7 +16471,7 @@ label.error {
     position: relative;
     border: solid 1px #e4e7ed;
     width: 210px;
-    height: 190px;
+    height: auto;
     line-height: 120px;
     text-align: center;
     vertical-align: middle;
