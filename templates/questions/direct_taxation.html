@@ -103,15 +103,15 @@
             name="s_salary_income"
             data-id="1"
             data-income="salary"
-            id="salary_income"
+            id="Registration_on_portal"
             class=""
           />
-          <label for="salary_income"
+          <label for="Registration_on_portal"
             ><img
               src="https://tax2win.in/assets-new/img/source-of-income/salary_income.png"
               alt="Salary Income"
               title="Salary Income"
-            /><span>Income from <strong>Salary/Pension</strong></span
+            /><span> <strong> Registration on portal </strong></span
             ><bold class="chang-txt"
               >Select<i>ed</i> <i class="fa fa-check"></i
             ></bold>
@@ -127,15 +127,15 @@
             name="s_presumptive_income"
             data-id="2"
             data-income="presumptive_income"
-            id="presumptive_income"
+            id="Income_Tax_Return_Filings"
             class=""
           />
-          <label for="presumptive_income"
+          <label for="Income_Tax_Return_Filings"
             ><img
               src="https://tax2win.in/assets-new/img/source-of-income/presumptive_income.png"
               alt="Business Income"
               title="Business Income"
-            /><span>Income from <strong>Business/Profession</strong></span
+            /><span> <strong> Income Tax Return Filings </strong> </span
             ><bold class="chang-txt"
               >Select<i>ed</i> <i class="fa fa-check"></i
             ></bold>
@@ -151,17 +151,16 @@
             name="s_house_property_income"
             data-id="3"
             data-income="house_property_income"
-            id="house_property_income"
+            id="Income_Tax_Audit_filings"
             class=""
           />
-          <label for="house_property_income"
+          <label for="Income_Tax_Audit_filings"
             ><img
               src="https://tax2win.in/assets-new/img/source-of-income/house_property_income.png"
               alt="House Property Income"
               title="House Property Income"
             /><span
-              >Income from <strong>House Property</strong> or
-              <strong>Home Loan</strong></span
+              > <strong> Income Tax Audit filings </strong> </span
             ><bold class="chang-txt"
               >Select<i>ed</i> <i class="fa fa-check"></i
             ></bold>
@@ -177,15 +176,15 @@
             name="s_other_sources_income"
             data-id="4"
             data-income="other_sources_income"
-            id="other_sources_income"
+            id="Assesment_filings"
             class=""
           />
-          <label for="other_sources_income"
+          <label for="Assesment_filings"
             ><img
               src="https://tax2win.in/assets-new/img/source-of-income/other_sources_income.png"
               alt="Other Sources Income"
               title="Other Sources Income"
-            /><span>Income from <strong>Other Sources</strong></span
+            /><span> <strong> Assesment filings </strong> </span
             ><bold class="chang-txt"
               >Select<i>ed</i> <i class="fa fa-check"></i
             ></bold>
@@ -201,15 +200,15 @@
             name="s_capital_gain_income"
             data-id="5"
             data-income="capital_gain_income"
-            id="capital_gain_income"
+            id="Tax_planning"
             class=""
           />
-          <label for="capital_gain_income"
+          <label for="Tax_planning"
             ><img
               src="https://tax2win.in/assets-new/img/source-of-income/capital_gain_income.png"
               alt="Capital Gains Income"
               title="Capital Gains Income"
-            /><span>Income from <strong>Capital Gains</strong></span
+            /><span> <strong> Tax planning </strong> </span
             ><bold class="chang-txt"
               >Select<i>ed</i> <i class="fa fa-check"></i
             ></bold>
@@ -225,15 +224,15 @@
             name="s_foreign_income"
             data-id="6"
             data-income="foreign_income"
-            id="foreign_income"
+            id="Advice_Consultancy"
             class=""
           />
-          <label for="foreign_income"
+          <label for="Advice_Consultancy"
             ><img
               src="https://tax2win.in/assets-new/img/source-of-income/foreign_income.png"
               alt="Foreign Income Income"
               title="Foreign Income Income"
-            /><span>Income from <strong>Foreign Source</strong> </span
+            /><span> <strong> Advice/Consultancy </strong> </span
             ><bold class="chang-txt"
               >Select<i>ed</i> <i class="fa fa-check"></i
             ></bold>
@@ -350,37 +349,37 @@
 
 
 
-        let salary_income = 'False'
-        let presumptive_income = 'False'
-        let house_property_income = 'False'
-        let other_sources_income = 'False'
-        let capital_gain_income = 'False'
-        let foreign_income = 'False'
+        let Registration_on_portal = 'False'
+        let Income_Tax_Return_Filings = 'False'
+        let Income_Tax_Audit_filings = 'False'
+        let Assesment_filings = 'False'
+        let Tax_planning = 'False'
+        let Advice_Consultancy = 'False'
 
 
-        if($("#salary_income").prop('checked') == true){
+        if($("#Registration_on_portal").prop('checked') == true){
 
-            salary_income = 'True'
+          Registration_on_portal = 'True'
         }
-        if($("#presumptive_income").prop('checked') == true){
+        if($("#Income_Tax_Return_Filings").prop('checked') == true){
 
-            presumptive_income = 'True'
+          Income_Tax_Return_Filings = 'True'
         }
-        if($("#house_property_income").prop('checked') == true){
+        if($("#Income_Tax_Audit_filings").prop('checked') == true){
 
-            house_property_income = 'True'
+          Income_Tax_Audit_filings = 'True'
         }
-        if($("#other_sources_income").prop('checked') == true){
+        if($("#Assesment_filings").prop('checked') == true){
 
-            other_sources_income = 'True'
+          Assesment_filings = 'True'
         }
-        if($("#capital_gain_income").prop('checked') == true){
+        if($("#Tax_planning").prop('checked') == true){
 
             capital_gain_income = 'True'
         }
-        if($("#foreign_income").prop('checked') == true){
+        if($("#Advice_Consultancy").prop('checked') == true){
 
-            foreign_income = 'True'
+          Advice_Consultancy = 'True'
         }
 
         name = document.getElementById("name").value
@@ -391,18 +390,19 @@
         $.ajax({
             cache: false, // initialize an AJAX request
             type: "POST",
-            url: "{% url 'submit_request' %}",
+            url: "{% url 'direct_taxcation_questions' %}",
             data: {
                 csrfmiddlewaretoken:  '{{ csrf_token  }}',
                 name : name,
                 mobile : mobile,
                 date_time : date_time,
-                salary_income : salary_income,
-                presumptive_income : presumptive_income,
-                house_property_income : house_property_income,
-                other_sources_income : other_sources_income,
-                capital_gain_income : capital_gain_income,
-                foreign_income : foreign_income
+                Registration_on_portal : Registration_on_portal,
+                Income_Tax_Return_Filings : Income_Tax_Return_Filings,
+                Income_Tax_Audit_filings : Income_Tax_Audit_filings,
+                Assesment_filings : Assesment_filings,
+                Tax_planning : Tax_planning,
+                Advice_Consultancy : Advice_Consultancy,
+               
             },
     
 

@@ -12,6 +12,7 @@ from django.core import serializers
 from django.contrib.auth.decorators import login_required
 from datetime import date
 from django.urls import reverse
+import dateutil.parser
 from datetime import date
 from django.http import FileResponse, Http404
 from itertools import chain
@@ -53,10 +54,149 @@ def index(request):
 
     return render(request, 'index.html')
 
-def questions(request):
+def direct_taxcation_questions(request):
+
+    if request.method == 'POST':
+
+        
+
+        date_time = request.POST.get('date_time')
+
+        
+        d = dateutil.parser.parse(date_time)
+        from_date_time = d.strftime("%Y-%m-%d %H:%M:%S")
+
+        post = request.POST.copy() 
+        post.update({"date_time" : from_date_time})
+        request.POST = post
+
+        forms = direct_taxcation_Form(request.POST)
+
+        if forms.is_valid():
+
+            forms.save()
+
+            return JsonResponse({'result' : True})
+
+        else:
+
+            print(forms.errors)
 
 
-    return render(request, 'questions.html')
+    else:
+
+        return render(request, 'questions/direct_taxation.html')
+
+def indirect_taxcation_questions(request):
+
+    
+    if request.method == 'POST':
+
+        
+
+        date_time = request.POST.get('date_time')
+
+        
+        d = dateutil.parser.parse(date_time)
+        from_date_time = d.strftime("%Y-%m-%d %H:%M:%S")
+
+        post = request.POST.copy() 
+        post.update({"date_time" : from_date_time})
+        request.POST = post
+
+        forms = indirect_taxcation_Form(request.POST)
+
+        if forms.is_valid():
+
+            forms.save()
+
+            return JsonResponse({'result' : True})
+
+        else:
+
+            print(forms.errors)
+
+    else:
+
+        return render(request, 'questions/indirect_taxation.html')
+
+def virtual_book_questions(request):
+
+
+    
+    if request.method == 'POST':
+
+        
+
+        date_time = request.POST.get('date_time')
+
+        
+        d = dateutil.parser.parse(date_time)
+        from_date_time = d.strftime("%Y-%m-%d %H:%M:%S")
+
+        post = request.POST.copy() 
+        post.update({"date_time" : from_date_time})
+        request.POST = post
+
+        forms = virtual_book_questions_Form(request.POST)
+
+        if forms.is_valid():
+
+            forms.save()
+
+            return JsonResponse({'result' : True})
+
+        else:
+
+            print(forms.errors)
+
+    else:
+
+
+        return render(request, 'questions/virtual_book.html')
+
+def company_llp_questions(request):
+
+    print('dhdusdsudgusgdshdsygdb')
+    print('dhdusdsudgusgdshdsygdb')
+    print('dhdusdsudgusgdshdsygdb')
+    print('dhdusdsudgusgdshdsygdb')
+    print('dhdusdsudgusgdshdsygdb')
+
+
+    print(request.POST)
+    
+
+    if request.method == 'POST':
+
+        
+
+        date_time = request.POST.get('date_time')
+
+        
+        d = dateutil.parser.parse(date_time)
+        from_date_time = d.strftime("%Y-%m-%d %H:%M:%S")
+
+        post = request.POST.copy() 
+        post.update({"date_time" : from_date_time})
+        request.POST = post
+
+        forms = company_llp_questions_Form(request.POST)
+
+        if forms.is_valid():
+
+            forms.save()
+
+            return JsonResponse({'result' : True})
+
+        else:
+
+            print(forms.errors)
+
+    else:
+
+
+        return render(request, 'questions/compny_llp.html')
 
 
 

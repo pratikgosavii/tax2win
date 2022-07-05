@@ -32,24 +32,26 @@
                                 </form>
                             </div>
                             <div class="item active services">
-                                {% comment %} <div class="col-md-6 col-sm-12 col-xs-12">
-                                    <div class="file-itself clearfix">
+                                
+                                
+                                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                                    <div class="ca-assisted clearfix" style="height: fit-content;">
                                         <div class="col-md-3 col-sm-2 col-xs-3">
-                                            <img src="{% static 'img/file-ityour-self.png' %}" alt="File Income Tax" class="img-responsive" title="File Income Tax" width="68" height="76" /> </div>
+                                            <img src="{% static '' %}img/self filing.svg" alt="CA Assistance" class="img-responsive" title="CA Assisted ITR Filing" width="87" height="87" /> </div>
                                         <div class="col-md-9 col-sm-10 col-xs-9 card-txt">
-                                            <h3>File it yourself</h3>
-                                            <p>Trust us, you can file your tax return on your own. It’s Easy, quick and free when you file with Namaste Ventures on your own.</p>
-                                            <a href="{% url 'questions' %}" class="btn" title="File Income Tax Yourself">File ITR Now &rightarrow;</a> </div>
+                                            <h3>Self Filing</h3>
+                                            <p>Filings on your fingertips for fre</p>
+                                            <a class="btn" title="Tax Filing Help" data-ctid="card-clicked-book-eca-now-415d2f25cd">Book eCA Now &rightarrow;</a> </div>
                                     </div>
-                                </div> {% endcomment %}
-                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                </div>
+                                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
                                     <div class="ca-assisted clearfix" style="height: fit-content;">
                                         <div class="col-md-3 col-sm-2 col-xs-3">
                                             <img src="{% static '' %}img/ca-assisted.png" alt="CA Assistance" class="img-responsive" title="CA Assisted ITR Filing" width="87" height="87" /> </div>
                                         <div class="col-md-9 col-sm-10 col-xs-9 card-txt">
-                                            <h3>Get a personal eCA</h3>
-                                            <p>Get your personal eCA to do tax filing for you. And it is personal, convenient & fast with maximum refund calculated for you.</p>
-                                            <a href="{% url 'questions' %}" class="btn" title="Tax Filing Help" data-ctid="card-clicked-book-eca-now-415d2f25cd">Book eCA Now &rightarrow;</a> </div>
+                                            <h3>CA Assisted Filing</h3>
+                                            <p>Connect with an expert CA for your filings.</p>
+                                            <a class="btn" title="Tax Filing Help" data-ctid="card-clicked-book-eca-now-415d2f25cd">Book eCA Now &rightarrow;</a> </div>
                                     </div>
                                 </div>
                             </div>
@@ -164,136 +166,66 @@ update.<br> <a href="guide/crypto-assets-taxation.html" title="Taxation Guide">R
 </div>
 </section> -->
 
-<section class="t2w_services">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="heading"><span>Benefits of E-Filing Your Income Tax Returns</span>
-                    {% comment %} <div class="clearfix"></div>
-                    <a href="efile-income-tax-return/sources-of-income.html" class="btn1" title="Free File Now">Free File Now →</a> {% endcomment %}
-                    <hr>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="wrapper">
-                    <div class="box">
-                        <figure><img src="{% static 'img/calculators/e-ca.png' %}" alt="" loading="lazy"></figure>
-                        <h3>Claim Tax Refund</h3>
-                        <p>If you have paid more income tax, you are eligible for a tax refund </p>
-                    </div>
-                    <div class="box">
-                        <figure><img style="width: 51px;" src="{% static '' %}new/late_fee.jpeg" alt="">
-                        </figure>
-                        <h3>Avoid Late Filing Fee</h3>
-                        <p>A delay in filing ITR makes you liable to pay a fee of up to Rs. 5,000</p>
-                    </div>
-                    <div class="box">
-                        <figure><img src="{% static '' %}img/calculators/file-itself.png" loading="lazy" alt=""></figure>
-                        <h3>Carry forward Capital Losses</h3>
-                        <p>If you have incurred capital losses, you can carry forward it and settle in future</p>
-                    </div>
-                    <div class="box">
-                        <figure><img src="{% static '' %}new/visa.png" alt=""></figure>
-                        <h3>Obtaining Visa</h3>
-                        <p>Foreign consulates may ask you to furnish your income tax returns for obtaining Visa</p>
-                    </div>
-                    <div class="box">
-                        <figure><img src="{% static '' %}img/calculators/plan-tax-file-itr.png" alt=""></figure>
-                        <h3>Easy Loan Approval</h3>
-                        <p>The income tax return serves as an important document for loan approval</p>
-                    </div>
-                    <div class="box">
-                        <figure><img style="width:51px;" src="{% static '' %}new/taxnotice.jpg" alt="" loading="lazy"></figure>
-                        
-                        <h3>Avoid Tax Notices</h3>
-                        <p>Filing tax returns is a must to avoid late filing notices from the IT department</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="home-refund-status">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-sm-5 col-xs-12 mobile_view">
-                <figure> <img src="{% static '' %}img/refund/h-refundicon.png" alt="Check Refund Status" title="Check Refund Status" loading="lazy"> </figure>
-            </div>
-            <div class="col-md-8 col-sm-7 col-xs-12">
-                <article>
-                    <h2>Check Your Income Tax <strong>Refund Status </strong><br> Accurate & Latest</h2>
-
-                    <p>
-                        Refund Status of income tax return that have been filed this year, must<br> be updated in the Income Tax Department systems.
-                    </p>
-                    <a id="exampleModal_button" onclick="popup_refund()" class="green-btn" title="Income Tax Return Status" data-ctid="card-clicked-check-refund-status-93c34044a1">Check
-Refund Status</a>
-                </article>
-            </div>
-            <div class="col-md-4 col-sm-5 col-xs-12 desktop_view">
-                <figure> <img src="{% static '' %}img/refund/h-refundicon.png" alt="Check Refund Status" title="Check Refund Status" width="412" height="331" loading="lazy">
-                </figure>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="home-services w3-animate-opacity">
     <div class="container">
         <div class="row">
-            <div class="heading text-center"  style="width: 100%;"><span>What We Do For You</span>
+            <div class="heading text-center"  style="width: 100%;"><span>Our Expert Service</span>
                 <hr>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="card ca-assisted clearfix">
                     <div class="col-md-3 col-sm-4 col-xs-3">
                         <img src="{% static '' %}img/ca-assisted.png" alt="CA Assistance" class="img-responsive" title="CA Assisted ITR Filing" width="87" height="87" /> </div>
                     <div class="col-md-9 col-sm-8 col-xs-9 card-txt">
-                        <h3>Get A personal eCA</h3>
-                        <p>Get your personal eCA to do tax filing for you. And it is personal, convenient & fast with maximum refund calculated for you.</p>
-                        <a onclick="popup('ECA');" class="btn" title="Tax Filing Help" data-ctid="card-clicked-get-a-personal-eca-6adc80e418">Book Now &rightarrow;</a> </div>
+                        <h3>Direct Taxation
+                            Planning And
+                            Compliance</h3>
+                        {% comment %} <p>Get your personal eCA to do tax filing for you. And it is personal, convenient & fast with maximum refund calculated for you.</p> {% endcomment %}
+                        <a href="{% url 'direct_taxcation_questions' %}" class="btn" title="Tax Filing Help" data-ctid="card-clicked-get-a-personal-eca-6adc80e418">Book Now &rightarrow;</a> </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="card file-itself clearfix">
                     <div class="col-md-3 col-sm-4 col-xs-3">
                         <img src="{% static 'new/file_1.png' %}" alt="File Income Tax" class="img-responsive" title="File Income Tax" width="63" height="74" /> </div>
                     <div class="col-md-9 col-sm-8 col-xs-9 card-txt">
-                        <h3>Direct Taxation Advice and Planning</h3>
-                        <p>You can file your ITR on your own. It's Easy, quick & free when you file with Namaste Ventures on your own.
+                        <h3>Indirect
+                            Taxation
+                            Planning And
+                            Compliance</h3>
+                        {% comment %} <p>You can file your ITR on your own. It's Easy, quick & free when you file with Namaste Ventures on your own. {% endcomment %}
                         </p>
-                        <a  onclick="popup('Direct Taxation Advice');" class="btn" title="File Income Tax Yourself" data-ctid="card-clicked-file-it-yourself-758cd3ca6a">File Now &rightarrow;</a> </div>
+                        <a  href="{% url 'indirect_taxcation_questions' %}" class="btn" title="File Income Tax Yourself" data-ctid="card-clicked-file-it-yourself-758cd3ca6a">File Now &rightarrow;</a> </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="col-md-3 col-sm-6 col-xs-12">
 
                 <div class="card file-itself clearfix">
                     <div class="col-md-3 col-sm-4 col-xs-3">
                         <img src="{% static 'new/file_2.png' %}" alt="File Income Tax" class="img-responsive" title="File Income Tax" width="63" height="74" /> </div>
                     <div class="col-md-9 col-sm-8 col-xs-9 card-txt">
-                        <h3>ITR Filling</h3>
-                        <p>You can file your ITR on your own. It's Easy, quick & free when you file with Namaste Ventures on your own.
+                        <h3>Company/LLP
+                            Formation And
+                            Compliance</h3>
+                        {% comment %} <p>You can file your ITR on your own. It's Easy, quick & free when you file with Namaste Ventures on your own. {% endcomment %}
                         </p>
-                        <a onclick="popup('ITR Filling');" class="btn" title="File Income Tax Yourself" data-ctid="card-clicked-file-it-yourself-758cd3ca6a">File Now &rightarrow;</a> </div>
+                        <a href="{% url 'company_llp_questions' %}" class="btn" title="File Income Tax Yourself" data-ctid="card-clicked-file-it-yourself-758cd3ca6a">File Now &rightarrow;</a> </div>
                 </div>
             </div>
-        
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <a onclick="popup('File Revised Return');"title="Revised Income Tax Return" data-ctid="card-clicked-file-revised-return-e8cc7fff2c">
-                    <div class="card refund-status clearfix text-center">
-                        <img src="{% static 'img/revised_return.png' %}" alt="Revised Return" class="img-responsive0" title="Revised Return" loading="lazy" width="64" height="60" />
-                        <h4>File Revised Return</h4>
-                        <p>
-                            Made mistake while filing ITR?<br> We can help you correct it.
-                        </p>
-                        <span>Revise ITR Now →</span>
-                    </div>
-                </a>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="card ca-assisted clearfix">
+                    <div class="col-md-3 col-sm-4 col-xs-3">
+                        <img src="{% static 'img/revised_return.png' %}" alt="CA Assistance" class="img-responsive" title="CA Assisted ITR Filing" width="87" height="87" /> </div>
+                    <div class="col-md-9 col-sm-8 col-xs-9 card-txt">
+                        <h3>Virtual Book Keeping
+                            And Accontancy(CFO)</h3>
+                        {% comment %} <p>Get your personal eCA to do tax filing for you. And it is personal, convenient & fast with maximum refund calculated for you.</p> {% endcomment %}
+                        <a href="{% url 'virtual_book_questions' %}" class="btn" title="Tax Filing Help" data-ctid="card-clicked-get-a-personal-eca-6adc80e418">Book Now &rightarrow;</a> </div>
+                </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
+
+           
+            {% comment %} <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="card plan-tax clearfix">
                     <div class="col-md-3 col-sm-4 col-xs-3">
                         <img src="{% static 'img/ca-assisted.png' %}" alt="Plan Tax & File ITR" class="img-responsive" title="Plan Tax & File Income Tax Return" loading="lazy" width="87" height="87" /> </div>
@@ -353,8 +285,102 @@ Refund Status</a>
                         <a onclick="popup('Virtual CFO Book keeping and Accountancy');" class="btn" title="NRI Income Tax Return File" data-ctid="card-clicked-nri-taxes-itr-filling-c9899e8314">Start Now &rightarrow;</a> </div>
                 </div>
             </div>
+        </div> {% endcomment %}
+    </div>
+    </div>
+</section>
+
+<section class="t2w_services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="heading"><span>Knowledge Is Power</span>
+                    {% comment %} <div class="clearfix"></div>
+                    <a href="efile-income-tax-return/sources-of-income.html" class="btn1" title="Free File Now">Free File Now →</a> {% endcomment %}
+                    <hr>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="wrapper">
+                    <div class="box">
+                        <figure><img src="{% static 'img/calculators/e-ca.png' %}" alt="" loading="lazy"></figure>
+                        <h3>Income From Salary</h3>
+                        <p>If you have paid more income tax, you are eligible for a tax refund </p>
+                    </div>
+                    <div class="box">
+                        <figure><img style="width: 51px;" src="{% static '' %}new/late_fee.jpeg" alt="">
+                        </figure>
+                        <h3>Income From House Propety</h3>
+                        <p>A delay in filing ITR makes you liable to pay a fee of up to Rs. 5,000</p>
+                    </div>
+                    <div class="box">
+                        <figure><img src="{% static '' %}img/calculators/file-itself.png" loading="lazy" alt=""></figure>
+                        <h3>Income From Propery Gain</h3>
+                        <p>If you have incurred capital losses, you can carry forward it and settle in future</p>
+                    </div>
+                    <div class="box">
+                        <figure><img src="{% static '' %}new/visa.png" alt=""></figure>
+                        <h3>Income From Business & Profession</h3>
+                        <p>Foreign consulates may ask you to furnish your income tax returns for obtaining Visa</p>
+                    </div>
+                    <div class="box">
+                        <figure><img src="{% static '' %}img/calculators/plan-tax-file-itr.png" alt=""></figure>
+                        <h3>Income From Other Source</h3>
+                        <p>The income tax return serves as an important document for loan approval</p>
+                    </div>
+                    <div class="box">
+                        <figure><img style="width:51px;" src="{% static '' %}new/taxnotice.jpg" alt="" loading="lazy"></figure>
+                        
+                        <h3>Avoid Tax Notices</h3>
+                        <p>Filing tax returns is a must to avoid late filing notices from the IT department</p>
+                    </div>
+                    <div class="box">
+                        <figure><img style="width:51px;" src="{% static '' %}new/taxnotice.jpg" alt="" loading="lazy"></figure>
+                        
+                        <h3>Tax Deductions At Sources (TDS)</h3>
+                        <p>Filing tax returns is a must to avoid late filing notices from the IT department</p>
+                    </div>
+                    <div class="box">
+                        <figure><img style="width:51px;" src="{% static '' %}new/taxnotice.jpg" alt="" loading="lazy"></figure>
+                        
+                        <h3>Tax Collection At Sources (TCS)</h3>
+                        <p>Filing tax returns is a must to avoid late filing notices from the IT department</p>
+                    </div>
+                    <div class="box">
+                        <figure><img style="width:51px;" src="{% static '' %}new/taxnotice.jpg" alt="" loading="lazy"></figure>
+                        
+                        <h3>Due Dates</h3>
+                        <p>Filing tax returns is a must to avoid late filing notices from the IT department</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</section>
+
+
+<section class="home-refund-status">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-5 col-xs-12 mobile_view">
+                <figure> <img src="{% static '' %}img/refund/h-refundicon.png" alt="Check Refund Status" title="Check Refund Status" loading="lazy"> </figure>
+            </div>
+            <div class="col-md-8 col-sm-7 col-xs-12">
+                <article>
+                    <h2>Check Your Income Tax <strong>Refund Status </strong><br> Accurate & Latest</h2>
+
+                    <p>
+                        Refund Status of income tax return that have been filed this year, must<br> be updated in the Income Tax Department systems.
+                    </p>
+                    <a id="exampleModal_button" onclick="popup_refund()" class="green-btn" title="Income Tax Return Status" data-ctid="card-clicked-check-refund-status-93c34044a1">Check
+Refund Status</a>
+                </article>
+            </div>
+            <div class="col-md-4 col-sm-5 col-xs-12 desktop_view">
+                <figure> <img src="{% static '' %}img/refund/h-refundicon.png" alt="Check Refund Status" title="Check Refund Status" width="412" height="331" loading="lazy">
+                </figure>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -778,7 +804,7 @@ ITR Now”</a> option at Namaste Ventures.in and upload your Form 16. </li>
     
                         <div class="form-group">
     
-                            <label> Name </label>
+                            <label> Name (*As per PAN card) </label>
                             <input type="text" style="height: 45px;" id="name" style="margin-bottom: 14px;" class="form-control" placeholder="name">
                             <br><label> Mobile Number </label>
                           <input type="text"  style="height: 45px;" id="mobile" style="margin-bottom: 14px;" class="form-control" placeholder="mobile">
