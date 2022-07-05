@@ -13320,7 +13320,7 @@ html {
 }
 
 .banner .banner-carousel {
-    height: 190px;
+    height: auto;
     text-align: center;
 }
 
@@ -33191,7 +33191,7 @@ img {
         padding: 10px 20px;
     }
     .banner .banner-carousel {
-        height: 190px;
+        height: auto;
         text-align: center;
     }
     .banner .banner-carousel .services .ca-assisted,
