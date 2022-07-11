@@ -11241,7 +11241,7 @@ label.error {
     border-radius: 3px;
     background-clip: padding-box;
     padding: 8px 20px;
-    border: solid 1px #3d506c;
+    border: solid 1px #0186d7;
     color: #000;
     font-size: 13px;
 }
@@ -11249,7 +11249,7 @@ label.error {
 .heading hr {
     width: 40px;
     margin: 10px auto;
-    background: #3d506c;
+    background: #0186d7;
     height: 2px;
     border: none;
 }
@@ -11278,7 +11278,7 @@ label.error {
     border-radius: 3px;
     background-clip: padding-box;
     padding: 8px 20px;
-    border: solid 1px #3d506c;
+    border: solid 1px #0186d7;
     color: #000;
     font-size: 13px;
 }
@@ -11443,7 +11443,7 @@ label.error {
 }
 
 .global-faqs .wrapper:hover .question {
-    background: #3d506c;
+    background: #0186d7;
 }
 
 .global-faqs img {
@@ -11509,7 +11509,7 @@ label.error {
     top: 0;
     width: 100px;
     height: 1px;
-    background: #3d506c;
+    background: #0186d7;
 }
 
 .valOtp .modal-body,
@@ -11600,7 +11600,7 @@ header .top span {
 }
 
 header .top span strong {
-    color: #3d506c;
+    color: #0186d7;
 }
 
 header .top .social-icons {
@@ -11681,7 +11681,7 @@ header .bottom .navbar ul li a:hover {
 
 header .bottom .navbar ul li.log-in {
     color: #fff;
-    background: #3d506c;
+    background: #0186d7;
     border: solid 1px #e97c1d;
     border-radius: 3px;
     background-clip: padding-box;
@@ -11765,7 +11765,7 @@ header .bottom .navbar .dropdown-menu li a {
 }
 
 header .bottom .navbar .dropdown-menu li a:hover {
-    background: #3d506c;
+    background: #0186d7;
     color: #fff;
     text-decoration: none;
 }
@@ -11841,7 +11841,7 @@ header .bottom .navbar .dropdown-menu.tools_menu li ul.tools_submenu li a {
 }
 
 header .bottom .navbar .dropdown-menu.tools_menu li ul.tools_submenu li:hover {
-    background: #3d506c;
+    background: #0186d7;
     color: #fff;
 }
 
@@ -11991,7 +11991,7 @@ header .chnge-language a:hover {
 
 .latest_news .news_t {
     float: left;
-    color: #3d506c;
+    color: #0186d7;
     padding-right: 10px;
     height: 20px;
     position: absolute;
@@ -12487,7 +12487,7 @@ header .chnge-language a:hover {
     }
     header .bottom .navbar .dropdown-menu li a:hover {
         background: 0 0;
-        color: #3d506c;
+        color: #0186d7;
     }
     header .bottom .navbar .dropdown-menu.guide_menu {
         width: auto !important;
@@ -12563,7 +12563,7 @@ header .chnge-language a:hover {
     }
     header.inr-new-header .bottom .navbar ul li.log-in a small {
         display: inline-block;
-        background: #3d506c;
+        background: #0186d7;
         font-weight: 100;
         color: #fff;
         padding: 10px 8px;
@@ -12895,7 +12895,7 @@ label.error {
     border-radius: 3px;
     background-clip: padding-box;
     padding: 8px 20px;
-    border: solid 1px #3d506c;
+    border: solid 1px #0186d7;
     color: #000;
     font-size: 13px;
 }
@@ -12903,7 +12903,7 @@ label.error {
 .heading hr {
     width: 40px;
     margin: 10px auto;
-    background: #3d506c;
+    background: #0186d7;
     height: 2px;
     border: none;
 }
@@ -12932,7 +12932,7 @@ label.error {
     border-radius: 3px;
     background-clip: padding-box;
     padding: 8px 20px;
-    border: solid 1px #3d506c;
+    border: solid 1px #0186d7;
     color: #000;
     font-size: 13px;
 }
@@ -13097,7 +13097,7 @@ label.error {
 }
 
 .global-faqs .wrapper:hover .question {
-    background: #3d506c;
+    background: #0186d7;
 }
 
 .global-faqs img {
@@ -13163,7 +13163,7 @@ label.error {
     top: 0;
     width: 100px;
     height: 1px;
-    background: #3d506c;
+    background: #0186d7;
 }
 
 .valOtp .modal-body,
@@ -13253,7 +13253,7 @@ html {
 .banner .txt hr {
     width: 40px;
     margin: 10px auto;
-    background: #3d506c;
+    background: #0186d7;
     height: 2px;
     border: none;
 }
@@ -13270,7 +13270,7 @@ html {
 
 .banner .txt a,
 .banner .txt button {
-    background: #3d506c;
+    background: #0186d7;
     border-radius: 0 2px 2px 0;
     background-clip: padding-box;
     padding: 14px 50px;
@@ -13369,7 +13369,7 @@ html {
     padding: 8px 28px;
     font-size: 14px;
     display: inline-block !important;
-    background: #3d506c;
+    background: #0186d7;
 }
 
 .banner .banner-carousel .services .ca-assisted img,
@@ -13389,7 +13389,7 @@ html {
 }
 
 .banner .banner-carousel .services .ca-assisted a {
-    background: #3d506c;
+    background: #0186d7;
 }
 
 .banner .banner-carousel .services h3 {
@@ -13426,7 +13426,7 @@ html {
 
 .gray-btn,
 .green-btn {
-    background: #3d506c;
+    background: #0186d7;
     padding: 10px 30px;
     color: #fff;
     border-radius: 3px;
@@ -14064,7 +14064,7 @@ html {
     border: none;
     width: 40px;
     height: 3px;
-    background: #3d506c;
+    background: #0186d7;
     margin: 10px 0;
 }
 
@@ -14134,7 +14134,7 @@ html {
 .register .register-form #onfly-midway-submit-button,
 .register .register-form button[type="submit"],
 .register .register-form input[type="submit"] {
-    background: #3d506c;
+    background: #0186d7;
     color: #fff;
     border-radius: 3px;
     background-clip: padding-box;
@@ -14218,7 +14218,7 @@ html {
 
 .register .carousel-control {
     position: relative;
-    color: #3d506c;
+    color: #0186d7;
     text-shadow: none;
     opacity: 1;
     font-size: 12px;
@@ -14930,7 +14930,7 @@ label.error {
 
 .guide-wrapper .guides-section hr {
     border: none;
-    background: #3d506c;
+    background: #0186d7;
     width: 50px;
     height: 3px;
     display: inline-block;
@@ -14946,7 +14946,7 @@ label.error {
     border-radius: 2px;
     background-clip: padding-box;
     border: solid 1px #e6e6e6;
-    border-top: solid 3px #3d506c;
+    border-top: solid 3px #0186d7;
     padding: 30px;
     margin-bottom: 30px;
 }
@@ -15129,7 +15129,7 @@ label.error {
 }
 
 .ca-assisted-page .banner .alredy_login.v2 .login-details span strong {
-    color: #3d506c;
+    color: #0186d7;
     font-weight: 400;
 }
 
@@ -15137,14 +15137,14 @@ label.error {
     background: #f2fff1;
     border-radius: 15px;
     padding: 5px 20px;
-    color: #3d506c;
+    color: #0186d7;
     font-size: 11px;
     border: solid 1px #94cf8d;
 }
 
 .ca-assisted-page .banner .alredy_login.v2 .login-details span a {
     background: 0 0;
-    color: #3d506c;
+    color: #0186d7;
     font-size: 12px;
     display: inline-block;
 }
@@ -15340,7 +15340,7 @@ label.error {
 .ca-assisted-page .banner .question-slider .custom-radio input[type="checkbox"]:checked+label figure,
 .ca-assisted-page .banner .question-slider .custom-radio input[type="radio"]:checked+label figure {
     border-width: 2px;
-    border-color: #3d506c;
+    border-color: #0186d7;
     box-shadow: 0 0 20px 0 rgba(51, 37, 37, 0.3);
 }
 
@@ -15351,8 +15351,8 @@ label.error {
 
 .ca-assisted-page .banner .question-slider .custom-radio input[type="checkbox"]:checked+label small,
 .ca-assisted-page .banner .question-slider .custom-radio input[type="radio"]:checked+label small {
-    border-color: #3d506c;
-    background: #3d506c;
+    border-color: #0186d7;
+    background: #0186d7;
 }
 
 .ca-assisted-page .banner .question-slider .custom-radio input[type="checkbox"]:checked+label small i,
@@ -15673,9 +15673,9 @@ label.error {
 
 .ca-assisted-page .banner .question-slider .plan-summary small {
     cursor: pointer;
-    color: #3d506c;
+    color: #0186d7;
     padding: 10px 20px;
-    border: dashed 1px #3d506c;
+    border: dashed 1px #0186d7;
     text-align: left;
     display: inline-block;
     border-radius: 4px;
@@ -15716,7 +15716,7 @@ label.error {
 
 .ca-assisted-page .banner .question-slider .plan-summary .coupon-code .enter-code button {
     border: none;
-    background: #3d506c;
+    background: #0186d7;
     color: #fff;
     font-size: 13px;
     padding: 5px 15px;
@@ -15729,7 +15729,7 @@ label.error {
 }
 
 .ca-assisted-page .banner .question-slider .plan-summary .coupon-code .enter-code .apply {
-    border: dotted 2px #3d506c;
+    border: dotted 2px #0186d7;
     background: #f2faf1;
     padding: 3px 15px;
     font-size: 12px;
@@ -15823,10 +15823,10 @@ label.error {
 .ca-assisted-page .banner .question-slider .sidenav .example .button {
     float: left;
     padding: 10px 22px;
-    background: #3d506c;
+    background: #0186d7;
     color: #fff;
     font-size: 16px;
-    border: 1px solid #3d506c;
+    border: 1px solid #0186d7;
     border-left: none;
     cursor: pointer;
     border-radius: 0 3px 3px 0 !important;
@@ -15863,7 +15863,7 @@ label.error {
 .ca-assisted-page .banner .register-form #onfly-midway-submit-button,
 .ca-assisted-page .banner .register-form button[type="submit"],
 .ca-assisted-page .banner .register-form input[type="submit"] {
-    background: #3d506c;
+    background: #0186d7;
     color: #fff;
     border-radius: 3px;
     background-clip: padding-box;
@@ -16129,7 +16129,7 @@ label.error {
 }
 
 .ca-assisted-page .ca-assisted-message .modal-content .outer a {
-    background: #3d506c;
+    background: #0186d7;
     color: #fff;
     display: inline-block;
     padding: 10px 30px;
@@ -16221,7 +16221,7 @@ label.error {
 .lang-hindi .lp-midsection .heading hr {
     width: 40px;
     margin: 10px auto;
-    background: #3d506c;
+    background: #0186d7;
     height: 2px;
     border: none;
 }
@@ -16404,7 +16404,7 @@ label.error {
 
 .ca-assisted-new .question-panel-outer .question-panel .panel-body .register-form .form-control:focus,
 .ca-assisted-new .question-panel-outer .question-panel .panel-body .register-form .textBoxes:focus {
-    border-color: #3d506c;
+    border-color: #0186d7;
     transition: 0.7s;
     box-sizing: border-box;
     border-bottom: solid 2px #e97c1d;
@@ -16672,7 +16672,7 @@ label.error {
     display: inline-block;
     float: right;
     cursor: pointer;
-    color: #3d506c;
+    color: #0186d7;
     padding-top: 5px;
 }
 
@@ -16712,7 +16712,7 @@ label.error {
 
 .ca-assisted-new .question-panel-outer .question-panel .panel-body .plan-summary .coupon-code .enter-code button {
     border: none;
-    background: #3d506c;
+    background: #0186d7;
     color: #fff;
     font-size: 13px;
     padding: 5px 15px;
@@ -16725,7 +16725,7 @@ label.error {
 }
 
 .ca-assisted-new .question-panel-outer .question-panel .panel-body .plan-summary .coupon-code .enter-code .apply {
-    border: dotted 2px #3d506c;
+    border: dotted 2px #0186d7;
     background: #fff;
     padding: 3px 15px;
     font-size: 12px;
@@ -17114,7 +17114,7 @@ label.error {
 }
 
 .ca-assisted-popup .modal-content .outer a {
-    background: #3d506c;
+    background: #0186d7;
     color: #fff;
     display: inline-block;
     padding: 10px 30px;
@@ -17585,7 +17585,7 @@ label.error {
     height: 3px;
     margin: 15px auto 0;
     border: none;
-    background: #3d506c;
+    background: #0186d7;
 }
 
 .source-of-income .select-plan .checkbox input[type="checkbox"]+label bold {
@@ -17607,7 +17607,7 @@ label.error {
 .source-of-income .select-plan .checkbox input[type="checkbox"]:checked+label {
     transition: all 0.3s ease;
     box-shadow: 0 5px 20px #d6d6d6;
-    border-bottom: solid 3px #3d506c;
+    border-bottom: solid 3px #0186d7;
 }
 
 .source-of-income .select-plan .checkbox input[type="checkbox"]:checked+label bold {
@@ -18021,7 +18021,7 @@ label.error {
     height: 3px;
     margin: 15px auto 0;
     border: none;
-    background: #3d506c;
+    background: #0186d7;
 }
 
 .source-of-income.v3 .selected-plan .checkbox input[type="checkbox"]+label .bold-unchecked,
@@ -18044,7 +18044,7 @@ label.error {
 .source-of-income.v3 .selected-plan .checkbox.yes_select {
     transition: all 0.3s ease;
     box-shadow: 0 5px 20px #e6e6e6;
-    border-bottom: solid 3px #3d506c;
+    border-bottom: solid 3px #0186d7;
     border-radius: 4px;
     background-clip: padding-box;
 }
@@ -18599,7 +18599,7 @@ label.error {
     height: 2px;
     margin: 10px auto;
     border: none;
-    background: #3d506c;
+    background: #0186d7;
 }
 
 .efiling-proces-outer .filling-process .upload-form-16 .upload-outer .hr {
@@ -18607,7 +18607,7 @@ label.error {
     height: 2px;
     margin: -12px auto 28px;
     border: none;
-    background: #3d506c;
+    background: #0186d7;
 }
 
 .efiling-proces-outer .filling-process .upload-form-16 .upload-outer .upload-area {
@@ -18761,7 +18761,7 @@ label.error {
     height: 20px;
     border-radius: 50px;
     background-clip: padding-box;
-    border: solid 1px #3d506c;
+    border: solid 1px #0186d7;
     text-align: center;
     color: #000;
     line-height: 18px;
@@ -18858,7 +18858,7 @@ label.error {
     overflow: hidden;
     padding: 10px 28px;
     color: #fff;
-    background: #3d506c;
+    background: #0186d7;
     border-radius: 3px;
     background-clip: padding-box;
 }
@@ -19196,7 +19196,7 @@ label.error {
 
 .efiling-proces-outer .filling-process .form-control:focus,
 .efiling-proces-outer .filling-process .textBoxes:focus {
-    border-color: #3d506c;
+    border-color: #0186d7;
     transition: 0.7s;
     box-sizing: border-box;
     border-bottom: solid 2px #e97c1d;
@@ -19270,13 +19270,13 @@ label.error {
 }
 
 .efiling-proces-outer .filling-process .custom-radio [type="radio"]:checked+small:before {
-    border-color: #3d506c;
+    border-color: #0186d7;
     box-shadow: 0 0 10px #fff;
     position: relative;
 }
 
 .efiling-proces-outer .filling-process .custom-radio [type="radio"]:checked+small i {
-    background: #3d506c;
+    background: #0186d7;
 }
 
 .efiling-proces-outer .filling-process .custom-radio label {
@@ -19293,7 +19293,7 @@ label.error {
     width: 16px;
     height: 16px;
     content: "";
-    background: #3d506c;
+    background: #0186d7;
     position: absolute;
     left: 14px;
     bottom: 6px;
@@ -19545,7 +19545,7 @@ label.error {
 
 .efiling-proces-outer .filling-process .addSalBtnBox button,
 .efiling-proces-outer .filling-process .inlineAdd button {
-    background: #3d506c;
+    background: #0186d7;
     font-size: 12px;
     border: none;
     cursor: pointer;
@@ -19615,7 +19615,7 @@ label.error {
 
 .efiling-proces-outer .filling-process .comptopLeft strong i,
 .efiling-proces-outer .filling-process .comptopRight strong i {
-    color: #3d506c;
+    color: #0186d7;
 }
 
 .efiling-proces-outer .filling-process .computation-detail {
@@ -19774,7 +19774,7 @@ label.error {
 
 .efiling-proces-outer .addmore {
     border: none;
-    background: #3d506c;
+    background: #0186d7;
     color: #fff;
     font-size: 22px;
     padding: 0 10px;
@@ -20044,7 +20044,7 @@ label.error {
 }
 
 .tax-refund-status .banner .txt {
-    border-left: solid 3px #3d506c;
+    border-left: solid 3px #0186d7;
     padding-left: 40px;
     margin: 0 0 40px 0;
 }
@@ -20193,13 +20193,13 @@ label.error {
 }
 
 .tax-refund-status .banner .register-form .custom-radio [type="radio"]:checked+small:before {
-    border-color: #3d506c;
+    border-color: #0186d7;
     box-shadow: 0 0 10px #fff;
     position: relative;
 }
 
 .tax-refund-status .banner .register-form .custom-radio [type="radio"]:checked+small i {
-    background: #3d506c;
+    background: #0186d7;
 }
 
 .tax-refund-status .banner .register-form .custom-radio label {
@@ -20219,7 +20219,7 @@ label.error {
     width: 12px;
     height: 12px;
     content: "";
-    background: #3d506c;
+    background: #0186d7;
     position: absolute;
     left: 12px;
     bottom: 4px;
@@ -20272,7 +20272,7 @@ label.error {
 .tax-refund-status .banner .register-form #onfly-midway-submit-button,
 .tax-refund-status .banner .register-form button[type="button"],
 .tax-refund-status .banner .register-form input[type="button"] {
-    background: #3d506c;
+    background: #0186d7;
     color: #fff;
     border-radius: 2px;
     background-clip: padding-box;
@@ -20416,7 +20416,7 @@ label.error {
     border-radius: 2px;
     background-clip: padding-box;
     border: solid 1px #e6e6e6;
-    border-top: solid 3px #3d506c;
+    border-top: solid 3px #0186d7;
     padding: 30px;
     margin: 30px 0 30px 0;
 }
@@ -20482,7 +20482,7 @@ label.error {
 .tax-refund-status .tax-refund-report hr {
     width: 5%;
     border-width: 2px;
-    border-color: #3d506c;
+    border-color: #0186d7;
 }
 
 .tax-refund-status .tax-refund-report .panel {
@@ -20597,17 +20597,17 @@ label.error {
 }
 
 .tax-refund-status .tax-refund-report .refund-timeline article .refund-success span strong {
-    color: #3d506c;
+    color: #0186d7;
     display: block;
     font-size: 22px;
 }
 
 .tax-refund-status .tax-refund-report .refund-timeline article.done {
-    border-right: solid 3px #3d506c;
+    border-right: solid 3px #0186d7;
 }
 
 .tax-refund-status .tax-refund-report .refund-timeline article.done small {
-    background: #3d506c;
+    background: #0186d7;
     border-color: #e97c1d;
 }
 
@@ -20672,7 +20672,7 @@ label.error {
 
 .tax-refund-status .tax-refund-report .loader-outer .loader .line {
     position: absolute;
-    background: #3d506c;
+    background: #0186d7;
     width: 400px;
     height: 2px;
 }
@@ -20770,7 +20770,7 @@ header.lp-header .bottom hr {
     width: 50px;
     height: 3px;
     margin: 45px auto 0;
-    background: #3d506c;
+    background: #0186d7;
 }
 
 header.lp-header .bottom hr.hr {
@@ -20904,7 +20904,7 @@ header.lp-header.sticky-header .bottom {
     padding: 8px 28px;
     font-size: 13px;
     display: inline-block !important;
-    background: #3d506c;
+    background: #0186d7;
     color: #fff;
     border-radius: 3px;
     background-clip: padding-box;
@@ -20929,7 +20929,7 @@ header.lp-header.sticky-header .bottom {
 }
 
 .lp-banner .banner .services .ca-assisted a {
-    background: #3d506c;
+    background: #0186d7;
 }
 
 .lp-banner .banner .services h3 {
@@ -20953,7 +20953,7 @@ header.lp-header.sticky-header .bottom {
 .lp-banner .banner .services hr {
     width: 40px;
     height: 2px;
-    background: #3d506c;
+    background: #0186d7;
     border: none;
     margin: 10px auto 40px;
 }
@@ -20965,7 +20965,7 @@ header.lp-header.sticky-header .bottom {
 }
 
 .lp-banner .banner .coupon-code {
-    border: 2px #3d506c dashed;
+    border: 2px #0186d7 dashed;
     display: inline-block;
     background: #fff;
     padding: 10px 15px;
@@ -20986,7 +20986,7 @@ header.lp-header.sticky-header .bottom {
     top: -12px;
     left: 10px;
     font-size: 20px;
-    color: #3d506c;
+    color: #0186d7;
 }
 
 .lp-banner:hover .itr-element-1 {
@@ -21128,7 +21128,7 @@ header.lp-header.sticky-header .bottom {
 .lp-banner.lp-register .register-form #onfly-midway-submit-button,
 .lp-banner.lp-register .register-form button[type="submit"],
 .lp-banner.lp-register .register-form input[type="submit"] {
-    background: #3d506c;
+    background: #0186d7;
     color: #fff;
     border-radius: 3px;
     background-clip: padding-box;
@@ -21414,7 +21414,7 @@ header.lp-header.sticky-header .bottom {
     border-radius: 30px;
     background-clip: padding-box;
     box-shadow: none !important;
-    background: #3d506c !important;
+    background: #0186d7 !important;
     color: #fff !important;
 }
 
@@ -21582,7 +21582,7 @@ body {
     width: 50px;
     height: 3px;
     margin: 45px auto 0;
-    background: #3d506c;
+    background: #0186d7;
 }
 
 .icici-landing-page .lp-banner,
@@ -22052,8 +22052,8 @@ body {
 
 .icici-landing-page .how-it-works.pricing .panel section:hover a,
 .indusland-landing-newtheme .how-it-works.pricing .panel section:hover a {
-    background: #3d506c;
-    border-color: #3d506c;
+    background: #0186d7;
+    border-color: #0186d7;
     color: #fff;
 }
 
@@ -22284,7 +22284,7 @@ body {
     border: none;
     width: 40px;
     height: 3px;
-    background: #3d506c;
+    background: #0186d7;
     margin: 10px 0;
 }
 
@@ -22405,7 +22405,7 @@ body {
 .indusland-landing-newtheme table tr td strong i {
     font-size: 28px;
     vertical-align: middle;
-    color: #3d506c;
+    color: #0186d7;
 }
 
 .icici-landing-page table tr td table tr,
@@ -22601,7 +22601,7 @@ body {
 }
 
 .auto-loan-page .lp-banner .banner .loan-caption .cta-btn {
-    background: #3d506c;
+    background: #0186d7;
     cursor: pointer;
     padding: 14px 25px;
     color: #fff;
@@ -23080,8 +23080,8 @@ body {
 }
 
 .infosys-new-page .pricing-plan.pricing .panel section:hover a {
-    background: #3d506c;
-    border-color: #3d506c;
+    background: #0186d7;
+    border-color: #0186d7;
     color: #fff;
 }
 
@@ -23303,7 +23303,7 @@ body {
 .popover {
     padding: 0;
     border-radius: 3px;
-    border-top: solid 3px #3d506c;
+    border-top: solid 3px #0186d7;
 }
 
 .popover .popover-content {
@@ -23327,7 +23327,7 @@ body {
 .tooltip-inner {
     background-color: #fff;
     color: #000;
-    border-top: 3px solid #3d506c;
+    border-top: 3px solid #0186d7;
     padding: 10px;
     font-size: 12px;
     box-shadow: 0 0 10px #ccc;
@@ -23490,7 +23490,7 @@ body {
     background-color: #fff;
     border: none;
     color: #000;
-    border-top: 3px solid #3d506c;
+    border-top: 3px solid #0186d7;
     padding: 10px;
     font-size: 12px;
     box-shadow: 0 0 10px #ccc;
@@ -23743,7 +23743,7 @@ body {
 }
 
 .about-us-wrapper .about-us .some-insights .page .left h3 strong {
-    color: #3d506c;
+    color: #0186d7;
 }
 
 .about-us-wrapper .about-us .some-insights .page .left span {
@@ -24052,7 +24052,7 @@ body {
 
 .call-to-action .form-controltx {
     width: 100%;
-    border: 1px solid #3d506c;
+    border: 1px solid #0186d7;
     height: 60px;
     padding: 10px;
     padding-bottom: 3px;
@@ -24075,15 +24075,15 @@ body {
 }
 
 .call-to-action .btn:hover {
-    background: #3d506c;
-    border: 1px solid #3d506c;
+    background: #0186d7;
+    border: 1px solid #0186d7;
 }
 
 .call-to-action .click-btn {
     margin-top: 10px;
-    background: #3d506c;
+    background: #0186d7;
     padding: 6px 18px;
-    border: 1px solid #3d506c;
+    border: 1px solid #0186d7;
     color: #fff;
     cursor: pointer;
     border-radius: 3px;
@@ -24112,7 +24112,7 @@ body {
 }
 
 .call-to-action .cta-btn {
-    background: #3d506c;
+    background: #0186d7;
     cursor: pointer;
     padding: 12px 18px;
     color: #fff;
@@ -24273,7 +24273,7 @@ body {
     position: absolute;
     right: 40px;
     bottom: 25px;
-    background: #3d506c;
+    background: #0186d7;
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -24912,7 +24912,7 @@ img {
 }
 
 .guide-wrapper .guides-section .contents-indexing li a:hover {
-    color: #3d506c;
+    color: #0186d7;
 }
 
 .guide-wrapper .guides-section .contents-indexing li .child-indexing li {
@@ -24926,7 +24926,7 @@ img {
 }
 
 .guide-wrapper .guides-section .contents-indexing li .child-indexing li a:hover {
-    color: #3d506c;
+    color: #0186d7;
 }
 
 .guide-wrapper .guides-section .heading2 {
@@ -25181,7 +25181,7 @@ img {
 
 .tax-basices .guides-section .panel {
     padding: 10px;
-    border-top: solid 3px #3d506c !important;
+    border-top: solid 3px #0186d7 !important;
 }
 
 .tax-basices .guides-section .panel ul li {
@@ -26082,7 +26082,7 @@ img {
 }
 
 .full-view-page .faqs-section .ctb-bg .ad-bx2 a:hover h4 {
-    color: #3d506c;
+    color: #0186d7;
 }
 
 .full-view-page .faqs-section .ctb-bg .ad-bx2 .ad-icon2 {
@@ -27563,7 +27563,7 @@ img {
     border: none;
     width: 40px;
     height: 3px;
-    background: #3d506c;
+    background: #0186d7;
     margin: 10px 0;
 }
 
@@ -27678,7 +27678,7 @@ img {
 .questions-answers .banner .btn-post {
     background: #fff;
     color: #000;
-    border: 1px solid #3d506c;
+    border: 1px solid #0186d7;
     padding: 8px 30px;
     font-size: 14px;
     font-weight: 600;
@@ -27689,7 +27689,7 @@ img {
 }
 
 .questions-answers .banner .btn-post:hover {
-    border-color: #3d506c;
+    border-color: #0186d7;
 }
 
 .questions-answers .banner .form-horizontal-qa .with-fb {
@@ -27728,13 +27728,13 @@ img {
 }
 
 .questions-answers .question-listing .head-tab {
-    border-bottom: 1px solid #3d506c;
+    border-bottom: 1px solid #0186d7;
     margin-bottom: 15px;
 }
 
 .questions-answers .question-listing .head-tab h3 {
     display: inline-block;
-    color: #3d506c;
+    color: #0186d7;
     margin: 0;
     padding-top: 10px;
     font-size: 18px;
@@ -27750,8 +27750,8 @@ img {
 }
 
 .questions-answers .question-listing .head-tab .nav-tabs li.active a {
-    background: #3d506c;
-    border: 1px solid #3d506c;
+    background: #0186d7;
+    border: 1px solid #0186d7;
     color: #fff;
 }
 
@@ -27767,7 +27767,7 @@ img {
 
 .questions-answers .question-listing .ans-info .tm-0 span {
     width: 120px;
-    color: #3d506c;
+    color: #0186d7;
     font-size: 16px;
     display: inline-block;
 }
@@ -27891,7 +27891,7 @@ img {
 }
 
 .questions-answers .question-listing .question-summary .summary h3 .question-hyperlink:hover {
-    color: #3d506c;
+    color: #0186d7;
 }
 
 .questions-answers .question-listing .question-summary .summary .tags {
@@ -27949,7 +27949,7 @@ img {
     font-size: 16px;
     box-shadow: inset 0 1px 0 #73eb66;
     border-color: #1e8513;
-    background-color: #3d506c;
+    background-color: #0186d7;
 }
 
 .questions-answers .question-listing .sign-bx-1 a.btn {
@@ -27984,7 +27984,7 @@ img {
 }
 
 .questions-answers .question-listing .question-view .q-tab {
-    border-bottom: 1px solid #3d506c;
+    border-bottom: 1px solid #0186d7;
 }
 
 .questions-answers .question-listing .question-view .q-tab h3 {
@@ -28230,7 +28230,7 @@ img {
 }
 
 .questions-answers .question-listing .right-side-list .list-1 li a:hover {
-    color: #3d506c;
+    color: #0186d7;
 }
 
 .questions-answers .question-listing .right-side-list .newsletter {
@@ -28240,7 +28240,7 @@ img {
 }
 
 .questions-answers .question-listing .right-side-list .newsletter h4 {
-    color: #3d506c;
+    color: #0186d7;
     font-size: 24px;
     font-weight: 600;
 }
@@ -28263,7 +28263,7 @@ img {
     position: absolute;
     right: 0;
     top: 5px;
-    color: #3d506c;
+    color: #0186d7;
     background: 0 0;
     border: 0;
     height: 34px;
@@ -28273,7 +28273,7 @@ img {
 .questions-answers .question-listing .right-side-list .newsletter .input-bx span {
     position: absolute;
     top: 15px;
-    color: #3d506c;
+    color: #0186d7;
     left: 10px;
 }
 
@@ -28302,7 +28302,7 @@ img {
 }
 
 .questions-answers .question-listing .call-to-sign {
-    background: #3d506c;
+    background: #0186d7;
     position: relative;
     padding: 20px 10px;
     margin: 25px 0;
@@ -28331,7 +28331,7 @@ img {
     border-left: 15px solid transparent;
     content: "";
     border-right: 15px solid transparent;
-    border-bottom: 15px solid #3d506c;
+    border-bottom: 15px solid #0186d7;
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
@@ -28468,7 +28468,7 @@ img {
 }
 
 .rj-police-frm16 .banner h1 strong {
-    color: #3d506c;
+    color: #0186d7;
 }
 
 .rj-police-frm16 .banner ul {
@@ -28749,14 +28749,14 @@ img {
     box-shadow: 0 0 40px rgba(184, 188, 195, 0.1);
     font-weight: 500;
     color: #000;
-    border-left: 5px solid #3d506c;
+    border-left: 5px solid #0186d7;
     border-radius: 0;
 }
 
 .income-tax-efiling .status-bx .fa-file-o {
     position: relative;
     font-size: 24px;
-    color: #3d506c;
+    color: #0186d7;
 }
 
 .income-tax-efiling .guides-section {
@@ -28888,20 +28888,20 @@ img {
 }
 
 .income-tax-efiling .guides-section .screen-tab .tabs .tabs__header li a:hover {
-    color: #3d506c;
+    color: #0186d7;
 }
 
 .income-tax-efiling .guides-section .screen-tab .tabs .tabs__header li.active {
-    color: #3d506c;
-    border: 1px solid #3d506c;
+    color: #0186d7;
+    border: 1px solid #0186d7;
 }
 
 .income-tax-efiling .guides-section .screen-tab .tabs .tabs__header li.active:before {
-    border-left: 15px solid #3d506c;
+    border-left: 15px solid #0186d7;
 }
 
 .income-tax-efiling .guides-section .screen-tab .tabs .tabs__header li.active a {
-    color: #3d506c;
+    color: #0186d7;
 }
 
 .income-tax-efiling .guides-section .screen-tab .tabs .tabs__content {
@@ -28995,7 +28995,7 @@ img {
     content: "";
     width: 150px;
     height: 3px;
-    background: #3d506c;
+    background: #0186d7;
     left: 0;
     bottom: -1px;
 }
@@ -29087,7 +29087,7 @@ img {
 }
 
 .index-slide-panel .side-memu-links .panel-heading span[aria-expanded="true"] {
-    color: #3d506c;
+    color: #0186d7;
 }
 
 .index-slide-panel .side-memu-links .panel-heading span[aria-expanded="true"]:after {
@@ -29121,12 +29121,12 @@ img {
 .index-slide-panel .side-memu-links .ul_submenu li a:active,
 .index-slide-panel .side-memu-links .ul_submenu li a:focus,
 .index-slide-panel .side-memu-links .ul_submenu li a:hover {
-    color: #3d506c;
+    color: #0186d7;
     background: #fff;
 }
 
 .index-slide-panel .side-memu-links .ul_submenu li.active a {
-    color: #3d506c;
+    color: #0186d7;
 }
 
 .overfolow {
@@ -29364,7 +29364,7 @@ img {
         padding-right: 40px;
     }
     .overfolow .income-tax-efiling .guides-section .screen-tab .tabs .tabs__accordion-heading.active {
-        color: #3d506c;
+        color: #0186d7;
     }
     .overfolow .income-tax-efiling .guides-section .screen-tab .tabs .tabs__accordion-heading:before {
         font-size: 36px;
@@ -29546,7 +29546,7 @@ img {
         -webkit-transition: -webkit-transform 0.25s linear;
     }
     .income-tax-efiling .guides-section .panel-group .panel .panel-heading h2.panel-title a[aria-expanded="true"] {
-        color: #3d506c;
+        color: #0186d7;
     }
     .income-tax-efiling .guides-section .panel-group .panel .panel-heading h2.panel-title a[aria-expanded="true"]:after {
         content: "\2212";
@@ -29565,7 +29565,7 @@ img {
         padding-right: 40px;
     }
     .income-tax-efiling .guides-section .screen-tab .tabs .tabs__accordion-heading.active {
-        color: #3d506c;
+        color: #0186d7;
     }
     .income-tax-efiling .guides-section .screen-tab .tabs .tabs__accordion-heading:before {
         font-size: 36px;
@@ -29992,11 +29992,11 @@ img {
 }
 
 .site-login-signup .calculator-wrapper .right .form-control:focus {
-    border-color: #3d506c;
+    border-color: #0186d7;
 }
 
 .site-login-signup .calculator-wrapper .right button[type="submit"] {
-    background: #3d506c;
+    background: #0186d7;
     color: #fff;
     border-radius: 3px;
     background-clip: padding-box;
@@ -30404,7 +30404,7 @@ img {
 }
 
 .site-login-signup.new_flow .right button[type="submit"] {
-    background: #3d506c;
+    background: #0186d7;
     color: #fff;
     border-radius: 8px;
     background-clip: padding-box;
@@ -31283,7 +31283,7 @@ img {
     background-clip: padding-box;
     float: right;
     font-size: 22px;
-    color: #3d506c;
+    color: #0186d7;
     position: absolute;
     right: 20px;
     top: 15%;
@@ -31584,8 +31584,8 @@ img {
 
 .ctc-tax-optimiser .checkbox_select .custom-radio input[type="checkbox"]:checked+label small,
 .ctc-tax-optimiser .checkbox_select .custom-radio input[type="radio"]:checked+label small {
-    border-color: #3d506c;
-    background: #3d506c;
+    border-color: #0186d7;
+    background: #0186d7;
 }
 
 .ctc-tax-optimiser .checkbox_select .custom-radio input[type="checkbox"]:checked+label small i,
@@ -31878,7 +31878,7 @@ img {
 
 .tax-optimiser-v2 .callBx2 .callMnCA {
     display: inline-block;
-    color: #3d506c;
+    color: #0186d7;
     vertical-align: top;
     padding-left: 20px;
     margin-top: 5px;
@@ -36668,7 +36668,7 @@ label.error {
     border-radius: 3px;
     background-clip: padding-box;
     padding: 8px 20px;
-    border: solid 1px #3d506c;
+    border: solid 1px #0186d7;
     color: #000;
     font-size: 13px;
 }
@@ -36676,7 +36676,7 @@ label.error {
 .heading hr {
     width: 40px;
     margin: 10px auto;
-    background: #3d506c;
+    background: #0186d7;
     height: 2px;
     border: none;
 }
@@ -36705,7 +36705,7 @@ label.error {
     border-radius: 3px;
     background-clip: padding-box;
     padding: 8px 20px;
-    border: solid 1px #3d506c;
+    border: solid 1px #0186d7;
     color: #000;
     font-size: 13px;
 }
@@ -36870,7 +36870,7 @@ label.error {
 }
 
 .global-faqs .wrapper:hover .question {
-    background: #3d506c;
+    background: #0186d7;
 }
 
 .global-faqs img {
@@ -36936,7 +36936,7 @@ label.error {
     top: 0;
     width: 100px;
     height: 1px;
-    background: #3d506c;
+    background: #0186d7;
 }
 
 @font-face {
