@@ -11654,6 +11654,11 @@ header .bottom .logo img {
     width: 159px;
 }
 
+.logo img {
+    width: 159px;
+    height: auto;
+}
+
 header .bottom .navbar {
     float: right;
     margin: 5px 0 0 0;
