@@ -34,6 +34,7 @@ urlpatterns = [
 
     path('pricing', pricing, name="pricing"),
     path('privacy-policy', privacy_policy, name="privacy_policy"),
+    path('contact', privacy_policy, name="contact"),
     path('terms-condtion', terms_condition, name="terms_condition"),
     
     path('admin-view-categories', admin_view, name="admin_view"),
