@@ -55,7 +55,7 @@ def index(request):
     return render(request, 'index.html')
 
 
-@login_required(login_url='login')
+
 def direct_taxcation_questions(request):
 
     if request.method == 'POST':
@@ -92,7 +92,7 @@ def direct_taxcation_questions(request):
 
 
 
-@login_required(login_url='login')
+
 def indirect_taxcation_questions(request):
 
     
@@ -130,7 +130,7 @@ def indirect_taxcation_questions(request):
 
 
 
-@login_required(login_url='login')
+
 def virtual_book_questions(request):
 
 
@@ -172,7 +172,7 @@ def virtual_book_questions(request):
 
 
 
-@login_required(login_url='login')
+
 def company_llp_questions(request):
 
     print('dhdusdsudgusgdshdsygdb')
@@ -290,7 +290,9 @@ def refund_status(request):
 
 
 
+def pricing(request):
 
+    return render(request, 'pricing.html')
 
 
 
@@ -336,3 +338,7 @@ def privacy_policy(request):
 def terms_condition(request):
 
     return render(request, 'terms-condition.html')
+
+def admin_view(request):
+
+    return render(request, 'admin-list-options.html')

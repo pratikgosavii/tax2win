@@ -32,8 +32,11 @@ urlpatterns = [
     path('refund-status', refund_status, name="refund_status"),
     path('submit-services-request', submit_services_request, name="submit_services_request"),
 
+    path('pricing', pricing, name="pricing"),
     path('privacy-policy', privacy_policy, name="privacy_policy"),
     path('terms-condtion', terms_condition, name="terms_condition"),
+    
+    path('admin-view-categories', admin_view, name="admin_view"),
 
 ]
 
