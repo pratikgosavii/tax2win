@@ -753,6 +753,7 @@ ITR Now”</a> option at Namaste Rapid Tax.in and upload your Form 16. </li>
 
 
     <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <form class="modal-content" id="sample-demo">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header pb-0">
@@ -796,6 +797,8 @@ ITR Now”</a> option at Namaste Rapid Tax.in and upload your Form 16. </li>
 
     <div class="modal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
+            <form class="modal-content" id="sample-demo">
+
             <div class="modal-content">
                 <div class="modal-header pb-0">
                     <div>
@@ -814,7 +817,7 @@ ITR Now”</a> option at Namaste Rapid Tax.in and upload your Form 16. </li>
                             <label> Name (*As per PAN card) </label>
                             <input type="text" style="height: 45px;" id="name" style="margin-bottom: 14px;" class="form-control" placeholder="name">
                             <br><label> Mobile Number </label>
-                          <input type="text"  style="height: 45px;" id="mobile" style="margin-bottom: 14px;" class="form-control" placeholder="mobile">
+                          <input type="number"  style="height: 45px;" id="mobile" style="margin-bottom: 14px;" class="form-control" placeholder="mobile">
                           <br> <label> Convenient time for call back </label>
                             <input type="datetime-local"  style="height: 45px;" id="date_time" style="margin-bottom: 14px;" class="form-control" placeholder="pincode">
                         
@@ -824,14 +827,18 @@ ITR Now”</a> option at Namaste Rapid Tax.in and upload your Form 16. </li>
                       
                 </div>
                 <div class="modal-footer d-flex">
-                    <button type="button" style="width: 100%;background: #0186d7;" onclick="ajax_call_refund()" class="btn btn-secondary d-flex justify-content-center align-items-center" data-bs-dismiss="modal">
+                    <button type="submit" style="width: 100%;background: #0186d7;"  class="btn btn-secondary d-flex justify-content-center align-items-center" data-bs-dismiss="modal">
                          
                         <span class="d-block">Submit</span>
                     </button>
                 </div>
+          </form>
+
             </div>
         </div>
     </div>
+
+
 
 
 {% endblock content %}
@@ -863,7 +870,14 @@ ITR Now”</a> option at Namaste Rapid Tax.in and upload your Form 16. </li>
 
 
     
-    function ajax_call(){
+    $(document).ready(function() {
+        $('#sample-demo').on('submit', function(e){
+          // validation code here
+          e.preventDefault();
+
+
+
+          alert('kshdskdjws')
 
         name = document.getElementById("name").value;
         mobile = document.getElementById("mobile").value;
@@ -900,49 +914,11 @@ ITR Now”</a> option at Namaste Rapid Tax.in and upload your Form 16. </li>
 
             
             });
-
-
-        }
     
-    function ajax_call_refund(){
-
-        name = document.getElementById("name").value;
-        mobile = document.getElementById("mobile").value;
-        date_time = document.getElementById("date_time").value;
-
-
-        $.ajax({
-            cache: false, // initialize an AJAX request
-            type: "POST",
-            url: "{% url 'submit_services_request' %}",
-            data: {
-                csrfmiddlewaretoken:  '{{ refund_status  }}',
-                name : name,
-                mobile : mobile,
-                date_time : date_time,
-                services : services,
-               
-            },
-    
-
-
-
-            success: function (data) {
-
-
-                      myModal.hide();
-                      
-                      myModal_su.show();
-
-                     
-
-            }
-
-            
-            });
-
-
-        }
+   
+       
+        });
+    });
 
 
 

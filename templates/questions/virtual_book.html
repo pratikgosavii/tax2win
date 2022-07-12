@@ -188,7 +188,7 @@
 
 <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <form class="modal-content">
+        <form class="modal-content" id="sample-demo">
             <div class="modal-header pb-0">
                 <div>
                     <h5 class="modal-title" id="exampleModalLabel">Your details</h5>
@@ -206,7 +206,7 @@
                         <label> Name (*As per PAN card) </label>
                         <input type="text" style="height: 45px;" id="name" style="margin-bottom: 14px;" class="form-control" placeholder="name" required>
                         <br required<label> Mobile Number </label>
-                      <input type="text"  style="height: 45px;" id="mobile" style="margin-bottom: 14px;" class="form-control" placeholder="mobile" required>
+                      <input type="number"  style="height: 45px;" id="mobile" style="margin-bottom: 14px;" class="form-control" placeholder="mobile" required>
                       <br> <label> Convenient time for call back </label>
                         <input type="datetime-local"  style="height: 45px;" id="date_time" style="margin-bottom: 14px;" class="form-control" placeholder="pincode" required>
                         
@@ -217,7 +217,7 @@
                   
             </div>
             <div class="modal-footer d-flex">
-                <button type="submit" style="width: 100%;background: #0186d7;" onclick="ajax_call()" class="btn btn-secondary d-flex justify-content-center align-items-center" data-bs-dismiss="modal">
+                <button type="submit" style="width: 100%;background: #0186d7;" class="btn btn-secondary d-flex justify-content-center align-items-center" data-bs-dismiss="modal">
                      
                     <span class="d-block">Submit</span>
                 </button>
@@ -226,7 +226,7 @@
     </div>
 </div>
 
-<div class="modal" style="margin-top: 93px;" id="abcd" tabindex="-1" aria-labelledby="exampleModal_suLabel" aria-hidden="true">
+<div class="modal" style="margin-top: 93px;overflow: inherit;" id="abcd" tabindex="-1" aria-labelledby="exampleModal_suLabel" aria-hidden="true">
     <div class="modal-dialog">
            
             <div class="modal-body d-flex flex-column gap-2">
@@ -273,7 +273,10 @@
     })
 
 
-    function ajax_call(){
+    $(document).ready(function() {
+      $('#sample-demo').on('submit', function(e){
+        // validation code here
+        e.preventDefault();
 
 
 
@@ -336,8 +339,9 @@
 
 
 
-      } 
-
+      
+          });
+        });
 
 
     

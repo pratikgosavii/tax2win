@@ -48,6 +48,12 @@
 
     <style>
 
+
+        .logoimg {
+          
+            top: -36px !important;
+        }
+
         .banner .banner-carousel {
             height: auto;
             
@@ -69,7 +75,8 @@
             }
 
             .logo img {
-                width: 86px !important;
+                width: 111px !important;
+    height: 89px !important;
             }
 
             .logoimg {
@@ -78,7 +85,7 @@
                 margin: 0px !important;
                 position: fixed !important;
                 overflow: hidden !important;
-                top: -9px !important;
+                top: -11px !important;
             }
 
             .navstyle{
@@ -93,6 +100,10 @@
 
             .burg{
                 top: 45px;
+            }
+
+            .dropdo{
+                margin-top : 43px !important;
             }
             
         }
@@ -116,11 +127,15 @@
     <header class="clearfix ">
 
         <div class="clearfix"></div>
-        <section class="bottom">
+        <section class="bottom" 
+        style="background: black;"
+    >
             <div class="container">
                 <div class="row">
                     <div class="col-md-2 col-sm-12 col-xs-12 navstyle">
-                        <a href="{% url 'index' %}" class="logo"><img style="top: -23px !important;position: absolute;" src="{% static 'img/new-logo.png' %}" title="Income Tax Filing Online" alt="Income Tax Filing Online" class="logoimg" width="159" height="37" /></a>
+                        <a href="{% url 'index' %}" class="logo"><img style="
+                            position: absolute;
+                            z-index: 9999;" src="{% static 'img/new-logo.png' %}" title="Income Tax Filing Online" alt="Income Tax Filing Online" class="logoimg" width="159" height="37" /></a>
                     </div>
                     <div class="col-md-10 col-sm-12 col-xs-12">
 
@@ -139,22 +154,15 @@
                                         "></span>
                                 </button>
                             </div>
-                            <div id="navbar" class="navbar-collapse collapse">
-                                <!-- <ul class="nav navbar-nav">
+                            <div id="navbar" class="navbar-collapse collapse dropdo">
+                               <ul class="nav navbar-nav">
 
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Services <span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="efile-income-tax-return/sources-of-income.html" title="File Income Tax Return" data-ctid="button-file-your-return-33a0ad467c">File Your Return</a></li>
-                                            <li><a href="efile-income-tax-return/upload-form16.html" title="File ITR from Form 16" data-ctid="button-upload-form-16-d90fe35717">Upload Form 16</a></li>
-                                            <li><a href="ca-assisted.html" title="File ITR with CA" data-ctid="button-ca-assistanant-tax-filling-720df06c70">CA Assisted Tax Filing</a></li>
-                                            <li><a href="income-tax-refund-status.html" title="Income Tax Refund Status" data-ctid="button-refund-status-5b47851085">Refund Status</a></li>
-                                            <li><a href="services/tds-solution.html" title="TDS Solution" data-ctid="button-tds-solution-cdb226871a">TDS Solution</a></li>
-                                            <li><a href="plan-tax-file-itr.html" title="Plan Tax & File ITR" data-ctid="button-plan-tax-file-itr-994eac7c93">Plan Tax & File ITR</a></li>
-                                            <li><a href="nri-tax-filing.html" title="NRI Taxes & ITR Filing" data-ctid="button-nri-taxes-itr-filling-ac4c63eda1">NRI Taxes & ITR Filing</a></li>
-                                        </ul>
+                                        
                                     </li>
-                                    <li class="dropdown">
+                                </ul>
+                                     <!-- <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Tools <span class="caret"></span></a>
                                         <ul class="dropdown-menu tools_menu">
                                             <li>

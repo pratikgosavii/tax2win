@@ -134,7 +134,7 @@ class virtual_book_questions(models.Model):
     
     Book_keeping_and_accountancy = models.BooleanField()
     Finalisation_of_accounts_books = models.BooleanField()
-    All_other_MCA_compliances  = models.BooleanField()
+    MIS_reports_Receivables_Ageing_report  = models.BooleanField()
 
 
 
