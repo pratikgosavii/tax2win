@@ -228,7 +228,15 @@
                                         </ul>
                                     </li>-->
                                     <li><a style="background:white;margin-right:10px;" href="contact-us.html" title="Contact Tax2win" data-ctid="button-contact-3d8ea0e7de">Contact</a></li>
-                                    <li style="border:none;" class="log-in"><a href="user/login.html" class="login" title="Log In" data-ctid="button-login-signup-780bc5c1cc">Log In</a> / <a href="user/register.html" class="login" title="Sign Up" data-ctid="button-login-signup-780bc5c1cc">Sign Up</a>
+                                    {% if user.is_authenticated %}
+                                    
+                                        <li style="border:none;" class="log-in"><a href="{% url 'logout' %}" class="login" title="Log In" data-ctid="button-login-signup-780bc5c1cc">Logout</a>
+                                    
+                                    {% else %}
+
+                                        <li style="border:none;" class="log-in"><a href="{% url 'login' %}" class="login" title="Log In" data-ctid="button-login-signup-780bc5c1cc">Log In</a> / <a href="{% url 'register' %}" class="login" title="Sign Up" data-ctid="button-login-signup-780bc5c1cc">Sign Up</a>
+
+                                    {% endif %}
                                 </ul> 
                             </div>
                         </nav>
@@ -312,50 +320,17 @@
             </div>
         </section>
         <header class="clearfix ">
-        <section class="top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-9 col-sm-9 col-xs-12 hidden-xs latest_news"> <span class="news_t">Latest News :-</span>
-                        <div class="news_text hidden">
-                            <ul>
-                                <li>
-                                    <span>&nbsp;&nbsp;New IT Rule 12AB now requires Compulsory Return Filing in all circumstances where limitations in the previous financial year were exceeded for the following: - Business Turnover of Rs. 60 lacs, Professional Receipts of Rs. 10 lacs, TDS & TCS of Rs.25,000, or if the deposit in Saving Bank Accounts is equal to or more than 50 lacs&nbsp;</span>
-                                </li>
-                                <li>
-                                    <span>&nbsp;&nbsp;Contribution in NPS to be increased to 14% for state government employees.&nbsp;</span>
-                                </li>
-                                <li>
-                                    <span>&nbsp;&nbsp;Taxpayers can now update their income tax returns till 2 years.&nbsp;</span>
-                                </li>
-                                <li>
-                                    <span>&nbsp;&nbsp;Virtual digital assets shall be taxable at a flat 30% without any deduction.&nbsp;</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class=" social-icons">
-                            <a href="https://www.facebook.com/tax2win" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('https://www.facebook.com/tax2win', '_blank', 'width=800,height=600,scrollbars=yes,menubar=no,status=yes,resizable=yes,screenx=0,screeny=0'); return false;"
-                                rel="nofollow" title="Facebook" data-ctid="button-facebook-87bc9b86e2" data-cf-modified-ea33cef389775e130f30c516-=""><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://twitter.com/tax2win"
-                                onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('https://twitter.com/tax2win', '_blank', 'width=800,height=600,scrollbars=yes,menubar=no,status=yes,resizable=yes,screenx=0,screeny=0'); return false;" rel="nofollow"
-                                title="Twitter" data-ctid="button-twitter-9f9f8dd99b" data-cf-modified-ea33cef389775e130f30c516-=""><i class="fa fa-twitter" aria-hidden="true"></i></a><a href="https://www.linkedin.com/company/tax2win" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('https://www.linkedin.com/company/tax2win', '_blank', 'width=800,height=600,scrollbars=yes,menubar=no,status=yes,resizable=yes,screenx=0,screeny=0'); return false;"
-                                rel="nofollow" title="Linkedin" data-ctid="button-linkedln-26aff8241b" data-cf-modified-ea33cef389775e130f30c516-=""><i class="fa fa-linkedin" aria-hidden="true"></i></a><a href="https://www.youtube.com/channel/UCI5JZW94yuU6pxH6yKTwuOw/featured"
-                                onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('https://www.youtube.com/channel/UCI5JZW94yuU6pxH6yKTwuOw/featured', '_blank', 'width=800,height=600,scrollbars=yes,menubar=no,status=yes,resizable=yes,screenx=0,screeny=0'); return false;"
-                                rel="nofollow" title="Youtube" data-ctid="button-youtube-06f44bd209" data-cf-modified-ea33cef389775e130f30c516-=""><i class="fa fa-youtube" aria-hidden="true"></i></a><a href="https://www.instagram.com/tax2win/" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('https://www.instagram.com/tax2win/', '_blank', 'width=800,height=600,scrollbars=yes,menubar=no,status=yes,resizable=yes,screenx=0,screeny=0'); return false;"
-                                rel="nofollow" title="Instagram" data-ctid="button-instagram-cff8c34b04" data-cf-modified-ea33cef389775e130f30c516-=""><i class="fa fa-instagram" aria-hidden="true"></i></a> </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+       
         <section class="copyright">
             <div class="container">
+                
             <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
-            © 2022 <a href="{% url 'privacy_policy' %}" title="File Income Tax Return">Namaste Rapid Tax</a>. All Rights Reserved.
+                
+            © 2022  <a title="File Income Tax Return">Namaste Rapid Tax</a>. All Rights Reserved.
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-            <a href="{% url 'terms_condition' %}">Terms &amp; Conditions</a> | <a href="https://tax2win.in/legal/privacy-policy">Privacy Policy</a> </div>
+            <a href="{% url 'terms_condition' %}">Terms &amp; Conditions</a> | <a <a href="{% url 'privacy_policy' %}">Privacy Policy</a> </div>
             </div>
             </div>
             </section>

@@ -54,11 +54,11 @@ def index(request):
 
     return render(request, 'index.html')
 
+
+@login_required(login_url='login')
 def direct_taxcation_questions(request):
 
     if request.method == 'POST':
-
-        
 
         date_time = request.POST.get('date_time')
 
@@ -87,6 +87,12 @@ def direct_taxcation_questions(request):
 
         return render(request, 'questions/direct_taxation.html')
 
+
+
+
+
+
+@login_required(login_url='login')
 def indirect_taxcation_questions(request):
 
     
@@ -120,6 +126,11 @@ def indirect_taxcation_questions(request):
 
         return render(request, 'questions/indirect_taxation.html')
 
+
+
+
+
+@login_required(login_url='login')
 def virtual_book_questions(request):
 
 
@@ -155,6 +166,13 @@ def virtual_book_questions(request):
 
         return render(request, 'questions/virtual_book.html')
 
+
+
+
+
+
+
+@login_required(login_url='login')
 def company_llp_questions(request):
 
     print('dhdusdsudgusgdshdsygdb')

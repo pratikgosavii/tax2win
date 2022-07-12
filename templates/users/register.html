@@ -6,10 +6,14 @@
 {% endblock head %} {% block content %}
 
 
-<section class="site-login-signup">
+<section class="banner site-login-signup">
+    <div class="banner">
+        <div class="top-relement"></div>
+
+    </div>
 
     <div class="container clearfix ">
-        <div class="row " style="margin-top:52px;">
+        <div class="row">
             <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1 clearfix ">
                 <div class="row calculator-wrapper ">
                     <div class="col-md-6 col-sm-5 col-xs-12 left ">
@@ -30,17 +34,20 @@
                         </div><br class="hidden-xs "><br class="hidden-xs ">
                         <img src="../assets-new/img/signup-element.png " alt=" " class="laptop_elmt hidden-xs "> </div>
                     <div class="col-md-6 col-sm-7 col-xs-12 right ">
-                        <form action="https://tax2win.in/user/register " class="validate " id="loginForm " autocomplete="off " method="post " accept-charset="utf-8 ">
-                            <div class="form-group "><label for="first_name ">First Name</label><input type="text " name="first_name " value=" " id="first_name " class="textBoxes required form-control " maxlength="25 " />
+                        <form action="{% url 'register' %}" class="validate " autocomplete="off " method="post">
+                            {% csrf_token %}
+                            <div class="form-group "><label for="first_name ">First Name</label><input type="text " name="first_name" id="first_name " class="textBoxes required form-control " maxlength="25 " />
                             </div>
-                            <div class="form-group "><label for="last_name ">Last Name <span class="required ">*</span></label><input type="text " name="last_name " value=" " id="last_name " class="textBoxes required form-control " maxlength="75 " />
+                            <div class="form-group "><label for="last_name ">Last Name <span class="required ">*</span></label><input type="text " name="last_name" id="last_name " class="textBoxes required form-control " maxlength="75 " />
                             </div>
-                            <div class="form-group "><label for="email ">Email address <span class="required ">*</span></label><input type="email " name="email " value=" " id="email " class="textBoxes required form-control " maxlength="125 " />
+                            <div class="form-group "><label for="email ">Email address <span class="required ">*</span></label><input type="email " name="email" id="email " class="textBoxes required form-control " maxlength="125 " />
                             </div>
-                            <div class="form-group "><label for="mobile_no ">Mobile Number <span class="required ">*</span></label><input type="number " name="username " value=" " min=" " max=" " step=" " id="mobile_no " class="textBoxes required form-control
+                            <div class="form-group "><label for="mobile_no ">Mobile Number <span class="required ">*</span></label><input type="number " name="mobile_no" min=" " max=" " step=" " id="mobile_no " class="textBoxes required form-control
     " maxlength="10 " />
                             </div>
-                            <div class="form-group paswrdShow "><label for="password ">Password <span class="required ">*</span></label><input type="password " name="password " value=" " class="textBoxes required form-control " id="password " />
+                            <div class="form-group paswrdShow "><label for="password ">Password <span class="required ">*</span></label><input type="password " name="password1" class="textBoxes required form-control " id="password " />
+                            </div>
+                            <div class="form-group paswrdShow "><label for="password ">Confirm Password <span class="required ">*</span></label><input type="password " name="password2" class="textBoxes required form-control " id="password " />
                             </div>
                             <div class="custom_check margin2 ">
 

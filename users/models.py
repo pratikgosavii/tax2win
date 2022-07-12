@@ -7,6 +7,7 @@ class UserManager(BaseUserManager):
     """Define a model manager for User model with no username field."""
 
     use_in_migrations = True
+    
 
     def _create_user(self, email, password, **extra_fields):
         """Create and save a User with the given email and password."""
@@ -41,5 +42,12 @@ class User(AbstractUser):
     """User model."""
 
     ## Here goes the model definition from before. ##
+
+    username = None
+    email = models.EmailField(_('email address'), unique=True) 
+    mobile_no = models.IntegerField(blank=True, null=True,) 
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
 
     objects = UserManager() ## This is the new line in the User model. ##

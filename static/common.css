@@ -29796,7 +29796,7 @@ img {
 
 .site-login-signup .banner {
     overflow: hidden;
-    padding: 180px 0 60px 0;
+    padding: 100px 0 60px 0;
 }
 
 .site-login-signup .banner .txt h1 {
@@ -33298,7 +33298,7 @@ img {
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
     .banner {
-        padding: 160px 0 60px 0;
+        padding: 90px 0 60px 0;
         height: auto;
     }
     .banner .left-element,

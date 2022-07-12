@@ -10,38 +10,48 @@ from .forms import *
 def login_page(request):
     forms = LoginForm()
     if request.method == 'POST':
-        forms = LoginForm(request.POST)
-        if forms.is_valid():
-            username = forms.cleaned_data['username']
-            password = forms.cleaned_data['password']
-            user = authenticate(username=username, password=password)
-
-            
-            if user:
-                print('yes')
-                login(request, user)
-                return redirect('dashboard')
-
-            else:
-
-                msg = 'Credentials wrong'
 
 
-                context = {
-                    'msg': msg,
-                    'form': forms,
-                }
-                return render(request, 'users/login.html', context)
+
+
+        print('in')
+
+    
+        print('1')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        user = authenticate(email=email, password=password)
+        print('2')
+
         
+        if user:
+            print('yes')
+            login(request, user)
+
+            if 'next' in request.POST:
+                return redirect(request.POST.get('next'))
+            return redirect('index')
+
         else:
 
-           
+            print('----------------')
+
+            msg = 'Credentials wrong'
+
+            print('not done')
+            print(forms.errors)
+            print('---------------------------')
+
+
             context = {
+                'msg': msg,
                 'form': forms,
-                }
+            }
             return render(request, 'users/login.html', context)
-    context = {'form': forms}
-    return render(request, 'users/login.html', context)
+    
+        
+    
+    return render(request, 'users/login.html')
 
 
 
@@ -49,20 +59,30 @@ def register_page(request):
 
     forms = registerForm()
     if request.method == 'POST':
+        print('1')
         forms = registerForm(request.POST)
         if forms.is_valid():
+            print('2')
+
             forms.save()
             email = forms.cleaned_data['email']
             password = forms.cleaned_data['password1']
             user = authenticate(email=email, password=password)
+            print('3')
+
             if user:
                 
                 messages.error(request, 'user already exsist')
                 messages.success(request, 'sdst')
+                print('done')
                 return redirect('register')
             else:
+                print('no')
+
                 return redirect('register')
         else:
+
+            print(forms.errors)
 
             context = {
                 'form': forms,
@@ -119,5 +139,6 @@ def register_showroom(request, username, password):
 
 
 def logout_page(request):
+    print('in logit')
     logout(request)
     return redirect('login')
