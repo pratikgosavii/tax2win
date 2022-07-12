@@ -317,4 +317,4 @@ def privacy_policy(request):
 
 def terms_condition(request):
 
-    return render(request, 'term-condition.html')
+    return render(request, 'terms-condition.html')

@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from .views import *
 
 from django.conf import settings
@@ -22,6 +22,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('users/', include('users.urls')),
     path('', index, name="index"),
     path('direct-taxcation-questions', direct_taxcation_questions, name="direct_taxcation_questions"),
     path('indirect-taxcation-questions', indirect_taxcation_questions, name="indirect_taxcation_questions"),
