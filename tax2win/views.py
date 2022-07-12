@@ -308,3 +308,13 @@ def submit_services_request(request):
     else:
 
         print(forms.errors)
+
+
+
+def privacy_policy(request):
+
+    return render(request, 'privacy-policy.html')
+
+def terms_condition(request):
+
+    return render(request, 'term-condition.html')

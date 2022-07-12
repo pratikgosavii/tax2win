@@ -31,6 +31,9 @@ urlpatterns = [
     path('refund-status', refund_status, name="refund_status"),
     path('submit-services-request', submit_services_request, name="submit_services_request"),
 
+    path('privacy-policy', privacy_policy, name="privacy_policy"),
+    path('terms-condtion', terms_condition, name="terms_condition"),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL,
