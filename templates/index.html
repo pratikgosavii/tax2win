@@ -10,6 +10,10 @@
             
         }
 
+        .tawk-button{
+            background-color : #0186d7 !important;
+        }
+
         @media (max-width:420px)  {
 
             .banner{
@@ -23,10 +27,34 @@
 
             .logo img {
                 width: 86px !important;
-                height: 29px !important;
+            }
+
+            .logoimg {
+                height: 77px !important;
+                padding: 0px !important;
+                margin: 0px !important;
+                position: fixed !important;
+                overflow: hidden !important;
+                top: -9px !important;
+            }
+
+            .navstyle{
+                background: black !important;
+                height: 55px !important;
+                position: fixed !important;
+            }
+
+            .bottom{
+                padding : 0px !important;
+            }
+
+            .burg{
+                top: 45px;
             }
             
         }
+
+   
 
             
     </style>
@@ -43,7 +71,7 @@
     <div class="left-element hidden-xs"></div>
     <div class="right-element hidden-xs"></div>
     <div class="container text-center">
-        <div class="txt w3-animate-opacity"> <span>Welcome to Namaste Ventures</span>
+        <div class="txt w3-animate-opacity"> <span>Welcome to Namaste Rapid Tax</span>
             <hr>
             <h1 class="h1mobile">
                 Easiest Way of e-filing your
@@ -214,44 +242,44 @@ update.<br> <a href="guide/crypto-assets-taxation.html" title="Taxation Guide">R
                             Planning And
                             Compliance</h3>
                         {% comment %} <p>Get your personal eCA to do tax filing for you. And it is personal, convenient & fast with maximum refund calculated for you.</p> {% endcomment %}
-                        <a href="{% url 'direct_taxcation_questions' %}" class="btn" title="Tax Filing Help" data-ctid="card-clicked-get-a-personal-eca-6adc80e418">Book Now &rightarrow;</a> </div>
+                        <a style="color:black;" href="{% url 'direct_taxcation_questions' %}" class="btn"  data-ctid="card-clicked-get-a-personal-eca-6adc80e418">Book Now &rightarrow;</a> </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="card file-itself clearfix">
+                <div class="card file-itself clearfix" style="background-color:#cce6f7">
                     <div class="col-md-3 col-sm-4 col-xs-3">
-                        <img src="{% static 'new/file_1.png' %}" alt="File Income Tax" class="img-responsive" title="File Income Tax" width="63" height="74" /> </div>
+                        <img src="{% static 'new/file_1.png' %}" alt="File Income Tax" class="img-responsive" width="63" height="74" /> </div>
                     <div class="col-md-9 col-sm-8 col-xs-9 card-txt">
                         <h3>Indirect
                             Taxation
                             Planning And
                             Compliance</h3>
-                        {% comment %} <p>You can file your ITR on your own. It's Easy, quick & free when you file with Namaste Ventures on your own. {% endcomment %}
-                        <a  href="{% url 'indirect_taxcation_questions' %}" class="btn" title="File Income Tax Yourself" data-ctid="card-clicked-file-it-yourself-758cd3ca6a">File Now &rightarrow;</a> </div>
+                        {% comment %} <p>You can file your ITR on your own. It's Easy, quick & free when you file with Namaste Rapid Tax on your own. {% endcomment %}
+                        <a style="color:black;" href="{% url 'indirect_taxcation_questions' %}" class="btn" data-ctid="card-clicked-file-it-yourself-758cd3ca6a">File Now &rightarrow;</a> </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
 
-                <div class="card file-itself clearfix">
+                <div class="card file-itself clearfix" style="background-color:#b2daf3">
                     <div class="col-md-3 col-sm-4 col-xs-3">
-                        <img src="{% static 'new/file_2.png' %}" alt="File Income Tax" class="img-responsive" title="File Income Tax" width="63" height="74" /> </div>
+                        <img src="{% static 'new/file_2.png' %}" alt="File Income Tax" class="img-responsive" width="63" height="74" /> </div>
                     <div class="col-md-9 col-sm-8 col-xs-9 card-txt">
                         <h3>Company/LLP
                             Formation And
                             Compliance</h3>
-                        {% comment %} <p>You can file your ITR on your own. It's Easy, quick & free when you file with Namaste Ventures on your own. {% endcomment %}
-                        <a href="{% url 'company_llp_questions' %}" class="btn" title="File Income Tax Yourself" data-ctid="card-clicked-file-it-yourself-758cd3ca6a">File Now &rightarrow;</a> </div>
+                        {% comment %} <p>You can file your ITR on your own. It's Easy, quick & free when you file with Namaste Rapid Tax on your own. {% endcomment %}
+                        <a style="color:black;" href="{% url 'company_llp_questions' %}" class="btn" title="File Income Tax Yourself" data-ctid="card-clicked-file-it-yourself-758cd3ca6a">File Now &rightarrow;</a> </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="card ca-assisted clearfix">
+                <div class="card ca-assisted clearfix" style="background-color:#b5d9ef">
                     <div class="col-md-3 col-sm-4 col-xs-3">
                         <img src="{% static 'img/revised_return.png' %}" alt="CA Assistance" class="img-responsive" title="CA Assisted ITR Filing" width="87" height="87" /> </div>
                     <div class="col-md-9 col-sm-8 col-xs-9 card-txt">
                         <h3>Virtual Book Keeping
                             And Accontancy(CFO)</h3>
                         {% comment %} <p>Get your personal eCA to do tax filing for you. And it is personal, convenient & fast with maximum refund calculated for you.</p> {% endcomment %}
-                        <a href="{% url 'virtual_book_questions' %}" class="btn" title="Tax Filing Help" data-ctid="card-clicked-get-a-personal-eca-6adc80e418">Book Now &rightarrow;</a> </div>
+                        <a style="color:black;" href="{% url 'virtual_book_questions' %}" class="btn" title="Tax Filing Help" data-ctid="card-clicked-get-a-personal-eca-6adc80e418">Book Now &rightarrow;</a> </div>
                 </div>
             </div>
 
@@ -442,7 +470,7 @@ Refund Status</a>
 
                     <div class="wrapper">
                         <article class="green_box">
-                            <p>Namaste Ventures helped me file my ITR with foreign income. Yash Soni was really helpful and always available to answer my doubts and ensure everything went smoothly.</p>
+                            <p>Namaste Rapid Tax helped me file my ITR with foreign income. Yash Soni was really helpful and always available to answer my doubts and ensure everything went smoothly.</p>
                             <div class="c_detail">
                                 <figure><img alt="" src="{% static 'img/testimonials/neeladari-sen.png' %}" alt="Neeladri Sen" title="Neeladri Sen" class="c_img" loading="lazy" width="60" height="60">
                                 </figure>
@@ -472,7 +500,7 @@ Refund Status</a>
                     </div>
                     <div class="wrapper">
                         <article>
-                            <p>Good service, quick response, Interacting friendly.Thank you Namaste Ventures team for filing my ITR especially to Aishwarya Jaju.</p>
+                            <p>Good service, quick response, Interacting friendly.Thank you Namaste Rapid Tax team for filing my ITR especially to Aishwarya Jaju.</p>
                             <div class="c_detail">
                                 <figure><img alt="" src="{% static 'img/testimonials/swaminathan-pillai.png' %}" alt="Swaminathan Pillai" class="c_img" loading="lazy" width="60" height="60">
                                 </figure>
@@ -606,7 +634,7 @@ Refund Status</a>
                 <img src="{% static 'img/man-laptop.png' %}" alt="Tax2win Income Tax" class="img-responsive why-t2w" title="Tax2win Income Tax" loading="lazy" width="393" height="299">
             </div>
             <div class="col-md-7 col-sm-8 col-xs-12 right">
-                <div class="heading"><span>Namaste Ventures</span>
+                <div class="heading"><span>Namaste Rapid Tax</span>
                     <hr>
                 </div>
                 <h2>Best income tax efiling website in India</h2>
@@ -700,9 +728,9 @@ filing my Income Tax Return?</a>
                         </div>
                         <div id="collapse4" class="panel-collapse collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                             <div class="panel-body" itemprop="text">
-                                <p>Income Tax online filing is a simple process and can be done by sitting at home for free with Namaste Ventures.</p>
+                                <p>Income Tax online filing is a simple process and can be done by sitting at home for free with Namaste Rapid Tax.</p>
                                 <ul>
-                                    <li>Step 1: Visit <a href="index.html">the Namaste Ventures</a> website. Here, click on the option <a href="efile-income-tax-return/sources-of-income.html">“File
+                                    <li>Step 1: Visit <a href="index.html">the Namaste Rapid Tax</a> website. Here, click on the option <a href="efile-income-tax-return/sources-of-income.html">“File
 ITR Now”</a>.</li>
                                     <li>Step 2: Here Select your source of Income and click on continue.</li>
                                     <li>Step 3: If you're a salaried individual, Just Upload your Form 16. If you do not have any form 16 then you can simply skip the option and move further.</li>
@@ -724,8 +752,8 @@ ITR Now”</a>.</li>
                                 <p>The procedure to e-file return with form-16 is as follows:</p>
                                 <ul>
                                     <li>Step 1: Choose "File It Yourself" and click on the <a href="efile-income-tax-return/sources-of-income.html">“File
-ITR Now”</a> option at Namaste Ventures.in and upload your Form 16. </li>
-                                    <li>Step 2: After uploading form 16, Namaste Ventures software will auto-fill the Form 16 data.
+ITR Now”</a> option at Namaste Rapid Tax.in and upload your Form 16. </li>
+                                    <li>Step 2: After uploading form 16, Namaste Rapid Tax software will auto-fill the Form 16 data.
                                     </li>
                                     <li>Step 3: Verify your tax computation now and edit if required.</li>
                                     <li>Step 4: Click the "FILE MY RETURN" button and you are done!.</li>
@@ -879,6 +907,40 @@ ITR Now”</a> option at Namaste Ventures.in and upload your Form 16. </li>
     s0.parentNode.insertBefore(s1,s0);
     })();
     <!--End of Tawk.to Script-->
+
+    
+var def_tawk_bottom = "20px"; /*This is their default style that I want to change*/
+var def_tawk_right = "16px"; /*This is their default style that I want to change*/
+var customize_tawk = ""; /*Interval object*/
+
+function customize_tawk_widget(){
+    var cur_bottom = jQuery("iframe[title='chat widget']").eq(0).css('bottom'); /*Get the default style*/
+    var cur_right = jQuery("iframe[title='chat widget']").eq(0).css('right'); /*Get the default style*/
+    if(cur_bottom == def_tawk_bottom && cur_right == def_tawk_right){
+        /*Check if the default style exists then remove it and add my custom style*/
+        jQuery("iframe[title='chat widget']").eq(0).css({ 'right': '', 'bottom': '' });
+        jQuery("iframe[title='chat widget']").eq(0).addClass("custom-chat-widget");
+        clearInterval(customize_tawk);
+    }
+}
+
+/*Customize the widget as soon as the widget is loaded*/
+Tawk_API = Tawk_API || {};
+Tawk_API.onLoad = function(){
+    /*Only for mobile version*/
+    if(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent) ) {
+        var customize_tawk = setInterval(customize_tawk_widget, 100);
+    }
+};
+
+/*Customize the widget as soon as the widget is minimized*/
+Tawk_API = Tawk_API || {};
+Tawk_API.onChatMinimized = function(){
+    /*Only for mobile version*/
+    if(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent) ) {
+        var customize_tawk = setInterval(customize_tawk_widget, 100);
+    }
+};
     
     var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {})
     var myModal2 = new bootstrap.Modal(document.getElementById('exampleModal2'), {})
