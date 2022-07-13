@@ -138,10 +138,10 @@ MEDIA_ROOT = '/root/tax2win/media/'
 
 
 
-STATIC_URL = '/static/'
+STATIC_URL = '/tmp/8da64d00265c39e/static'
 STATIC_ROOT = os.path.join(BASE_DIR, 'public', 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.compressedmanifeststaticfilesstorage"
