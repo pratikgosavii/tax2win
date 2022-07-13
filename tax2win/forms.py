@@ -20,6 +20,13 @@ class refund_status_Form(forms.ModelForm):
         model = refund_status
         fields = '__all__'
       
+
+
+class contact_Form(forms.ModelForm):
+    class Meta:
+        model = contact
+        fields = '__all__'
+      
        
 
 
@@ -47,6 +54,22 @@ class virtual_book_questions_Form(forms.ModelForm):
 class company_llp_questions_Form(forms.ModelForm):
     class Meta:
         model = company_llp_questions
+        fields = '__all__'
+      
+       
+       
+
+class unlock_eca_Form(forms.ModelForm):
+    class Meta:
+        model = Unlock_eca
+        fields = '__all__'
+      
+       
+       
+
+class file_yourself_Form(forms.ModelForm):
+    class Meta:
+        model = file_yourself
         fields = '__all__'
       
        

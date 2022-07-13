@@ -32,9 +32,12 @@ urlpatterns = [
     path('refund-status', refund_status, name="refund_status"),
     path('submit-services-request', submit_services_request, name="submit_services_request"),
 
+    path('unlock-eca', unlock_eca, name="unlock_eca_url"),
+    path('file-yourself', file_yourself_view, name="file_yourself_url"),
+
     path('pricing', pricing, name="pricing"),
     path('privacy-policy', privacy_policy, name="privacy_policy"),
-    path('contact', privacy_policy, name="contact"),
+    path('contact', contact_view, name="contact"),
     path('terms-condtion', terms_condition, name="terms_condition"),
     
     path('admin-view-categories', admin_view, name="admin_view"),

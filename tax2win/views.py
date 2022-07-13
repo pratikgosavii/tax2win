@@ -258,34 +258,45 @@ def submit(request):
 def refund_status(request):
 
 
-    
+    if request.method == "POST":
 
-    date_time = request.POST.get('date_time')
-
-    
-    d = dateutil.parser.parse(date_time)
-    from_date_time = d.strftime("%Y-%m-%d %H:%M:%S")
 
         
-    post = request.POST.copy() 
-    post.update({"date_time" : from_date_time})
-    request.POST = post
+
+        date_time = request.POST.get('date_time')
+
+        
+        d = dateutil.parser.parse(date_time)
+        from_date_time = d.strftime("%Y-%m-%d %H:%M:%S")
+
+            
+        post = request.POST.copy() 
+        post.update({"date_time" : from_date_time})
+        request.POST = post
 
 
 
-    forms = refund_status_Form(request.POST)
+        forms = refund_status_Form(request.POST)
 
-    if forms.is_valid():
+        if forms.is_valid():
 
-       forms.save()
+            print('save')
 
-       return JsonResponse({'result' : True})
+            forms.save()
+
+            return redirect('index')
+
+        
+
+        else:
+
+            
+            print(forms.errors)
+            print('forms.errors')
+
+            return redirect('index')
 
     
-
-    else:
-
-        print(forms.errors)
     
 
 
@@ -293,6 +304,101 @@ def refund_status(request):
 def pricing(request):
 
     return render(request, 'pricing.html')
+
+
+
+
+def unlock_eca(request):
+
+    if request.method == "POST":
+
+  
+
+        date_time = request.POST.get('date_time')
+
+        
+        d = dateutil.parser.parse(date_time)
+        from_date_time = d.strftime("%Y-%m-%d %H:%M:%S")
+
+            
+        post = request.POST.copy() 
+        post.update({"date_time" : from_date_time})
+        request.POST = post
+
+
+
+
+
+
+        forms = unlock_eca_Form(request.POST)
+
+        if forms.is_valid():
+
+            forms.save()
+
+            return redirect('index')
+
+        
+
+        else:
+
+            return redirect('index')
+
+
+
+
+
+
+
+
+def file_yourself_view(request):
+
+    if request.method == "POST":
+
+
+        print('iin hereeeeeeeeeeee')
+    
+          
+
+        date_time = request.POST.get('date_time')
+
+        
+        d = dateutil.parser.parse(date_time)
+        from_date_time = d.strftime("%Y-%m-%d %H:%M:%S")
+
+            
+        post = request.POST.copy() 
+        post.update({"date_time" : from_date_time})
+        request.POST = post
+
+
+
+        
+
+        forms = file_yourself_Form(request.POST)
+
+        if forms.is_valid():
+
+            forms.save()
+            print('done')
+
+            return redirect('index')
+
+        
+
+        else:
+
+            print(forms.errors)
+            print('-------------------')
+            print('-------------------')
+
+            return redirect('index')
+
+    else:
+
+        print('-------------------')
+        print('-------------------')
+
 
 
 
@@ -334,6 +440,41 @@ def submit_services_request(request):
 def privacy_policy(request):
 
     return render(request, 'privacy-policy.html')
+
+def contact_view(request):
+
+    if request.method == "POST":
+        
+
+        forms = contact_Form(request.POST)
+
+        if forms.is_valid():
+            
+            print(  '--------------------------')
+
+            forms.save()
+
+            print('done')
+
+            msg = "Request Send Successfully"
+
+            return render(request, 'contact-us.html', {'msg' : msg})
+        
+        else:
+                
+            print(  '--------------------------')
+            print(  '--------------------------')
+            print(forms.errors)
+
+    else:
+
+        print(  '--------------------------')
+        print(  '--------------------------')
+        print(  '--------------------------')
+        print(  '--------------------------')
+        print(  '--------------------------')
+
+        return render(request, 'contact-us.html')
 
 def terms_condition(request):
 

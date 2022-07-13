@@ -137,6 +137,35 @@ class virtual_book_questions(models.Model):
     MIS_reports_Receivables_Ageing_report  = models.BooleanField()
 
 
+class contact(models.Model):
+
+    name = models.CharField(max_length=50)
+    mobile_no = models.IntegerField()
+    email = models.CharField(max_length=50)
+    comments = models.CharField(max_length=500)
+    date_time = models.DateTimeField(auto_now=True)
+
+    
+
+class Unlock_eca(models.Model):
+
+    name = models.CharField(max_length=50)
+    mobile_no = models.IntegerField()
+    date_time = models.DateTimeField(auto_now=True)
+
+
+    
+    
+
+class file_yourself(models.Model):
+
+    name = models.CharField(max_length=50)
+    mobile_no = models.IntegerField()
+    date_time = models.DateTimeField(auto_now=True)
+
+
+    
+
 
 
 

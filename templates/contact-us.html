@@ -1,0 +1,212 @@
+ {% extends 'base.html' %} 
+ {% load static %} 
+ {% block head %}
+<style>
+    .copyright {
+        bottom: 0px;
+        position: fixed;
+    }
+</style> 
+{% endblock head %} 
+{% block content %}
+<div>
+    <section class=" contact-us">
+        <div class="container page">
+            <div class="panel">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12 left">
+                        <form action="{% url 'contact' %}" method="post" >
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h3>Get Instant Tax Help</h3>
+                                </div>
+                                <div class="col-md-12"></div>
+                                <div class="col-md-6 col-sm-12 col-xs-12"><input type="text" name="name" value="" placeholder="Name" class="form-control" required/></div>
+                                <div class="col-md-6 col-sm-12 col-xs-12"><input type="number" name="mobile_no" value="" min="" max="" step="" placeholder="Phone" maxlength="10" class="form-control" required/></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12"><input type="email" name="email" value="" placeholder="Email" class="form-control" required/></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12"><textarea name="comments" class="form-control" placeholder="Comments" required></textarea></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12"><button type="Submit"><img src="https://tax2win.in/assets-new/img/send.svg" alt="" required/></button></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 right">
+                        <h4>Write We are here to help</h4>
+                        <div class="row">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                <figure><img src="assets-new/img/location-icon.svg" alt="" /></figure>
+                            </div>
+                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                <p>202-203, C-94, Fortune Heights Shubhash Marg, Jaipur, Rajasthan 302001</p>
+                            </div>
+                            <div class="clearfix"></div><br>
+                            <div class="d-n">
+                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                    <figure><img src="assets-new/img/mobile-icon.svg" alt="" /></figure>
+                                </div>
+                                <div class="col-md-10 col-sm-10 col-xs-10">
+                                    <p>(+91) 9988-77-66-55</p>
+                                </div>
+                                <div class="clearfix"></div><br></div>
+                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                <figure><img src="assets-new/img/email-icon.svg" alt="" /></figure>
+                            </div>
+                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                <p><a href="cdn-cgi/l/email-protection.html#2f5c5a5f5f405d5b6f5b4e571d584641014641"><span class="__cf_email__" data-cfemail="92e1e7e2e2fde0e6d2e6f3eaa0e5fbfcbcfbfc">[email&#160;
+    protected]</span></a></p>
+                            </div>
+                        </div><img src="assets-new/img/about-us/support.svg" alt="" width="120" class="support-img"></div>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+
+<div class="modal" style="margin-top: 93px;overflow: inherit;" id="abcd" tabindex="-1" aria-labelledby="exampleModal_suLabel" aria-hidden="true">
+    <div class="modal-dialog">
+           
+            <div class="modal-body d-flex flex-column gap-2">
+                
+
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <div class="icon-box">
+                        <i class="material-icons"> ✔ </i>
+                      </div>				
+                      <h4 class="modal-title w-100">Awesome!</h4>	
+                    </div>
+                    <div class="modal-body">
+                      <p class="text-center">Your booking has been confirmed. Our team will call you at your desired time.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                    </div>
+                  </div>
+                  
+           
+    </div>
+</div>
+
+
+
+</section> 
+{% endblock content %} 
+{% block script  %}
+
+<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script type="74561853ef16b8d4cb2978f2-text/javascript">
+    var token_name = 'token',
+        site_url = 'index.html';
+</script>
+<script src="assets-new/js/jquery-2.2.4.min.js" type="74561853ef16b8d4cb2978f2-text/javascript"></script>
+<script defer src="assets-new/dist/js/common-1650438011384.min.js" type="74561853ef16b8d4cb2978f2-text/javascript"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3MYQ6G875" type="74561853ef16b8d4cb2978f2-text/javascript"></script>
+<script type="74561853ef16b8d4cb2978f2-text/javascript">
+    $(document).ready(function() {
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-Q3MYQ6G875');
+        }
+
+    );
+</script>
+<script type="74561853ef16b8d4cb2978f2-text/javascript">
+    window._mfq = window._mfq || [];
+    (function() {
+            var mf = document.createElement("script");
+            mf.type = "text/javascript";
+            mf.async = true;
+            mf.src = "../cdn.mouseflow.com/projects/1f425764-4716-4f36-b482-121708fb6397.js";
+            document.getElementsByTagName("head")[0].appendChild(mf);
+        }
+
+    )();
+</script>
+<script type="74561853ef16b8d4cb2978f2-text/javascript">
+    (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = '../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        }
+
+    )(window, document, 'script', 'dataLayer', 'GTM-KR7B8Q');
+</script><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KR7B8Q" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="74561853ef16b8d4cb2978f2-text/javascript">
+    var clevertap = {
+        event: [],
+        profile: [],
+        account: [],
+        onUserLogin: [],
+        notifications: [],
+        privacy: []
+    }
+
+    ;
+    // replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+    clevertap.account.push({
+            "id": "4R4-7R7-RR6Z"
+        }
+
+    );
+    clevertap.privacy.push({
+            optOut: false
+        }
+
+    ); //set the flag to true, if the user of the device opts out of sharing their data
+    clevertap.privacy.push({
+            useIP: false
+        }
+
+    ); //set the flag to true, if the user agrees to share their IP data
+    (function() {
+            var wzrk = document.createElement('script');
+            wzrk.type = 'text/javascript';
+            wzrk.defer = true;
+            wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wzrk, s);
+        }
+
+    )();
+
+
+</script> 
+
+<script >
+
+    window.onload = function(){
+    alert("{{msg}}");
+
+    com = 
+
+    if("Request Send Successfully" == "{{ msg }}"){
+    var myModal_su = new bootstrap.Modal(document.getElementById('abcd'), {})
+
+    mymodal_su.show();
+    
+    }
+}
+
+</script>
+
+
+
+
+{% endblock script %}
+
+<!-- Mirrored from tax2win.in/contact-us by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 May 2022 06:23:22 GMT -->
+
+</html>
