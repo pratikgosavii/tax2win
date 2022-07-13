@@ -42,7 +42,4 @@ urlpatterns = [
     
     path('admin-view-categories', admin_view, name="admin_view"),
 
-]
-
-urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
