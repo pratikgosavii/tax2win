@@ -138,7 +138,15 @@ MEDIA_ROOT = '/root/tax2win/media/'
 
 
 
-STATIC_URL = '/tmp/8da64d00265c39e/static/'
+STATIC_URL = '/static/'
+
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+
+
+STATIC_URL = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'public', 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
