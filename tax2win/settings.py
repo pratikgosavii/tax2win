@@ -138,10 +138,10 @@ MEDIA_ROOT = '/root/tax2win/media/'
 
 
 
-STATIC_URL = '/tmp/8da64d00265c39e/static'
+STATIC_URL = '/tmp/8da64d00265c39e/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'public', 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-STATICFILES_STORAGE = "whitenoise.storage.compressedmanifeststaticfilesstorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
