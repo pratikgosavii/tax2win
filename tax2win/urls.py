@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('users.urls')),
+    path('admin-dashboard/', include('admindash.urls')),
     path('', index, name="index"),
     path('direct-taxcation-questions', direct_taxcation_questions, name="direct_taxcation_questions"),
     path('indirect-taxcation-questions', indirect_taxcation_questions, name="indirect_taxcation_questions"),
@@ -41,5 +42,8 @@ urlpatterns = [
     path('terms-condtion', terms_condition, name="terms_condition"),
     
     path('admin-view-categories', admin_view, name="admin_view"),
+
+
+
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

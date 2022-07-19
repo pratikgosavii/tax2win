@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tax2win',
     'users',
+    'admindash',
 ]
 
 MIDDLEWARE = [

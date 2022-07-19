@@ -4,12 +4,16 @@ from secrets import choice
 from django.db import models
 from django.forms import CharField
 
+from django.contrib.auth import get_user_model
+
+User=get_user_model()
+
 # Create your models here.
 
 class enquire(models.Model):
 
     name = models.CharField(max_length=50)
-    date_time = models.DateTimeField(auto_now=False, auto_now_add=False)
+    date_time = models.DateTimeField(auto_now=False)
     mobile = models.IntegerField()
 
     salary_income = models.BooleanField()
@@ -30,7 +34,7 @@ class enquire(models.Model):
 class refund_status(models.Model):
 
     name = models.CharField(max_length=50)
-    date_time = models.DateTimeField(auto_now=False, auto_now_add=False)
+    date_time = models.DateTimeField(auto_now=False)
     mobile = models.IntegerField()
     
 
@@ -39,47 +43,23 @@ class refund_status(models.Model):
 
 
 
-
-services_CHOICES1 =(
-    ("Registration on portal", "Registration on portal"),
-    ("Income Tax Return Filings", "Income Tax Return Filings"),
-    ("Income Tax Audit filings", "Income Tax Audit filings"),
-    ("Assesment filings", "Assesment filings"),
-    ("Tax planning", "Tax planning"),
-    ("Advice_Consultancy", "Advice/Consultancy"),
-   
+status_CHOICES =(
+    ("Done", "Done"),
+    ("Pending", "Pending"),
+    ("Cancle", "Cancle"),
+    ("Reschedule", "Reschedule"),
 )
-
-
-services_CHOICES2 =(
-    ("Registration on portal", "Registration on portal"),
-    ("Tax planning", "Tax planning"),
-    ("Advice_Consultancy", "Advice/Consultancy"),
-    
-)
-
-services_CHOICES3 =(
-    ("Name approval application", " Name approval application"),
-    ("Company_LLP registration", "Company/LLP registration"),
-    ("All other MCA compliances", "All other MCA compliances"),
-    
-)
-
-services_CHOICES4 =(
-    ("Book keeping and accountancy", "Book keeping and accountancy"),
-    ("Finalisation of accounts books", "Finalisation of accounts books"),
-    ("MIS reports-Receivables Ageing report", "MIS reports-Receivables Ageing report"),
-    
-)
-
-
-
+  
 
 class direct_taxcation(models.Model):
 
     name = models.CharField(max_length=50)
-    date_time = models.DateTimeField(auto_now=False, auto_now_add=False)
+    date_time = models.DateTimeField(auto_now=False)
     mobile = models.IntegerField()
+    user = models.ForeignKey(User , on_delete=models.CASCADE, blank=True, null=True)
+    comment = models.CharField(max_length=500, blank=True, null=True)
+    status = models.CharField(choices = status_CHOICES, max_length=50, blank=True, null=True)
+
 
     Registration_on_portal = models.BooleanField()
     Income_Tax_Return_Filings = models.BooleanField()
@@ -96,8 +76,12 @@ class direct_taxcation(models.Model):
 class indirect_taxcation(models.Model):
 
     name = models.CharField(max_length=50)
-    date_time = models.DateTimeField(auto_now=False, auto_now_add=False)
+    date_time = models.DateTimeField(auto_now=False)
     mobile = models.IntegerField()
+    user = models.ForeignKey(User , on_delete=models.CASCADE, blank=True, null=True)
+    comment = models.CharField(max_length=500, blank=True, null=True)
+    status = models.CharField(choices = status_CHOICES, max_length=50, blank=True, null=True)
+
     
     Registration_on_portal = models.BooleanField()
     Tax_planning = models.BooleanField()
@@ -112,8 +96,12 @@ class indirect_taxcation(models.Model):
 class company_llp_questions(models.Model):
 
     name = models.CharField(max_length=50)
-    date_time = models.DateTimeField(auto_now=False, auto_now_add=False)
+    date_time = models.DateTimeField(auto_now=False)
     mobile = models.IntegerField()
+    user = models.ForeignKey(User , on_delete=models.CASCADE, blank=True, null=True)
+    comment = models.CharField(max_length=500, blank=True, null=True)
+    status = models.CharField(choices = status_CHOICES, max_length=50, blank=True, null=True)
+
 
     Name_approval_application = models.BooleanField()
     Company_LLP_registration = models.BooleanField()
@@ -129,8 +117,12 @@ class company_llp_questions(models.Model):
 class virtual_book_questions(models.Model):
 
     name = models.CharField(max_length=50)
-    date_time = models.DateTimeField(auto_now=False, auto_now_add=False)
+    date_time = models.DateTimeField(auto_now=False)
     mobile = models.IntegerField()
+    user = models.ForeignKey(User , on_delete=models.CASCADE, blank=True, null=True)
+    comment = models.CharField(max_length=500, blank=True, null=True)
+    status = models.CharField(choices = status_CHOICES, max_length=50, blank=True, null=True)
+
     
     Book_keeping_and_accountancy = models.BooleanField()
     Finalisation_of_accounts_books = models.BooleanField()
@@ -143,7 +135,7 @@ class contact(models.Model):
     mobile_no = models.IntegerField()
     email = models.CharField(max_length=50)
     comments = models.CharField(max_length=500)
-    date_time = models.DateTimeField(auto_now=True)
+    date_time = models.DateTimeField(auto_now=False)
 
     
 
@@ -151,7 +143,7 @@ class Unlock_eca(models.Model):
 
     name = models.CharField(max_length=50)
     mobile_no = models.IntegerField()
-    date_time = models.DateTimeField(auto_now=True)
+    date_time = models.DateTimeField(auto_now=False)
 
 
     
@@ -161,7 +153,7 @@ class file_yourself(models.Model):
 
     name = models.CharField(max_length=50)
     mobile_no = models.IntegerField()
-    date_time = models.DateTimeField(auto_now=True)
+    date_time = models.DateTimeField(auto_now=False)
 
 
     

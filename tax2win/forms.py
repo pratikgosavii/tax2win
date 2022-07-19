@@ -29,11 +29,16 @@ class contact_Form(forms.ModelForm):
       
        
 
-
 class direct_taxcation_Form(forms.ModelForm):
+
+       
     class Meta:
         model = direct_taxcation
         fields = '__all__'
+        widgets = {
+
+            'date_time' : forms.DateTimeInput(attrs={'type': 'datetime-local', 'class': "form-control"}),
+        }
       
        
 
@@ -41,21 +46,29 @@ class indirect_taxcation_Form(forms.ModelForm):
     class Meta:
         model = indirect_taxcation
         fields = '__all__'
-      
+        widgets = {
+
+            'date_time' : forms.DateTimeInput(attrs={'type': 'datetime-local', 'class': "form-control"}),
+        }
        
 
-class virtual_book_questions_Form(forms.ModelForm):
+class virtual_book_Form(forms.ModelForm):
     class Meta:
         model = virtual_book_questions
         fields = '__all__'
-      
-       
+        widgets = {
 
-class company_llp_questions_Form(forms.ModelForm):
+            'date_time' : forms.DateTimeInput(attrs={'type': 'datetime-local', 'class': "form-control"}),
+        }
+
+class company_llp_Form(forms.ModelForm):
     class Meta:
         model = company_llp_questions
         fields = '__all__'
-      
+        widgets = {
+
+            'date_time' : forms.DateTimeInput(attrs={'type': 'datetime-local', 'class': "form-control"}),
+        }
        
        
 
@@ -63,7 +76,10 @@ class unlock_eca_Form(forms.ModelForm):
     class Meta:
         model = Unlock_eca
         fields = '__all__'
-      
+        widgets = {
+
+            'date_time' : forms.DateTimeInput(attrs={'type': 'datetime-local', 'class': "form-control"}),
+        }
        
        
 
@@ -72,4 +88,7 @@ class file_yourself_Form(forms.ModelForm):
         model = file_yourself
         fields = '__all__'
       
-       
+        widgets = {
+
+            'date_time' : forms.DateTimeInput(attrs={'type': 'datetime-local', 'class': "form-control"}),
+        }

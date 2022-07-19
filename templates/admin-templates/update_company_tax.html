@@ -1,0 +1,102 @@
+
+{% extends 'admin-templates/base.html' %}
+{% load static %}
+
+{% block head %}
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+            
+    {% endblock head %}
+
+
+
+{% block content %}
+
+
+
+    <div class="container">
+        
+        <div class="row">
+
+            <form method="post" class="col-lg-12">
+
+                {% csrf_token %}
+                <p>Services user want</p>
+
+                <div class="form-group">
+
+                    {{ form.Name_approval_application }}
+                    <label for="Name_approval_application">Name approval application</label><br>
+                    {{ form.Company_LLP_registration }}
+                    <label for="Company_LLP_registration">Company LLP registration</label><br>
+                    {{ form.All_other_MCA_compliances }}
+                    <label for="All_other_MCA_compliances">All other MCA compliances</label>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="senior">Name</label>
+                    <input type="text" name="name" class="form-control" value="{{ form.name.value }}">
+
+                    <label for="senior" style="">Mobile</label>
+                    <input type="integer" name="mobile" class="form-control" value="{{ form.mobile.value }}">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="senior">Date client ask services</label>
+                    {{ form.date_time }}
+                </div>
+
+                <div class="form-group">
+
+
+                    <label for="senior" style="">Comment</label>
+                    <input name="comment" type="text" value="{{ form.comment.value }}" class="form-control">
+
+                </div>
+
+                <div class="form-group">
+
+
+                    <label for="cars">Request status</label>
+
+                    <select name="status" value="{{ form.status.value }}" id="cars" class="form-control">
+                        <option value="Done">Done</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Cancle">Cancle</option>
+                        <option value="Reschedule">Reschedule</option>
+                    </select>
+
+                </div>
+
+                <div>
+
+                    <input  type="submit"  value="update" class="btn btn-sucess form-control bg-green">
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+{% endblock content %}
+
+{% block script %}
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+{% endblock script %}

@@ -149,7 +149,7 @@ def virtual_book_questions(request):
         post.update({"date_time" : from_date_time})
         request.POST = post
 
-        forms = virtual_book_questions_Form(request.POST)
+        forms = virtual_book_Form(request.POST)
 
         if forms.is_valid():
 
@@ -199,7 +199,7 @@ def company_llp_questions(request):
         post.update({"date_time" : from_date_time})
         request.POST = post
 
-        forms = company_llp_questions_Form(request.POST)
+        forms = company_llp_Form(request.POST)
 
         if forms.is_valid():
 

@@ -1,0 +1,115 @@
+
+
+{% extends 'admin-templates/base.html' %}
+{% load static %}
+
+{% block head %}
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+            
+    {% endblock head %}
+
+
+
+{% block content %}
+
+
+
+    <div class="container">
+        
+        <div class="row">
+
+            <form method="post" class="col-lg-12">
+
+                {% csrf_token %}
+                <p>Services user want</p>
+
+                <div class="form-group">
+
+                    {{ form.Registration_on_portal }}
+                    <label for="Book_keeping_and_accountancy">Book keeping and accountancy</label><br>
+                    
+                    {{ form.Income_Tax_Return_Filings }}
+                    <label for="Income_Tax_Return_Filings">Finalisation of accounts books</label><br>
+                    
+                    {{ form.Income_Tax_Audit_filings }}
+                    <label for="Income_Tax_Audit_filings">MIS reports Receivables Ageing report</label><br>
+                    
+                    {{ form.Assesment_filings }}
+                    <label for="Assesment_filings">MIS reports Receivables Ageing report</label><br>
+                    
+                    {{ form.Tax_planning }}
+                    <label for="Tax_planning">MIS reports Receivables Ageing report</label><br>
+                    
+                    {{ form.Advice_Consultancy }}
+                    <label for="Advice_Consultancy">MIS reports Receivables Ageing report</label><br>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="senior">Name</label>
+                    <input type="text" name="name" class="form-control" value="{{ form.name.value }}">
+
+                    <label for="senior" style="">Mobile</label>
+                    <input type="integer" name="mobile" class="form-control" value="{{ form.mobile.value }}">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="senior">Date client ask services</label>
+                    {{ form.date_time }}
+                </div>
+
+                <div class="form-group">
+
+
+                    <label for="senior" style="">Comment</label>
+                    <input name="comment" type="text" value="{{ form.comment.value }}" id="comment" class="form-control">
+
+                </div>
+
+                <div class="form-group">
+
+
+                    <label for="cars">Request status</label>
+
+                    <select name="status" value="{{ form.status.value }}" id="cars" class="form-control">
+                        <option value="Done">Done</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Cancle">Cancle</option>
+                        <option value="Reschedule">Reschedule</option>
+                    </select>
+
+                </div>
+
+                <div>
+
+                    <input  type="submit"  value="update" class="btn btn-sucess form-control bg-green">
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock content %}
+
+{% block script %}
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+{% endblock script %}
+
+
