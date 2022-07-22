@@ -55,7 +55,7 @@ def index(request):
     return render(request, 'index.html')
 
 
-
+@login_required(login_url='login')
 def direct_taxcation_questions(request):
 
     if request.method == 'POST':
@@ -74,7 +74,9 @@ def direct_taxcation_questions(request):
 
         if forms.is_valid():
 
-            forms.save()
+            instance = forms.save(commit=False)
+            instance.user = request.user
+            instance.save()
 
             return JsonResponse({'result' : True})
 
@@ -92,7 +94,7 @@ def direct_taxcation_questions(request):
 
 
 
-
+@login_required(login_url='login')
 def indirect_taxcation_questions(request):
 
     
@@ -114,7 +116,9 @@ def indirect_taxcation_questions(request):
 
         if forms.is_valid():
 
-            forms.save()
+            instance = forms.save(commit=False)
+            instance.user = request.user
+            instance.save()
 
             return JsonResponse({'result' : True})
 
@@ -130,7 +134,7 @@ def indirect_taxcation_questions(request):
 
 
 
-
+@login_required(login_url='login')
 def virtual_book_questions(request):
 
 
@@ -153,7 +157,9 @@ def virtual_book_questions(request):
 
         if forms.is_valid():
 
-            forms.save()
+            instance = forms.save(commit=False)
+            instance.user = request.user
+            instance.save()
 
             return JsonResponse({'result' : True})
 
@@ -173,6 +179,9 @@ def virtual_book_questions(request):
 
 
 
+
+
+@login_required(login_url='login')
 def company_llp_questions(request):
 
     print('dhdusdsudgusgdshdsygdb')
@@ -203,7 +212,9 @@ def company_llp_questions(request):
 
         if forms.is_valid():
 
-            forms.save()
+            instance = forms.save(commit=False)
+            instance.user = request.user
+            instance.save()
 
             return JsonResponse({'result' : True})
 
@@ -243,9 +254,11 @@ def submit(request):
 
     if forms.is_valid():
 
-       forms.save()
+        instance = forms.save(commit=False)
+        instance.user = request.user
+        instance.save()
 
-       return JsonResponse({'result' : True})
+        return JsonResponse({'result' : True})
 
     
 
@@ -307,7 +320,7 @@ def pricing(request):
 
 
 
-
+@login_required(login_url='login')
 def unlock_eca(request):
 
     if request.method == "POST":
@@ -336,7 +349,8 @@ def unlock_eca(request):
 
             forms.save()
 
-            return redirect('index')
+            return render(request, 'index.html', {'showmodal' : 'sdsd'})
+
 
         
 
@@ -350,7 +364,7 @@ def unlock_eca(request):
 
 
 
-
+@login_required(login_url='login')
 def file_yourself_view(request):
 
     if request.method == "POST":
@@ -379,25 +393,64 @@ def file_yourself_view(request):
 
         if forms.is_valid():
 
-            forms.save()
+            instance = forms.save(commit=False)
+            instance.user = request.user
+            instance.save()
             print('done')
 
-            return redirect('index')
-
-        
+            return JsonResponse({'result' : True})
 
         else:
 
             print(forms.errors)
-            print('-------------------')
-            print('-------------------')
 
-            return redirect('index')
 
     else:
 
         print('-------------------')
         print('-------------------')
+
+
+
+
+@login_required(login_url='login')
+@csrf_exempt
+def prices_enquire_view(request):
+
+
+    
+    if request.method == 'POST':
+
+        
+
+        date_time = request.POST.get('date_time')
+
+        
+        d = dateutil.parser.parse(date_time)
+        from_date_time = d.strftime("%Y-%m-%d %H:%M:%S")
+
+        post = request.POST.copy() 
+        post.update({"date_time" : from_date_time})
+        request.POST = post
+
+        forms = prices_enquire_Form(request.POST)
+
+        if forms.is_valid():
+
+            instance = forms.save(commit=False)
+            instance.user = request.user
+            instance.save()
+
+            return JsonResponse({'result' : True})
+
+        else:
+
+            print(forms.errors)
+
+    else:
+
+
+        return render(request, 'pricing.html')
 
 
 
@@ -444,6 +497,8 @@ def privacy_policy(request):
 def contact_view(request):
 
     if request.method == "POST":
+
+        print(request.POST)
         
 
         forms = contact_Form(request.POST)
@@ -458,7 +513,7 @@ def contact_view(request):
 
             msg = "Request Send Successfully"
 
-            return render(request, 'contact-us.html', {'msg' : msg})
+            return redirect(request, 'contact-us.html', {'msg' : msg})
         
         else:
                 
@@ -483,3 +538,5 @@ def terms_condition(request):
 def admin_view(request):
 
     return render(request, 'admin-list-options.html')
+
+

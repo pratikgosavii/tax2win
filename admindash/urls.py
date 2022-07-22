@@ -27,6 +27,10 @@ urlpatterns = [
     path('admin-indirect-tax', admin_indirect_tax, name="admin_indirect_tax"),
     path('admin-comapny', admin_company, name="admin_company"),
     path('admin-virtual', admin_virtual, name="admin_virtual"),
+    path('admin-prices-enquire', admin_prices_enquire, name="admin_prices_enquire"),
+    path('admin-contact-us', admin_contact_us, name="admin_contact_us"),
+  
+    path('admin-selffiling-ca-assisted', selfiling_eca, name="selfiling_eca"),
   
 
 

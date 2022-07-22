@@ -49,9 +49,40 @@
     <style>
 
 
+        .copyright {
+            bottom: 0px !important;
+            position: absolute !important;
+        }
+
+
+        .close-button {
+            border: none;
+            display: inline-block;
+            padding: 8px 16px;
+            vertical-align: middle;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            background-color: inherit;
+            text-align: center;
+            cursor: pointer;
+            white-space: nowrap
+          }
+          
+          .topright {
+            position: absolute;
+            right: 0;
+            top: 0
+          }
+
+        .foot-new{
+            bottom : 0;
+            position: inherit;
+        }
+
         .logoimg {
           
-            top: -40px !important;
+            top: 0px !important
         }
 
         .banner .banner-carousel {
@@ -86,7 +117,7 @@
                 margin: 0px !important;
                 position: fixed !important;
                 overflow: hidden !important;
-                top: -15px !important;
+                top: 0px !important;
             }
 
             .questionsbanner{
@@ -246,6 +277,9 @@
                                             </ul>
                                         </ul>
                                     </li>-->
+                                    {% if user.is_authenticated %}
+                                        <li><a style="background:white;margin-right:10px;" href="{% url 'your_requests' %}" title="Contact Namaste Ventures Rapid Tax" data-ctid="button-contact-3d8ea0e7de">Requests</a></li>
+                                    {% endif %}
                                     <li><a style="background:white;margin-right:10px;" href="{% url 'pricing' %}" title="Contact Namaste Ventures Rapid Tax" data-ctid="button-contact-3d8ea0e7de">Pricing</a></li>
                                     <li><a style="background:white;margin-right:10px;" href="{% url 'contact' %}" title="Contact Namaste Ventures Rapid Tax" data-ctid="button-contact-3d8ea0e7de">Contact</a></li>
                                     {% if user.is_authenticated %}
@@ -339,7 +373,7 @@
                 </div> {% endcomment %}
             </div>
         </section>
-        <header class="clearfix ">
+        <header class="clearfix foot-new">
        
         <section class="copyright">
             <div class="container">
@@ -357,6 +391,7 @@
         </div>
 
 
+    </header>
     </header>
     
         

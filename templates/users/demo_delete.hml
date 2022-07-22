@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+
+
+    <style>
+
+        .modal-backdrop {
+            background : none !important;
+        }
+    </style>
+
+
+            
+    {% endblock head %}
+
+
+
+{% block content %}
+
+
+        <section class="banner faq-se-home">
+          <div class="container">
+            <div class="row">
+              <!-- Direct Taxation
+                Planning And
+                Compliance -->
+                
+              <div class="heading text-center"><span>Your Requests</span>
+                  <hr>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-md-12">
+                <div class="clearfix"></div>
+
+                {% for i in data %}
+                <div class="panel-group" id="accordion" itemscope itemtype="https://schema.org/FAQPage">
+                  <div class="panel panel-default" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                      <div class="panel-heading">
+                          <div itemprop="name" data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
+                              <div class="right-arrow pull-right"><i class="fa fa-angle-right"></i></div>
+                              <a href="#"> What is e-Filing of income tax returns?</a>
+                          </div>
+                      </div>
+                      <div id="collapse1" class="panel-collapse collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                          <div class="panel-body" itemprop="text">
+                              <p>E-filing of Income-tax return is nothing but filing your Income-tax return online. As per the latest announcement by the income tax department, at present income tax returns can be filed through the online method only.
+                                  However, the super senior citizens who are filing ITR 1 or ITR 4 are allowed to use the offline paper mode.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+
+                {% endfor %}
+            </div>
+          </div>
+
+        </section>
+
+
+    {% endblock content %}

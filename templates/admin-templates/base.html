@@ -58,6 +58,7 @@
                                 <a href="" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                                
                             </li>
+                           
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Services Requests
                                     </span></a>
@@ -71,6 +72,20 @@
                                     <li><a href="{% url 'admin_virtual' %}">Virtual Book Keeping And Accontancy(CFO)
                                     </a></li>
                                 </ul>
+                                
+                            </li>
+
+                            <li class="active">
+                                <a href="{% url 'admin_prices_enquire' %}" aria-expanded="true"><i class="ti-dashboard"></i><span>Prices enquire</span></a>
+                               
+                            </li>
+                            <li class="active">
+                                <a href="{% url 'selfiling_eca' %}" aria-expanded="true"><i class="ti-dashboard"></i><span>Self filing/ CA Assisted</span></a>
+                               
+                            </li>
+                            <li class="active">
+                                <a href="{% url 'admin_contact_us' %}" aria-expanded="true"><i class="ti-dashboard"></i><span>Contact us</span></a>
+                               
                             </li>
                             {% comment %} <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Charts</span></a>

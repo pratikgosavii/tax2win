@@ -6,5 +6,4 @@ from .models import *
 
 
 admin.site.register(refund_status)
-admin.site.register(Unlock_eca)
 admin.site.register(file_yourself)

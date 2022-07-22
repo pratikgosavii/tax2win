@@ -4,13 +4,26 @@ from tax2win.forms import *
 import dateutil.parser
 
 
+
+
+from django.contrib.auth.decorators import user_passes_test
+
+
+def admin_required(login_url=None):
+    return user_passes_test(lambda u: u.is_superuser, login_url=login_url)
+
+
 # Create your views here.
 
 
 
+@admin_required(login_url="login")
+
 def index(request):
 
     return render(request, 'admin-templates/index.html')
+
+@admin_required(login_url="login")
 
 def admin_direct_tax(request):
 
@@ -18,11 +31,15 @@ def admin_direct_tax(request):
 
     return render(request, 'admin-templates/admin_direct_tax.html', {'data' : data})
 
+@admin_required(login_url="login")
+
 def admin_indirect_tax(request):
 
     data = indirect_taxcation.objects.all()
 
     return render(request, 'admin-templates/admin_indirect_tax.html', {'data' : data})
+
+@admin_required(login_url="login")
 
 def admin_company(request):
 
@@ -30,12 +47,42 @@ def admin_company(request):
 
     return render(request, 'admin-templates/admin_company.html', {'data' : data})
 
+@admin_required(login_url="login")
+
 def admin_virtual(request):
 
     data = virtual_book_questions.objects.all()
 
     return render(request, 'admin-templates/admin_virtual.html', {'data' : data})
 
+@admin_required(login_url="login")
+
+def admin_prices_enquire(request):
+
+    data = prices_enquire.objects.all()
+
+    return render(request, 'admin-templates/admin_prices_enquire.html', {'data' : data})
+
+
+@admin_required(login_url="login")
+
+def admin_contact_us(request):
+
+    data = contact.objects.all()
+
+    return render(request, 'admin-templates/admin_contact_us.html', {'data' : data})
+
+
+@admin_required(login_url="login")
+
+def selfiling_eca(request):
+
+    data = file_yourself.objects.all()
+
+    return render(request, 'admin-templates/selfiling_eca.html', {'data' : data})
+
+
+@admin_required(login_url="login")
 
 def update_direct_tax(request, request_id):
 
@@ -84,6 +131,8 @@ def update_direct_tax(request, request_id):
         return render(request, 'admin-templates/update_direct_tax.html', {'form' : form})
 
 
+@admin_required(login_url="login")
+
 def update_indirect_tax(request, request_id):
 
     if request.method == "POST":
@@ -120,6 +169,8 @@ def update_indirect_tax(request, request_id):
 
         return render(request, 'admin-templates/update_indirect.html', {'form' : form})
 
+
+@admin_required(login_url="login")
 
 def update_comapny_tax(request, request_id):
 
@@ -159,6 +210,8 @@ def update_comapny_tax(request, request_id):
         return render(request, 'admin-templates/update_company_tax.html', {'form' : form})
 
 
+@admin_required(login_url="login")
+
 def update_virtual_tax(request, request_id):
 
     if request.method == "POST":
@@ -196,6 +249,8 @@ def update_virtual_tax(request, request_id):
         return render(request, 'admin-templates/update_virtual_tax.html', {'form' : form})
 
 
+@admin_required(login_url="login")
+
 def delete_direct_tax(request, request_id):
 
 
@@ -203,11 +258,15 @@ def delete_direct_tax(request, request_id):
         
     return redirect('admin_direct_tax')
 
+@admin_required(login_url="login")
+
 def delete_indirect_tax(request, request_id):
 
     indirect_taxcation.objects.get(id = request_id).delete()
 
     return redirect('admin_indirect_tax')
+
+@admin_required(login_url="login")
 
 def delete_comapny_tax(request, request_id):
 
@@ -216,6 +275,8 @@ def delete_comapny_tax(request, request_id):
 
     return redirect('admin_company')
 
+
+@admin_required(login_url="login")
 
 def delete_virtual_tax(request, request_id):
 

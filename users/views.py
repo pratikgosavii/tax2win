@@ -2,6 +2,9 @@ from email import message
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from tax2win.models import *
+
 
 
 from .forms import *
@@ -142,3 +145,23 @@ def logout_page(request):
     print('in logit')
     logout(request)
     return redirect('login')
+
+
+@login_required(login_url='login')
+def your_requests(request):
+
+    direct_tax = direct_taxcation.objects.filter(user = request.user)
+    indirect_tax = indirect_taxcation.objects.filter(user = request.user)
+    company_tax = company_llp_questions.objects.filter(user = request.user)
+    virtual_tax = virtual_book_questions.objects.filter(user = request.user)
+    print(direct_tax)
+    context = {
+        'direct_tax' : direct_tax,
+        'indirect_tax' : indirect_tax,
+        'company_tax' : company_tax,
+        'virtual_tax' : virtual_tax,
+    }
+
+
+    return render(request, 'users/accounts.html', context)
+

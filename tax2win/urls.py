@@ -33,6 +33,8 @@ urlpatterns = [
     path('refund-status', refund_status, name="refund_status"),
     path('submit-services-request', submit_services_request, name="submit_services_request"),
 
+    path('prices-enquire', prices_enquire_view, name="prices_enquire"),
+
     path('unlock-eca', unlock_eca, name="unlock_eca_url"),
     path('file-yourself', file_yourself_view, name="file_yourself_url"),
 

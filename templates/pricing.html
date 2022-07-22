@@ -20,8 +20,8 @@
                                 <h4>Self Filing</h4>
                                 <p>You Prepare &amp; File Your Return</p>
                                 <br>
-                                <div>Base Price:</div>
-                                <strong> Free</strong> <small>&nbsp;</small> </div>
+                                <div></div>
+                                <strong> Comming soon</strong> <small>&nbsp;</small> </div>
                         </div>
                     </li>
                     <li>
@@ -33,7 +33,7 @@
                                 <div>Base Price: </div>
                                 <strong><i class="fa fa-inr" aria-hidden="true"></i> 549</strong>
                                 <small>+ Taxes</small>
-
+                                <a onclick="showmodal('Standard');">Buy Now</a>
                             </div>
                         </div>
                     </li>
@@ -46,6 +46,7 @@
                                 <div>Base Price: </div>
                                 <strong><i class="fa fa-inr" aria-hidden="true"></i> 849</strong>
                                 <small>+ Taxes</small>
+                                <a onclick="showmodal('MultipleF-16');">Buy Now</a>
                             </div>
                         </div>
                     </li>
@@ -58,6 +59,7 @@
                                 <div>Base Price: </div>
                                 <strong><i class="fa fa-inr" aria-hidden="true"></i> 1749</strong>
                                 <small>+ Taxes</small>
+                                <a onclick="showmodal('Business Income');">Buy Now</a>
                             </div>
                         </div>
                     </li>
@@ -70,6 +72,7 @@
                                 <div>Base Price: </div>
                                 <strong><i class="fa fa-inr" aria-hidden="true"></i> 2149</strong>
                                 <small>+ Taxes</small>
+                                <a value="demo" id="exampleModal_button">Buy Now</a>
                             </div>
                         </div>
                     </li>
@@ -215,7 +218,7 @@
 <i class="fa fa-inr" aria-hidden="true"></i> 2949
 <small>+ Taxes</small>
 </strong>
-                                    <a href="" class="green-btn">Buy Now</a> </div>
+                                    <a class="green-btn">Buy Now</a> </div>
                             </div>
                         </div>
                     </div>
@@ -229,7 +232,7 @@
 <i class="fa fa-inr" aria-hidden="true"></i> 4449
 <small>+ Taxes</small>
 </strong>
-                                    <a href="" class="green-btn">Buy Now</a> </div>
+                                    <a class="green-btn">Buy Now</a> </div>
                             </div>
                         </div>
                     </div>
@@ -241,6 +244,82 @@
 </div>
 </div>
 </div>
+
+
+
+
+<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form class="modal-content" id="sample-demo">
+            <div class="modal-header pb-0">
+                <div>
+                    <h5 class="modal-title" id="exampleModalLabel">Your details</h5>
+                </div>
+                 <div style="color:black;" class="" data-dismiss="modal" aria-label="Close">
+                            <span class="close-button topright" style="font-size: 36px;">&times;</span>
+                          </div>
+            </div>
+            <div class="modal-body d-flex flex-column gap-2">
+                
+                <div class="form-check">
+
+                    <input type="hidden" value="" id="plan" name="plan">
+
+                    <div class="form-group">
+
+                        <label> Name (*As per PAN card) </label>
+                        <input type="text" style="height: 45px;" id="name" style="margin-bottom: 14px;" class="form-control" placeholder="name" required>
+                        <br required<label> Mobile Number </label>
+                      <input type="number"  style="height: 45px;" id="mobile" style="margin-bottom: 14px;" class="form-control" placeholder="mobile" required>
+                      <br> <label> Convenient time for call back </label>
+                        <input type="datetime-local"  style="height: 45px;" id="date_time" style="margin-bottom: 14px;" class="form-control" placeholder="pincode" required>
+                        
+                    
+                    </div>
+                   
+                  </div>
+                  
+            </div>
+            <div class="modal-footer d-flex">
+                <button type="submit" style="width: 100%;background: #0186d7;" class="btn btn-secondary d-flex justify-content-center align-items-center" data-bs-dismiss="modal">
+                     
+                    <span class="d-block">Submit</span>
+                </button>
+            </div>
+          </form>
+    </div>
+</div>
+
+
+<div class="modal" style="margin-top: 93px;overflow: inherit;" id="abcd" tabindex="-1" aria-labelledby="exampleModal_suLabel" aria-hidden="true">
+    <div class="modal-dialog">
+           
+            <div class="modal-body d-flex flex-column gap-2">
+                
+
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <div class="icon-box">
+                        <i class="material-icons"> ✔ </i>
+                      </div>				
+                      <h4 class="modal-title w-100">Awesome!</h4>	
+                    </div>
+                    <div class="modal-body">
+                      <p class="text-center">Your booking has been confirmed. Our team will call you at your desired time.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                    </div>
+                  </div>
+                  
+           
+    </div>
+</div>
+
+
+
+
+
 </section>
 
 </footer>
@@ -248,57 +327,65 @@
 
 {% endblock content %} {% block script %}
 
-<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script type="8fb5116b98bf81f8e91509aa-text/javascript">
-    var token_name = 'token',
-        site_url = 'index.html';
-</script>
-<script src="assets-new/js/jquery-2.2.4.min.js" type="8fb5116b98bf81f8e91509aa-text/javascript"></script>
-<script defer src="assets-new/dist/js/common-1650438011384.min.js" type="8fb5116b98bf81f8e91509aa-text/javascript"></script>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3MYQ6G875" type="8fb5116b98bf81f8e91509aa-text/javascript"></script>
-<script type="8fb5116b98bf81f8e91509aa-text/javascript">
+<script>
+
+    var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {})
+    function showmodal(plan){
+       
+        document.getElementById('plan').value = plan
+      myModal.show();
+      alert('here')
+    }
+
     $(document).ready(function() {
-        window.dataLayer = window.dataLayer || [];
+        $('#sample-demo').on('submit', function(e){
+          // validation code here
+          e.preventDefault();
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+          name = document.getElementById("name").value
+          mobile = document.getElementById("mobile").value
+          date_time = document.getElementById("date_time").value
+          plan = document.getElementById("plan").value
+  
+          $.ajax({
+            cache: false, // initialize an AJAX request
+            type: "POST",
+            url: "{% url 'prices_enquire' %}",
+            data: {
+                name : name,
+                mobile : mobile,
+                date_time : date_time,
+                plan : plan,
+              
+            },
+    
 
-        gtag('config', 'G-Q3MYQ6G875');
-    });
-</script>
-<script type="8fb5116b98bf81f8e91509aa-text/javascript">
-    window._mfq = window._mfq || [];
-    (function() {
-        var mf = document.createElement("script");
-        mf.type = "text/javascript";
-        mf.async = true;
-        mf.src = "../cdn.mouseflow.com/projects/1f425764-4716-4f36-b482-121708fb6397.js";
-        document.getElementsByTagName("head")[0].appendChild(mf);
-    })();
-</script>
 
-<script type="8fb5116b98bf81f8e91509aa-text/javascript">
-    (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js'
+
+            success: function (data) {
+
+                      myModal.hide();
+                      
+                      myModal_su.show();
+
+                     
+
+            }
+
+            
+            });
+
+
+
+          });
         });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            '../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-KR7B8Q');
+      
+  
+
+
 </script>
 
-
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KR7B8Q" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="8fb5116b98bf81f8e91509aa-|49" defer=""></script>
 </body>

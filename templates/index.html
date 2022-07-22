@@ -4,6 +4,14 @@
 {% block head %}
 
 
+    <style>
+
+        .modal-backdrop {
+            background : none !important;
+        }
+    </style>
+
+
             
     {% endblock head %}
 
@@ -22,7 +30,7 @@
             <hr>
             <h1 class="h1mobile">
                 Unlock Your Easy Filing!
-                <br hidden-xs=""> Income Tax Return in India <span></span>
+                
             </h1>
             <div class="row">
                 <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1 banner-carousel" id="banner-slide">
@@ -49,7 +57,7 @@
                                         <div class="col-md-9 col-sm-10 col-xs-9 card-txt">
                                             <h3>Self Filing</h3>
                                             <p>Filings on your fingertips for free</p>
-                                            <a class="btn" onclick="popup();" title="Tax Filing Help" data-ctid="card-clicked-book-eca-now-415d2f25cd">Proceed eCA Now &rightarrow;</a> </div>
+                                            <a class="btn" onclick="popup();" title="Tax Filing Help" data-ctid="card-clicked-book-eca-now-415d2f25cd">Proceed Now &rightarrow;</a> </div>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
@@ -59,7 +67,7 @@
                                         <div class="col-md-9 col-sm-10 col-xs-9 card-txt">
                                             <h3>CA Assisted Filing</h3>
                                             <p>Connect with an expert CA for your filings.</p>
-                                            <a class="btn" onclick="popup_refund();" title="Tax Filing Help" data-ctid="card-clicked-book-eca-now-415d2f25cd">Proceed &rightarrow;</a> </div>
+                                            <a class="btn" onclick="popup();" title="Tax Filing Help" data-ctid="card-clicked-book-eca-now-415d2f25cd">Proceed &rightarrow;</a> </div>
                                     </div>
                                 </div>
                             </div>
@@ -159,7 +167,7 @@ update.<br> <a href="guide/crypto-assets-taxation.html" title="Taxation Guide">R
                             Planning And
                             Compliance</h3>
                         {% comment %} <p>Get your personal eCA to do tax filing for you. And it is personal, convenient & fast with maximum refund calculated for you.</p> {% endcomment %}
-                        <a style="color:black;" href="{% url 'direct_taxcation_questions' %}" class="btn"  data-ctid="card-clicked-get-a-personal-eca-6adc80e418">Book Now &rightarrow;</a> </div>
+                        <a style="color:black;" href="{% url 'direct_taxcation_questions' %}" class="btn"  data-ctid="card-clicked-get-a-personal-eca-6adc80e418">View more &rightarrow;</a> </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -172,7 +180,7 @@ update.<br> <a href="guide/crypto-assets-taxation.html" title="Taxation Guide">R
                             Planning And
                             Compliance</h3>
                         {% comment %} <p>You can file your ITR on your own. It's Easy, quick & free when you file with Namaste Rapid Tax on your own. {% endcomment %}
-                        <a style="color:black;" href="{% url 'indirect_taxcation_questions' %}" class="btn" data-ctid="card-clicked-file-it-yourself-758cd3ca6a">File Now &rightarrow;</a> </div>
+                        <a style="color:black;" href="{% url 'indirect_taxcation_questions' %}" class="btn" data-ctid="card-clicked-file-it-yourself-758cd3ca6a">View more &rightarrow;</a> </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -185,7 +193,7 @@ update.<br> <a href="guide/crypto-assets-taxation.html" title="Taxation Guide">R
                             Formation And
                             Compliance</h3>
                         {% comment %} <p>You can file your ITR on your own. It's Easy, quick & free when you file with Namaste Rapid Tax on your own. {% endcomment %}
-                        <a style="color:black;" href="{% url 'company_llp_questions' %}" class="btn" title="File Income Tax Yourself" data-ctid="card-clicked-file-it-yourself-758cd3ca6a">File Now &rightarrow;</a> </div>
+                        <a style="color:black;" href="{% url 'company_llp_questions' %}" class="btn" title="File Income Tax Yourself" data-ctid="card-clicked-file-it-yourself-758cd3ca6a"> View more  &rightarrow;</a> </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -196,7 +204,7 @@ update.<br> <a href="guide/crypto-assets-taxation.html" title="Taxation Guide">R
                         <h3>Virtual Book Keeping
                             And Accontancy(CFO)</h3>
                         {% comment %} <p>Get your personal eCA to do tax filing for you. And it is personal, convenient & fast with maximum refund calculated for you.</p> {% endcomment %}
-                        <a style="color:black;" href="{% url 'virtual_book_questions' %}" class="btn" title="Tax Filing Help" data-ctid="card-clicked-get-a-personal-eca-6adc80e418">Book Now &rightarrow;</a> </div>
+                        <a style="color:black;" href="{% url 'virtual_book_questions' %}" class="btn" title="Tax Filing Help" data-ctid="card-clicked-get-a-personal-eca-6adc80e418"> View more  &rightarrow;</a> </div>
                 </div>
             </div>
 
@@ -562,7 +570,7 @@ Prices </a>
                     <li><img src="{% static '' %}img/icons/certifed.png" alt="Authorized by Income Tax Department" title="Authorized by Income Tax Department" width="25" height="29">Authorized by Income Tax Department</li>
                     <li><img src="{% static '' %}img/icons/secure.png" alt="Secure and safe" title="Secure and safe" width="25" height="29">Secure and safe</li>
                     <li><img src="{% static '' %}img/icons/team.png" alt="Team of Chartered Accountants" title="Team of Chartered Accountants" width="28" height="29">Team of Chartered Accountants</li>
-                    <li><img src="{% static '' %}img/icons/rating.png" alt="4.9 star service rating" title="4.9 star service rating" width="25" height="29">4.9 star service rating</li>
+                    {% comment %} <li><img src="{% static '' %}img/icons/rating.png" alt="4.9 star service rating" title="4.9 star service rating" width="25" height="29">4.9 star service rating</li> {% endcomment %}
                 </ul>
                 <!-- <a href="about-us.html" class="btn" data-ctid="button-read-more-876af70524">Read
 More → </a> -->
@@ -618,7 +626,7 @@ More → </a> -->
                             <div itemprop="name" data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="panel-title expand">
                                 <div class="right-arrow pull-right"><i class="fa fa-angle-right"></i></div>
                                 <a href="#">What will happen in the circumstances where I have missed the due date while
-filing my Income Tax Return?</a>
+                                filing my Income Tax Return?</a>
                             </div>
                         </div>
                         <div id="collapse3" class="panel-collapse collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
@@ -648,7 +656,7 @@ filing my Income Tax Return?</a>
                                 <p>Income Tax online filing is a simple process and can be done by sitting at home for free with Namaste Rapid Tax.</p>
                                 <ul>
                                     <li>Step 1: Visit <a href="index.html">the Namaste Rapid Tax</a> website. Here, click on the option <a href="efile-income-tax-return/sources-of-income.html">“File
-ITR Now”</a>.</li>
+                                ITR Now”</a>.</li>
                                     <li>Step 2: Here Select your source of Income and click on continue.</li>
                                     <li>Step 3: If you're a salaried individual, Just Upload your Form 16. If you do not have any form 16 then you can simply skip the option and move further.</li>
                                     <li>Step 4: Enter the Financial Year, PAN & Aadhaar details and other basic details like your Employment Details, Deductions(If Any), bank details. After giving the details of all the information</li>
@@ -669,7 +677,7 @@ ITR Now”</a>.</li>
                                 <p>The procedure to e-file return with form-16 is as follows:</p>
                                 <ul>
                                     <li>Step 1: Choose "File It Yourself" and click on the <a href="efile-income-tax-return/sources-of-income.html">“File
-ITR Now”</a> option at Namaste Rapid Tax.in and upload your Form 16. </li>
+                                        ITR Now”</a> option at Namaste Rapid Tax.in and upload your Form 16. </li>
                                     <li>Step 2: After uploading form 16, Namaste Rapid Tax software will auto-fill the Form 16 data.
                                     </li>
                                     <li>Step 3: Verify your tax computation now and edit if required.</li>
@@ -721,8 +729,38 @@ ITR Now”</a> option at Namaste Rapid Tax.in and upload your Form 16. </li>
 
 
 
-    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <form action="{% url 'unlock_eca_url' %}" method="POST"  class="modal-content" id="sample-demo">
+    <div class="modal" style="margin-top: 93px;overflow: inherit;" id="abcd" tabindex="-1" aria-labelledby="exampleModal_suLabel" aria-hidden="true">
+        <div class="modal-dialog" style="overflow: inherit;
+        padding-right: 17px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);">
+               
+                <div class="modal-body d-flex flex-column gap-2">
+                    
+    
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <div class="icon-box">
+                            <i class="material-icons"> ✔ </i>
+                          </div>				
+                          <h4 class="modal-title w-100">Awesome!</h4>	
+                        </div>
+                        <div class="modal-body">
+                          <p class="text-center">Your booking has been confirmed. Our team will call you at your desired time.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                        </div>
+                      </div>
+                      
+               
+        </div>
+    </div>
+
+    <div class="modal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background-color:rgba(0, 0, 0, 0.5);">
+        <form action="{% url 'file_yourself_url' %}" method="post" class="modal-content" id="sample-demo" style="background: none;display: contents;">
             {% csrf_token %}
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -730,54 +768,9 @@ ITR Now”</a> option at Namaste Rapid Tax.in and upload your Form 16. </li>
                         <div>
                             <h5 class="modal-title" id="exampleModalLabel">Your details</h5>
                         </div>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body d-flex flex-column gap-2">
-                        
-                        <div class="form-check">
-            
-                            <div class="form-group">
-        
-                                <label> Name </label>
-                                <input type="text" style="height: 45px;" name="name" style="margin-bottom: 14px;" class="form-control" placeholder="name">
-                                <br><label> Mobile Number </label>
-                            <input type="text"  style="height: 45px;" name="mobile_no" style="margin-bottom: 14px;" class="form-control" placeholder="mobile">
-                            <br> <label> Convenient time for call back </label>
-                                <input type="datetime-local"  style="height: 45px;" name="date_time" style="margin-bottom: 14px;" class="form-control">
-                                <input type="hidden" value="" id="services">
-                            
-                            </div>
-                        
+                        <div style="color:black;" class="" data-dismiss="modal" aria-label="Close">
+                            <span class="close-button topright" style="font-size: 36px;">&times;</span>
                         </div>
-                        
-                    </div>
-                    <div class="modal-footer d-flex">
-                        <button type="submit" style="width: 100%;background: #0186d7;" class="btn btn-secondary d-flex justify-content-center align-items-center" data-bs-dismiss="modal">
-                            
-                            <span class="d-block">Submit it</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-
-
-
-    <div class="modal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <form action="{% url 'file_yourself_url' %}" method="post" class="modal-content" id="sample-demo">
-                {% csrf_token %}
-                <div class="modal-content">
-                    <div class="modal-header pb-0">
-                        <div>
-                            <h5 class="modal-title" id="exampleModalLabel">Your details</h5>
-                        </div>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
                     </div>
                     <div class="modal-body d-flex flex-column gap-2">
                     
@@ -786,11 +779,11 @@ ITR Now”</a> option at Namaste Rapid Tax.in and upload your Form 16. </li>
                             <div class="form-group">
         
                                 <label> Name (*As per PAN card) </label>
-                                <input type="text" style="height: 45px;" name="name" style="margin-bottom: 14px;" class="form-control" placeholder="name">
+                                <input type="text" style="height: 45px;" name="name" style="margin-bottom: 14px;" class="form-control" placeholder="name" required>
                                 <br><label> Mobile Number </label>
-                            <input type="number"  style="height: 45px;" name="mobile_no" style="margin-bottom: 14px;" class="form-control" placeholder="mobile">
+                            <input type="number"  style="height: 45px;" name="mobile_no" style="margin-bottom: 14px;" class="form-control" placeholder="mobile" required>
                             <br> <label> Convenient time for call back </label>
-                                <input type="datetime-local"  style="height: 45px;" name="date_time" style="margin-bottom: 14px;" class="form-control" placeholder="pincode">
+                                <input type="datetime-local"  style="height: 45px;" name="date_time" style="margin-bottom: 14px;" class="form-control" placeholder="pincode" required>
                             
                             </div>
                         
@@ -804,13 +797,13 @@ ITR Now”</a> option at Namaste Rapid Tax.in and upload your Form 16. </li>
                         </button>
                     </div>
                 </div>
-            </form>
+            </div>
+        </form>
 
-        </div>
     </div>
 
 
-
+    
 
 {% endblock content %}
 
@@ -829,13 +822,17 @@ ITR Now”</a> option at Namaste Rapid Tax.in and upload your Form 16. </li>
 
     function popup(services){
 
+        {% if user.is_authenticated %}
+
         
-        myModal.show();
-    }
+            myModal.show();
 
-    function popup_refund(){
+        {% else %}
 
-        myModal2.show();
+            window.location.href = "{% url 'login' %}"
+
+
+        {% endif %}
     }
 
 

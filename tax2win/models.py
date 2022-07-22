@@ -51,6 +51,24 @@ status_CHOICES =(
 )
   
 
+plan_CHOICES =(
+    ("Standard", "Standard"),
+    ("MultipleF-16", "MultipleF-16"),
+    ("Business Income", "Business Income"),
+    ("Capital Gain", "Capital Gain"),
+)
+  
+
+class prices_enquire(models.Model):
+
+    name = models.CharField(max_length=50)
+    date_time = models.DateTimeField(auto_now=False)
+    mobile = models.IntegerField()
+    user = models.ForeignKey(User , on_delete=models.CASCADE, blank=True, null=True)
+    comment = models.CharField(max_length=500, blank=True, null=True)
+    plan = models.CharField(choices = plan_CHOICES, max_length=50, blank=True, null=True)
+
+
 class direct_taxcation(models.Model):
 
     name = models.CharField(max_length=50)
@@ -135,18 +153,10 @@ class contact(models.Model):
     mobile_no = models.IntegerField()
     email = models.CharField(max_length=50)
     comments = models.CharField(max_length=500)
-    date_time = models.DateTimeField(auto_now=False)
+    date_time = models.DateTimeField(auto_now=True)
 
     
 
-class Unlock_eca(models.Model):
-
-    name = models.CharField(max_length=50)
-    mobile_no = models.IntegerField()
-    date_time = models.DateTimeField(auto_now=False)
-
-
-    
     
 
 class file_yourself(models.Model):
@@ -154,6 +164,7 @@ class file_yourself(models.Model):
     name = models.CharField(max_length=50)
     mobile_no = models.IntegerField()
     date_time = models.DateTimeField(auto_now=False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
     

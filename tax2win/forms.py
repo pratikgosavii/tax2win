@@ -14,6 +14,13 @@ class enquire_Form(forms.ModelForm):
       
        
 
+class prices_enquire_Form(forms.ModelForm):
+    class Meta:
+        model = prices_enquire
+        fields = '__all__'
+      
+       
+
 
 class refund_status_Form(forms.ModelForm):
     class Meta:
@@ -74,7 +81,7 @@ class company_llp_Form(forms.ModelForm):
 
 class unlock_eca_Form(forms.ModelForm):
     class Meta:
-        model = Unlock_eca
+        model = file_yourself
         fields = '__all__'
         widgets = {
 

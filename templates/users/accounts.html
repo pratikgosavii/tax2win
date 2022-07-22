@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+
+
+    <style>
+
+        .modal-backdrop {
+            background : none !important;
+        }
+
+        .active_bar{
+            color: #0186d7 !important;
+        }
+
+        
+        @media (max-width:420px)  {
+
+
+            .div1{
+                width : 38% !important;
+            }
+
+            .div2{
+                width : 62% !important;
+            }
+
+        }
+
+        @media (min-width:420px)  {
+
+
+            .accordian_laptop{
+                display : flex;
+                gap: 27px;
+            }
+
+        }
+
+        .banner{
+            height : 100vh;
+        }
+
+
+
+
+    </style>
+
+
+
+
+            
+    {% endblock head %}
+
+
+
+{% block content %}
+
+
+            <section class="banner faq-se-home">
+                <div class="container">
+                <div class="row">
+                    <div class="heading text-center"><span>Your Requests</span> </div>
+<hr>
+                    <div class="col-12" style="">
+                        <div class="col-4 div1" style="border-right: 1.5px solid grey;float:left;width:25%;font-size: 14px;text-align:center;">
+
+                        
+                           <div style="margin: 0 10%;border-bottom: 1px solid grey;"> <button id="direct_tab" onclick="show_cont('direct');" style="color:black;background: none;font-weight: 600;padding:0px;border:none !important;
+    border: 1px solid grey;
+    margin: 12px 0px;">Direct Taxation Planning And Compliance</button> </div>
+                           <div style="margin: 0 10%;border-bottom: 1px solid grey;"> <button id="indirect_tab" onclick="show_cont('indirect');" style="color:black;background: none;font-weight: 600;padding:0px;border:none !important;
+    border: 1px solid grey;
+    margin: 12px 0px;">Indirect Taxation Planning And Compliance</button> </div>
+                           <div style="margin: 0 10%;border-bottom: 1px solid grey;"> <button id="company_tab" onclick="show_cont('company');" style="color:black;background: none;font-weight: 600;padding:0px;border:none !important;
+    border: 1px solid grey;
+    margin: 12px 0px;">Company/LLP Formation And Compliance
+                        </button> </div>
+                           <div style="margin: 0 10%;border-bottom: 1px solid grey;"> <button id="virtual_tab" onclick="show_cont('virtual');" style="color:black;background: none;font-weight: 600;padding:0px;border:none !important;
+    border: 1px solid grey;
+    margin: 12px 0px;">Virtual Book Keeping And Accontancy(CFO)
+                        </button> </div>
+                            
+                        </div>
+                        <div class="col-8 div2" style="float:right;width:75%">
+                                <div id="direct" class="container"  style="display:block;">
+
+
+                                    <div class="clearfix"></div>
+                                        <div class="clearfix"></div>
+
+                                                {% for i in direct_tax %}
+                                            <div class="panel-group" id="accordion" itemscope itemtype="https://schema.org/FAQPage">
+                                                <div class="panel panel-default" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                                                <div class="panel-heading">
+                                                    <div itemprop="name" data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
+                                                        <div class="right-arrow pull-right"><i class="fa fa-angle-right"></i></div>
+                                                        <div class="accordian_laptop">
+                                                        <p> Name:- {{ i.name }}<p>
+                                                        <p> Mobile:-{{ i.mobile }}<p>
+                                                        <p> Status:- {{ i.status }}<p>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div id="collapse1" class="panel-collapse collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                                <div class="panel-body" itemprop="text">
+                                                    <p>Call Requested Date:-<br> {{ i.date_time }}</p>
+                                                    <p>{{ i.comment }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {% endfor %}
+                                </div>
+
+
+                                <div id="indirect" class="container" style="display:none;">
+                                    <div class="clearfix"></div>
+                                        <div class="clearfix"></div>
+
+                                                {% for i in indirect_tax %}
+                                            <div class="panel-group" id="accordion" itemscope itemtype="https://schema.org/FAQPage">
+                                                <div class="panel panel-default" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                                                <div class="panel-heading">
+                                                    <div itemprop="name" data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
+                                                        <div class="right-arrow pull-right"><i class="fa fa-angle-right"></i></div>
+                                                        <a href="#"> What is e-Filing of income tax returns?</a>
+                                                </div>
+                                            </div>
+                                            <div id="collapse1" class="panel-collapse collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                                <div class="panel-body" itemprop="text">
+                                                    <p>E-filing of Income-tax return is nothing but filing your Income-tax return online. As per the latest announcement by the income tax department, at present income tax returns can be filed through the online method only.
+                                                        However, the super senior citizens who are filing ITR 1 or ITR 4 are allowed to use the offline paper mode.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {% endfor %}
+                                </div>
+
+
+                                <div id="company" class="container" style="display:none;">
+                                    <div class="clearfix"></div>
+                                        <div class="clearfix"></div>
+
+                                                {% for i in company %}
+                                            <div class="panel-group" id="accordion" itemscope itemtype="https://schema.org/FAQPage">
+                                                <div class="panel panel-default" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                                                <div class="panel-heading">
+                                                    <div itemprop="name" data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
+                                                        <div class="right-arrow pull-right"><i class="fa fa-angle-right"></i></div>
+                                                        <a href="#"> What is e-Filing of income tax returns?</a>
+                                                </div>
+                                            </div>
+                                            <div id="collapse1" class="panel-collapse collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                                <div class="panel-body" itemprop="text">
+                                                    <p>E-filing of Income-tax return is nothing but filing your Income-tax return online. As per the latest announcement by the income tax department, at present income tax returns can be filed through the online method only.
+                                                        However, the super senior citizens who are filing ITR 1 or ITR 4 are allowed to use the offline paper mode.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {% endfor %}
+                                </div>
+
+                                
+                                
+                                <div id="virtual" class="container" style="display:none;">
+                                    <div class="clearfix"></div>
+                                        <div class="clearfix"></div>
+
+                                                {% for i in virtual %}
+                                            <div class="panel-group" id="accordion" itemscope itemtype="https://schema.org/FAQPage">
+                                                <div class="panel panel-default" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                                                <div class="panel-heading">
+                                                    <div itemprop="name" data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
+                                                        <div class="right-arrow pull-right"><i class="fa fa-angle-right"></i></div>
+                                                        <a href="#"> What is e-Filing of income tax returns?</a>
+                                                </div>
+                                            </div>
+                                            <div id="collapse1" class="panel-collapse collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                                <div class="panel-body" itemprop="text">
+                                                    <p>E-filing of Income-tax return is nothing but filing your Income-tax return online. As per the latest announcement by the income tax department, at present income tax returns can be filed through the online method only.
+                                                        However, the super senior citizens who are filing ITR 1 or ITR 4 are allowed to use the offline paper mode.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {% endfor %}
+                                </div>
+
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+                </div>
+
+            </section>
+
+    {% endblock content %}
+
+    {% block script %}
+
+    <script>
+        function show_cont(name){
+            alert('sdgsgdsdsjdg ')
+            $('#direct').css("display","none");
+            $('#indirect').css("display","none");
+            $('#company').css("display","none");
+            $('#virtual').css("display","none");
+
+            $('#direct_tab').removeClass('active_bar')
+            $('#indirect_tab').removeClass('active_bar')
+            $('#company_tab').removeClass('active_bar')
+            $('#virtual_tab').removeClass('active_bar')
+            name = '#' + name
+            name_tab = name + '_tab'
+            alert(name)
+
+            $(name).css("display","block");
+            $(name_tab).addClass('active_bar')
+
+        }
+    </script>
+
+
+    {% endblock script %}
