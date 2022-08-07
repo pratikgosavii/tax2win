@@ -29,6 +29,8 @@ urlpatterns = [
     path('admin-virtual', admin_virtual, name="admin_virtual"),
     path('admin-prices-enquire', admin_prices_enquire, name="admin_prices_enquire"),
     path('admin-contact-us', admin_contact_us, name="admin_contact_us"),
+
+    path('add-itrdate', add_itrdate_view, name="add_itrdate"),
   
     path('admin-selffiling-ca-assisted', selfiling_eca, name="selfiling_eca"),
   

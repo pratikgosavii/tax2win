@@ -99,3 +99,13 @@ class file_yourself_Form(forms.ModelForm):
 
             'date_time' : forms.DateTimeInput(attrs={'type': 'datetime-local', 'class': "form-control"}),
         }
+
+class add_itrdate_Form(forms.ModelForm):
+    class Meta:
+        model = add_itrdate
+        fields = '__all__'
+      
+        widgets = {
+
+            'date_time' : forms.DateTimeInput(attrs={'type': 'datetime-local', 'class': "form-control"}),
+        }

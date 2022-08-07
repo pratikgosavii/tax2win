@@ -52,7 +52,19 @@ IST = pytz.timezone('Asia/Kolkata')
 def index(request):
 
 
-    return render(request, 'index.html')
+    from datetime import datetime
+    from dateutil.parser import parse
+
+    # Solution
+    bday = "July 24, 2022, 11:31 p.m."
+
+    td = parse(bday)
+    bday = datetime.strftime(td, '%d/%m/%Y %H:%M')
+
+    print(bday)
+
+
+    return render(request, 'index.html', {'itr_Date': bday})
 
 
 @login_required(login_url='login')
@@ -347,14 +359,19 @@ def unlock_eca(request):
 
         if forms.is_valid():
 
-            forms.save()
+            instance = forms.save(commit=False)
+            instance.user = request.user
+            instance.save()
 
-            return render(request, 'index.html', {'showmodal' : 'sdsd'})
+            return JsonResponse({'result' : True})
+
 
 
         
 
         else:
+
+            print(forms.errors)
 
             return redirect('index')
 
@@ -398,7 +415,7 @@ def file_yourself_view(request):
             instance.save()
             print('done')
 
-            return JsonResponse({'result' : True})
+            return render(request, 'index.html', {'showmodal' : 'sdsd'})
 
         else:
 

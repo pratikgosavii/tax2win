@@ -164,7 +164,13 @@ class file_yourself(models.Model):
     name = models.CharField(max_length=50)
     mobile_no = models.IntegerField()
     date_time = models.DateTimeField(auto_now=False)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
+
+    
+
+class add_itrdate(models.Model):
+
+    date_time = models.DateTimeField(auto_now=False)
 
 
     

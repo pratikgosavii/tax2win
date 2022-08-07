@@ -27,9 +27,16 @@ def login_page(request):
         print('2')
 
         
+
+        
         if user:
             print('yes')
             login(request, user)
+
+
+            if user.is_superuser:
+
+                return redirect('admin-index')
 
             if 'next' in request.POST:
                 return redirect(request.POST.get('next'))
@@ -67,7 +74,6 @@ def register_page(request):
         if forms.is_valid():
             print('2')
 
-            forms.save()
             email = forms.cleaned_data['email']
             password = forms.cleaned_data['password1']
             user = authenticate(email=email, password=password)
@@ -80,9 +86,9 @@ def register_page(request):
                 print('done')
                 return redirect('register')
             else:
-                print('no')
-
-                return redirect('register')
+                forms.save()
+                
+                return redirect('login')
         else:
 
             print(forms.errors)
@@ -91,7 +97,7 @@ def register_page(request):
                 'form': forms,
             }
 
-            return render(request, 'users/resgister.html', context)
+            return render(request, 'users/register.html', context)
 
     else:
         print(forms.as_p)
@@ -100,45 +106,6 @@ def register_page(request):
 
         return render(request, 'users/register.html', context)
 
-
-
-def register_distributor(request, username, password):
-    
-    if not User.objects.filter(username=username).exists():
-
-        test = User.objects.create_user(username=username, password=password, is_distributor = True)
-
-        if test:
-            return test
-        else:
-            messages.error(request, 'something went wrong')
-            return redirect('add_distributor')
-    
-    else:
-
-        messages.error(request, 'username exists')
-        return redirect('add_distributor')
-
-
-
-def register_showroom(request, username, password):
-    
-    if not User.objects.filter(username=username).exists():
-
-        test = User.objects.create_user(username=username, password=password, is_showroom = True)
-
-        if test:
-
-            return test
-
-        else:
-            messages.error(request, 'something went wrong')
-            return redirect('add_showroom')
-    
-    else:
-
-        messages.error(request, 'username exists')
-        return redirect('add_showroom')
 
 
 def logout_page(request):

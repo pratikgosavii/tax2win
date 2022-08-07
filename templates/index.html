@@ -9,9 +9,70 @@
         .modal-backdrop {
             background : none !important;
         }
+
+        
+
+  .modal-backdrop {
+    background : none !important;
+}
+
+  .modal-confirm .icon-box i {
+    font-size: 58px;
+    position: relative;
+    top: 3px;
+}
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+  .icon-box {
+    color: #fff;		
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -70px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    z-index: 9;
+    background: #82ce34;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  .icon-box i {
+    font-size: 58px;
+    position: relative;
+    top: 3px;
+  }
+
+
+  @media (max-width:420px)  {
+
+   
+  
+    
+}
     </style>
 
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="{% static 'common.css' %}" />
+    
             
     {% endblock head %}
 
@@ -57,7 +118,7 @@
                                         <div class="col-md-9 col-sm-10 col-xs-9 card-txt">
                                             <h3>Self Filing</h3>
                                             <p>Filings on your fingertips for free</p>
-                                            <a class="btn" onclick="popup();" title="Tax Filing Help" data-ctid="card-clicked-book-eca-now-415d2f25cd">Proceed Now &rightarrow;</a> </div>
+                                            <a class="btn" id="exampleModal_button" title="Tax Filing Help" data-ctid="card-clicked-book-eca-now-415d2f25cd">Proceed Now &rightarrow;</a> </div>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
@@ -67,7 +128,8 @@
                                         <div class="col-md-9 col-sm-10 col-xs-9 card-txt">
                                             <h3>CA Assisted Filing</h3>
                                             <p>Connect with an expert CA for your filings.</p>
-                                            <a class="btn" onclick="popup();" title="Tax Filing Help" data-ctid="card-clicked-book-eca-now-415d2f25cd">Proceed &rightarrow;</a> </div>
+                                            <a class="btn" id="exampleModal_button12" title="Tax Filing Help" data-ctid="card-clicked-book-eca-now-415d2f25cd">Proceed Now &rightarrow;</a> </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -207,69 +269,6 @@ update.<br> <a href="guide/crypto-assets-taxation.html" title="Taxation Guide">R
                         <a style="color:black;" href="{% url 'virtual_book_questions' %}" class="btn" title="Tax Filing Help" data-ctid="card-clicked-get-a-personal-eca-6adc80e418"> View more  &rightarrow;</a> </div>
                 </div>
             </div>
-
-           
-            {% comment %} <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="card plan-tax clearfix">
-                    <div class="col-md-3 col-sm-4 col-xs-3">
-                        <img src="{% static 'img/ca-assisted.png' %}" alt="Plan Tax & File ITR" class="img-responsive" title="Plan Tax & File Income Tax Return" loading="lazy" width="87" height="87" /> </div>
-                    <div class="col-md-9 col-sm-8 col-xs-9 card-txt">
-                        <h3>Company Formation</h3>
-                        <p>A little planning can go a long way in saving your hard earned money. Don't just file your tax return, plan them & get maximum refunds.</p>
-                        <a onclick="popup('Company Formation');" class="btn" title="Hire CA Expert" data-ctid="card-clicked-plan-tax-file-itr-7b46e61244">Start Now &rightarrow;</a> </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="card pan-card clearfix">
-                    <div class="col-md-3 col-sm-4 col-xs-3">
-                        <img src="{% static 'new/card_infromation.png' %}" alt="NRI Income Tax Return File" class="img-responsive" title="NRI Income Tax Return File" loading="lazy" width="63" height="42" /> </div>
-                    <div class="col-md-9 col-sm-8 col-xs-9 card-txt">
-                        <h3>Registration and Formation of LLPs</h3>
-                        <p>Status of NRI seems to be cool but it brings with itself a lot of taxation.. </p>
-                        <a onclick="popup('Registration and Formation of LLPs');" class="btn" title="NRI Income Tax Return File" data-ctid="card-clicked-nri-taxes-itr-filling-c9899e8314">Start Now &rightarrow;</a> </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="card pan-card clearfix">
-                    <div class="col-md-3 col-sm-4 col-xs-3">
-                        <img src="{% static 'img/pan-card.png' %}" alt="NRI Income Tax Return File" class="img-responsive" title="NRI Income Tax Return File" loading="lazy" width="63" height="42" /> </div>
-                    <div class="col-md-9 col-sm-8 col-xs-9 card-txt">
-                        <h3>MCA 21 Compilances</h3>
-                        <p>Status of NRI seems to be cool but it brings with itself a lot of taxation.. </p>
-                        <a onclick="popup('MCA 21 Compilances');" class="btn" title="NRI Income Tax Return File" data-ctid="card-clicked-nri-taxes-itr-filling-c9899e8314">Start Now &rightarrow;</a> </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="card pan-card clearfix">
-                    <div class="col-md-3 col-sm-4 col-xs-3">
-                        <img src="{% static 'img/pan-card.png' %}" alt="NRI Income Tax Return File" class="img-responsive" title="NRI Income Tax Return File" loading="lazy" width="63" height="42" /> </div>
-                    <div class="col-md-9 col-sm-8 col-xs-9 card-txt">
-                        <h3>GST Registration</h3>
-                        <p>Status of NRI seems to be cool but it brings with itself a lot of taxation.. </p>
-                        <a onclick="popup('GST Registration", "GST Registration');" class="btn" title="NRI Income Tax Return File" data-ctid="card-clicked-nri-taxes-itr-filling-c9899e8314">Start Now &rightarrow;</a> </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="card pan-card clearfix">
-                    <div class="col-md-3 col-sm-4 col-xs-3">
-                        <img src="{% static 'img/pan-card.png' %}" alt="NRI Income Tax Return File" class="img-responsive" title="NRI Income Tax Return File" loading="lazy" width="63" height="42" /> </div>
-                    <div class="col-md-9 col-sm-8 col-xs-9 card-txt">
-                        <h3>Income Tax Assessment and Appeals</h3>
-                        <p>Status of NRI seems to be cool but it brings with itself a lot of taxation.. </p>
-                        <a onclick="popup('Income Tax Assessment and Appeals');" class="btn" title="NRI Income Tax Return File" data-ctid="card-clicked-nri-taxes-itr-filling-c9899e8314">Start Now &rightarrow;</a> </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="card pan-card clearfix">
-                    <div class="col-md-3 col-sm-4 col-xs-3">
-                        <img src="{% static 'new/ac_book.png' %}" alt="NRI Income Tax Return File" class="img-responsive" title="NRI Income Tax Return File" loading="lazy" width="63" height="42" /> </div>
-                    <div class="col-md-9 col-sm-8 col-xs-9 card-txt">
-                        <h3>Virtual CFO (Book keeping and Accountancy)</h3>
-                        <p>Status of NRI seems to be cool but it brings with itself a lot of taxation.. </p>
-                        <a onclick="popup('Virtual CFO Book keeping and Accountancy');" class="btn" title="NRI Income Tax Return File" data-ctid="card-clicked-nri-taxes-itr-filling-c9899e8314">Start Now &rightarrow;</a> </div>
-                </div>
-            </div>
-        </div> {% endcomment %}
     </div>
     </div>
 </section>
@@ -472,84 +471,6 @@ Prices </a>
         </div>
     </div>
 </section>
-{% comment %} 
-<div class="container clients-logo">
-    <div class="heading text-center"><span>Our Valued Associations</span>
-        <hr>
-    </div>
-    <div class="slider-container">
-        <ul id="slider" class="clearfix">
-            <li><img src="{% static 'img/clients-logos/sbi-logo.png' %}" alt="SBI Bank" title="SBI Bank" loading="lazy" width="135" height="25"></li>
-            <li><img src="{% static 'img/clients-logos/icici-logo.png' %}" alt="ICICI Bank" title="ICICI Bank" loading="lazy" width="135" height="26"></li>
-            <li><img src="{% static 'img/clients-logos/indusind-bank-logo.png' %}" alt="Indusind Bank" title="Indusind Bank" width="135" height="27"></li>
-            <li><img src="{% static 'img/clients-logos/life99.png' %}" alt="Life99" title="Life99" width="110" height="38"></li>
-            <li><img src="{% static 'img/clients-logos/zinghr-logo.png' %}" alt="ZingHr" title="ZingHr" loading="lazy" width="125" height="56"></li>
-            <li><img src="{% static 'img/clients-logos/bajaj-finserv-logo.png' %}" alt="Bajaj Finserv" title="Bajaj Finserv" loading="lazy" width="135" height="36"></li>
-            <li><img src="{% static 'img/clients-logos/g-pay-logo.png' %}" alt="Google Pay" title="Google Pay" loading="lazy" width="100" height="40"></li>
-            <li><img src="{% static 'img/clients-logos/phone-pay.png' %}" alt="Phone Pay" title="Phone Pay" loading="lazy" width="135" height="36"></li>
-            <li><img src="{% static 'img/clients-logos/paytm.png' %}" alt="Paytm" title="Paytm" loading="lazy" width="125" height="35"></li>
-            <li><img src="{% static 'img/clients-logos/icici-securities.png' %}" alt="ICICI Securities" title="ICICI Securities" width="130" height="32"></li>
-            <li><img src="{% static 'img/clients-logos/darwinbox-logo.png' %}" alt="Darwinbox" title="Darwinbox" width="150" height="33"></li>
-            <li><img src="{% static 'img/clients-logos/benefitHub_logo.png' %}" alt="Benefit Hub" title="Benefit Hub" loading="lazy" width="135" height="28"></li>
-        </ul>
-    </div>
-</div> {% endcomment %}
-<!-- 
-<section class="blog_section blog">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7">
-                <div class="heading"><span>Income Tax e-filing Popular Guides</span>
-                    <hr>
-                </div>
-            </div>
-            <br>
-            <div class="col-md-8 col-sm-6 col-xs-12">
-                <div class="box">
-                    <div class="row">
-                        <a href="guide/income-tax-return.html" title=" Your Income Tax Return (ITR) for FY 2021-22 (AY 2022-23)" rel="nofollow" target="_blank">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <figure><img src="{% static '' %}img/blog/guide-itr.jpg" width="720" height="324" alt=" Your Income Tax Return (ITR) for FY 2021-22 (AY 2022-23)" class="img-responsive"></figure>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12 detail">
-                                <div> Your Income Tax Return (ITR) for FY 2021-22 (AY 2022-23) </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="box2">
-                    <a href="guide/deductions.html" title="Income Tax Deductions - The Most Comprehensive Guide to 
-                    Tax Saving in India [Updated]" rel="nofollow" target="_blank">
-                        <div><i class="fa fa-angle-right"></i> Income Tax Deductions - The Most Comprehensive Guide to Tax Saving in India [Updated]</div>
-                    </a>
-                </div>
-                <div class="box2">
-                    <a href="guide/aadhaar-pan-link.html" title="Know the easiest way to link Aadhaar card with PAN card" rel="nofollow" target="_blank">
-                        <div><i class="fa fa-angle-right"></i> Know the easiest way to link Aadhaar card with PAN card
-                        </div>
-                    </a>
-                </div>
-                <div class="box2">
-                    <a href="guide/income-tax-slabs.html" title="Income Tax Slabs and Rates for FY 2021-22 (AY 2022-23)  [Updated]" rel="nofollow" target="_blank">
-                        <div><i class="fa fa-angle-right"></i> Income Tax Slabs and Rates for FY 2021-22 (AY 2022-23) [Updated]
-                        </div>
-                    </a>
-                </div>
-                <div class="box2">
-                    <a href="guide/e-verify-income-tax-return.html" title="What is verification of Income Tax Return? How to do e-verification of ITR?" rel="nofollow" target="_blank">
-                        <div><i class="fa fa-angle-right"></i> What is verification of Income Tax Return? How to do e-verification of ITR?</div>
-                    </a>
-                </div>
-                <div class="guide_more_btn"><a href="income-tax-guides.html" class="green-btn" title="Read More Blogs" target="_blank">Read More Guides →</a></div>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    </div>
-</section> -->
-
 
 
 <section class="whyus" style="padding-top:0px;">
@@ -727,15 +648,48 @@ More → </a> -->
     </div>
 
 
-
-
-    <div class="modal" style="margin-top: 93px;overflow: inherit;" id="abcd" tabindex="-1" aria-labelledby="exampleModal_suLabel" aria-hidden="true">
-        <div class="modal-dialog" style="overflow: inherit;
-        padding-right: 17px;
-        display: block;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);">
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form class="modal-content" id="sample-demo">
+                <div class="modal-header pb-0">
+                    <div>
+                        <h5 class="modal-title" id="exampleModalLabel">Your details</h5>
+                    </div>
+                     <div style="color:black;" class="" data-dismiss="modal" aria-label="Close">
+                                <span class="close-button topright" style="font-size: 36px;">&times;</span>
+                              </div>
+                </div>
+                <div class="modal-body d-flex flex-column gap-2">
+                    
+                    <div class="form-check">
+    
+                        <div class="form-group">
+    
+                            <label> Name (*As per PAN card) </label>
+                            <input type="text" style="height: 45px;" id="name" style="margin-bottom: 14px;" class="form-control" placeholder="name" required>
+                            <br required<label> Mobile Number </label>
+                          <input type="number"  style="height: 45px;" id="mobile" style="margin-bottom: 14px;" class="form-control" placeholder="mobile" required>
+                          <br> <label> Convenient time for call back </label>
+                            <input type="datetime-local"  style="height: 45px;" id="date_time" style="margin-bottom: 14px;" class="form-control" placeholder="pincode" required>
+                            
+                        
+                        </div>
+                       
+                      </div>
+                      
+                </div>
+                <div class="modal-footer d-flex">
+                    <button type="submit" style="width: 100%;background: #0186d7;color: white;" class="btn btn-secondary d-flex justify-content-center align-items-center" data-bs-dismiss="modal">
+                         
+                        <span class="d-block">Submit</span>
+                    </button>
+                </div>
+              </form>
+        </div>
+    </div>
+    
+    <div class="modal" style="padding-top: 93px; overflow: inherit; display: none; height: 100vh;" id="abcd" tabindex="-1" aria-labelledby="exampleModal_suLabel" aria-hidden="true">
+        <div class="modal-dialog">
                
                 <div class="modal-body d-flex flex-column gap-2">
                     
@@ -758,52 +712,32 @@ More → </a> -->
                
         </div>
     </div>
+    
+    
+    
+    
+      <br>
+    </div>
+    
+            {% if itr_Date %}
 
-    <div class="modal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background-color:rgba(0, 0, 0, 0.5);">
-        <form action="{% url 'file_yourself_url' %}" method="post" class="modal-content" id="sample-demo" style="background: none;display: contents;">
-            {% csrf_token %}
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header pb-0">
-                        <div>
-                            <h5 class="modal-title" id="exampleModalLabel">Your details</h5>
-                        </div>
-                        <div style="color:black;" class="" data-dismiss="modal" aria-label="Close">
-                            <span class="close-button topright" style="font-size: 36px;">&times;</span>
-                        </div>
-                    </div>
-                    <div class="modal-body d-flex flex-column gap-2">
-                    
-                        <div class="form-check">
-        
-                            <div class="form-group">
-        
-                                <label> Name (*As per PAN card) </label>
-                                <input type="text" style="height: 45px;" name="name" style="margin-bottom: 14px;" class="form-control" placeholder="name" required>
-                                <br><label> Mobile Number </label>
-                            <input type="number"  style="height: 45px;" name="mobile_no" style="margin-bottom: 14px;" class="form-control" placeholder="mobile" required>
-                            <br> <label> Convenient time for call back </label>
-                                <input type="datetime-local"  style="height: 45px;" name="date_time" style="margin-bottom: 14px;" class="form-control" placeholder="pincode" required>
-                            
-                            </div>
-                        
-                        </div>
-                      
-                    </div>
-                    <div class="modal-footer d-flex">
-                        <button type="submit" style="width: 100%;background: #0186d7;"  class="btn btn-secondary d-flex justify-content-center align-items-center" data-bs-dismiss="modal">
-                            
-                            <span class="d-block">Submit</span>
-                        </button>
-                    </div>
+    <div class="count-down-outer clearfix" id="itr-alert" style="left: 0px;"> <small class="close" onclick="closeNav()">X</small>
+        <div id="countdown">
+            <h3>Tax Filing Deadline FY 2021-22</h3>
+            <div id="counter-off">
+                <div id="tiles"><span>08</span><span>11</span><span>15</span><span>07</span></div>
+                    <div class="labels">
+                    <li>Days</li>
+                    <li>Hours</li>
+                    <li>Mins</li>
+                    <li>Secs</li>
                 </div>
+                <a class="btn btn-default cta_btn" style="background: #0186d7;" id="exampleModal_button13" target="_blank">Proced Now <i>→</i></a> </div>
             </div>
-        </form>
-
+        </div>
     </div>
 
-
-    
+    {% endif %}
 
 {% endblock content %}
 
@@ -817,30 +751,199 @@ More → </a> -->
     <script>
 
         
-    var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {})
-    var myModal2 = new bootstrap.Modal(document.getElementById('exampleModal2'), {})
-
-    function popup(services){
-
-        {% if user.is_authenticated %}
-
-        
+        var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {})
+        var myModal_su = new bootstrap.Modal(document.getElementById('abcd'), {})
+    
+        document.getElementById("exampleModal_button").addEventListener("click", function(event){
+            {% if user.is_authenticated %}
             myModal.show();
 
-        {% else %}
+            {% else %}
 
             window.location.href = "{% url 'login' %}"
 
 
         {% endif %}
+        })
+        document.getElementById("exampleModal_button12").addEventListener("click", function(event){
+            {% if user.is_authenticated %}
+            myModal.show();
+
+            {% else %}
+
+            window.location.href = "{% url 'login' %}"
+
+
+        {% endif %}
+        })
+        document.getElementById("exampleModal_button13").addEventListener("click", function(event){
+            {% if user.is_authenticated %}
+            myModal.show();
+
+            {% else %}
+
+            window.location.href = "{% url 'login' %}"
+
+
+        {% endif %}
+        })
+
+       
+    
+    $(document).ready(function() {
+        $('#sample-demo').on('submit', function(e){
+          // validation code here
+          e.preventDefault();
+
+
+          
+        name = document.getElementById("name").value
+        mobile = document.getElementById("mobile").value
+        date_time = document.getElementById("date_time").value
+        alert(name)
+        alert(mobile)
+        alert(date_time)
+
+        $.ajax({
+            cache: false, // initialize an AJAX request
+            type: "POST",
+            url: "{% url 'unlock_eca_url' %}",
+            data: {
+                csrfmiddlewaretoken:  '{{ csrf_token  }}',
+                name : name,
+                mobile_no : mobile,
+                date_time : date_time,
+               
+            },
+    
+
+
+
+            success: function (data) {
+
+                      myModal.hide();
+                      
+                      myModal_su.show();
+
+                     
+
+            }
+
+            
+            });
+
+
+
+          });
+        });
+          
+
+
+
+          
+
+    function openNav() {
+        $("#itr-alert").removeClass('hide');
+        $("#itr-alert").show().animate({
+            left: "0"
+        });
+      
     }
 
 
+    function closeNav() {
+        $("#itr-alert").animate({
+            left: "-280"
+        });
+       
+        
+    }
 
+   
 
+    // ITR filing days remaining alert-popup 
+    var endTime = '31/07/2022 23:59';
+    endTime = endTime.match(/(\d+)\/(\d+)\/(\d+)\s*(\d+):(\d+)/);
+    var target_date = new Date(endTime[3], endTime[2] - 1, endTime[1], endTime[4], endTime[5], 0, 0);
 
+    var days, hours, minutes, seconds; // variables for time units
+    var countdown = document.getElementById("tiles"); // get tag element
 
-    
+    function getCountdown() {
+
+        // find the amount of "seconds" between now and target
+        var current_date = new Date().getTime();
+        var seconds_left = (target_date - current_date) / 1000;
+        if (seconds_left > 0) {
+            days = pad(parseInt(seconds_left / 86400));
+            seconds_left = seconds_left % 86400;
+            hours = pad(parseInt(seconds_left / 3600));
+            seconds_left = seconds_left % 3600;
+
+            minutes = pad(parseInt(seconds_left / 60));
+            seconds = pad(parseInt(seconds_left % 60));
+
+            // format countdown string + set tag value
+            countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
+        } else {
+            // $("#countdown_time_running").hide();
+            // $("#countdown_time_up").show();
+            $('#itr-alert, .animation').hide();
+            clearInterval(countdownInterval);
+        }
+
+    }
+
+    function pad(n) {
+        return (n < 10 ? '0' : '') + n;
+    }
+
+    getCountdown();
+
+    var countdownInterval = setInterval(function() {
+        getCountdown();
+    }, 1000);
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3MYQ6G875" type="ddea0f99955d4f562df47487-text/javascript"></script>
+<script type="ddea0f99955d4f562df47487-text/javascript">
+    $(document).ready(function() {
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Q3MYQ6G875');
+    });
+</script>
+<script type="ddea0f99955d4f562df47487-text/javascript">
+    window._mfq = window._mfq || [];
+            (function() {
+            var mf = document.createElement("script");
+            mf.type = "text/javascript";
+            mf.async = true;
+            mf.src = "//cdn.mouseflow.com/projects/1f425764-4716-4f36-b482-121708fb6397.js";
+            document.getElementsByTagName("head")[0].appendChild(mf);
+        })();
+</script>
+
+<script type="ddea0f99955d4f562df47487-text/javascript">
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KR7B8Q');    
 </script>
 
 

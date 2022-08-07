@@ -54,6 +54,9 @@
             position: absolute !important;
         }
 
+        .modal{
+            background-color: rgba(0, 0, 0, 0.5) !important;
+        }
 
         .close-button {
             border: none;
@@ -81,8 +84,12 @@
         }
 
         .logoimg {
-          
-            top: 0px !important
+
+                height: 89px !important;
+                width: 398px !important;
+                left: 40px !important;
+                top: -18px !important;
+
         }
 
         .banner .banner-carousel {
@@ -112,12 +119,11 @@
 
 
             .logoimg {
-                height: 77px !important;
-                padding: 0px !important;
-                margin: 0px !important;
-                position: fixed !important;
-                overflow: hidden !important;
-                top: 0px !important;
+                
+
+                height: 57px !important;
+                top: 2px !important;
+
             }
 
             .questionsbanner{
@@ -178,14 +184,26 @@
 
         <div class="clearfix"></div>
         <section class="bottom" 
-        style="background: black;"
-    >
-            <div class="container">
+            style="background: black;">
+            <div class="container" style="min-width: 100%;">
                 <div class="row">
                     <div class="col-md-2 col-sm-12 col-xs-12 navstyle">
-                        <a href="{% url 'index' %}" class="logo"><img style="
-                            position: absolute;
-                            z-index: 9999;" src="{% static 'img/new-logo.png' %}" title="Income Tax Filing Online" alt="Income Tax Filing Online" class="logoimg" width="159" height="37" /></a>
+                        <a href="{% url 'index' %}" class="logo">
+                            
+                            
+                            {% if request.user_agent.is_mobile %}
+                            
+                                <img style="
+                                position: absolute;
+                                z-index: 9999;" src="{% static 'img/logo_mobile.png' %}" title="Income Tax Filing Online" alt="Income Tax Filing Online" class="logoimg" width="159" height="37" /></a>
+                            
+                            {% else %}
+                            
+                                <img style="
+                                position: absolute;
+                                z-index: 9999;" src="{% static 'img/new_logo.png' %}" title="Income Tax Filing Online" alt="Income Tax Filing Online" class="logoimg" width="159" height="37" /></a>
+
+                            {% endif %}
                     </div>
                     <div class="col-md-10 col-sm-12 col-xs-12">
 
@@ -373,26 +391,7 @@
                 </div> {% endcomment %}
             </div>
         </section>
-        <header class="clearfix foot-new">
-       
-        <section class="copyright">
-            <div class="container">
-                
-            <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                
-            © 2022  <a title="File Income Tax Return">Namaste Rapid Tax</a>. All Rights Reserved.
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-            <a href="{% url 'terms_condition' %}">Terms &amp; Conditions</a> | <a <a href="{% url 'privacy_policy' %}">Privacy Policy</a> </div>
-            </div>
-            </div>
-            </section>
-        </div>
-
-
-    </header>
-    </header>
+        
     
         
         </footer>

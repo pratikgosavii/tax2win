@@ -1,4 +1,5 @@
 from django.shortcuts import redirect, render
+from django.urls import is_valid_path
 from tax2win.models import *
 from tax2win.forms import *
 import dateutil.parser
@@ -71,6 +72,54 @@ def admin_contact_us(request):
     data = contact.objects.all()
 
     return render(request, 'admin-templates/admin_contact_us.html', {'data' : data})
+
+@admin_required(login_url="login")
+
+def add_itrdate_view(request):
+
+    print('here')
+
+    data = add_itrdate.objects.first()
+
+    if request.method == "POST":
+
+        print('here1')
+
+
+        form = add_itrdate_Form(instance = data)
+
+
+        date_time = request.POST.get('date_time')
+
+        
+        d = dateutil.parser.parse(date_time)
+        from_date_time = d.strftime("%Y-%m-%d %H:%M:%S")
+
+        post = request.POST.copy() 
+        post.update({"date_time" : from_date_time})
+        request.POST = post
+
+        form = add_itrdate_Form(request.POST)
+
+        if form.is_valid():
+
+            form.save()
+
+            print('sdhusydin')
+
+            return redirect('add_itrdate')
+
+        else:
+            
+            print(form.errors)
+    else:
+
+        print('here3')
+
+        form = add_itrdate_Form(instance = data)
+
+
+        return render(request, 'admin-templates/add_itrdate.html', {'form' : form})
 
 
 @admin_required(login_url="login")
