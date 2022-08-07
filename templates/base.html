@@ -1,4 +1,5 @@
 {% load static %}
+{% load user_agents %}
 <!DOCTYPE html>
 <html lang="en-IN">
 
@@ -112,16 +113,13 @@
                 font-size: 14px !important;
             }
 
-            .logo img {
-                width: 140px !important;
-                height: 108px !important;
-                }
-
+        
 
             .logoimg {
                 
 
                 height: 57px !important;
+                width: 159px !important;
                 top: 2px !important;
 
             }
@@ -198,11 +196,12 @@
                                 z-index: 9999;" src="{% static 'img/logo_mobile.png' %}" title="Income Tax Filing Online" alt="Income Tax Filing Online" class="logoimg" width="159" height="37" /></a>
                             
                             {% else %}
-                            
+
                                 <img style="
                                 position: absolute;
                                 z-index: 9999;" src="{% static 'img/new_logo.png' %}" title="Income Tax Filing Online" alt="Income Tax Filing Online" class="logoimg" width="159" height="37" /></a>
-
+                        
+                           
                             {% endif %}
                     </div>
                     <div class="col-md-10 col-sm-12 col-xs-12">
@@ -306,7 +305,8 @@
                                     
                                     {% else %}
 
-                                        <li style="border:none;" class="log-in"><a href="{% url 'login' %}" class="login" title="Log In" data-ctid="button-login-signup-780bc5c1cc">Log In</a> / <a href="{% url 'register' %}" class="login" title="Sign Up" data-ctid="button-login-signup-780bc5c1cc">Sign Up</a>
+                                        <li style="border:none;margin-right: 10px;" class="log-in"><a href="{% url 'login' %}" class="login" title="Log In" data-ctid="button-login-signup-780bc5c1cc">Log In</a> </li>
+                                        <li style="border:none;" class="log-in"> <a href="{% url 'register' %}" class="login" title="Sign Up" data-ctid="button-login-signup-780bc5c1cc">Sign Up</a>
 
                                     {% endif %}
                                 </ul> 
@@ -317,12 +317,6 @@
             </div>
         </section>
     </header>
-
-
-
-
-
-
 
     {% block content %}
 
