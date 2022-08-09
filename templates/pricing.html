@@ -1,4 +1,31 @@
-{% extends 'base.html' %} {% load static %} {% block head %} {% endblock head %} {% block content %}
+{% extends 'base.html' %} {% load static %} {% block head %}
+
+
+
+<style>
+
+
+    
+@media only screen and (max-width: 420px) {
+    h1 {
+        font-size: 16px !important;
+    }
+
+    .banner{
+        padding-top : 94px !important;
+    }
+
+    .coming{
+        font-size: 22px !important;
+    }
+}
+
+
+</style>
+
+
+
+{% endblock head %} {% block content %}
 
 <div class="pricing-new">
     <div class="banner">
@@ -21,7 +48,7 @@
                                 <p>You Prepare &amp; File Your Return</p>
                                 <br>
                                 <div></div>
-                                <strong> Comming soon</strong> <small>&nbsp;</small> </div>
+                                <strong class="coming"> Comming soon</strong> <small>&nbsp;</small> </div>
                         </div>
                     </li>
                     <li>

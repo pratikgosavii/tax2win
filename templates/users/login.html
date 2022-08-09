@@ -5,9 +5,15 @@
 
     </div>
     <div class="container clearfix">
+
         <div class="row">
             <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1 clearfix">
                 <div class="row calculator-wrapper">
+
+                    {% if error %}
+                        <p style="color:red;"> *Wrong Credentials </p>
+                    {% endif %}
+
                     <div class="col-md-6 col-sm-5 col-xs-12 left">
                         <h2>Login</h2>
                         <p>Looking for tax preparation help?<br class="hidde-sm hidden-xs"> Login Now to get our Experts Services.</p>

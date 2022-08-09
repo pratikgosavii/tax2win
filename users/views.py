@@ -46,7 +46,7 @@ def login_page(request):
 
             print('----------------')
 
-            msg = 'Credentials wrong'
+            error = 'Credentials wrong'
 
             print('not done')
             print(forms.errors)
@@ -54,7 +54,7 @@ def login_page(request):
 
 
             context = {
-                'msg': msg,
+                'error': error,
                 'form': forms,
             }
             return render(request, 'users/login.html', context)
@@ -76,6 +76,17 @@ def register_page(request):
 
             email = forms.cleaned_data['email']
             password = forms.cleaned_data['password1']
+            password2 = forms.cleaned_data['password2']
+
+            if password != password2:
+
+                context = {
+                    'form': forms,
+                    'error' : 'password'
+                }
+
+                return render(request, 'users/register.html', context)
+
             user = authenticate(email=email, password=password)
             print('3')
 
