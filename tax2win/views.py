@@ -557,3 +557,49 @@ def admin_view(request):
     return render(request, 'admin-list-options.html')
 
 
+def Income_From_House_Propety(request):
+
+    return render(request, 'knowledge/Income From House Propety.html')
+
+
+def Income_From_Busines_Profession(request):
+
+    return render(request, 'knowledge/Income From Busines Profession.html')
+
+def Income_From_Propery_Gain(request):
+
+    return render(request, 'knowledge/Income From Propery Gain.html')
+
+
+
+def Income_From_Salary(request):
+
+    return render(request, 'knowledge/Income From Salary.html')
+
+
+def Income_From_Other_Source(request):
+
+    return render(request, 'knowledge/Income From Other Source.html')
+
+
+def Avoid_Tax_Notices(request):
+
+    return render(request, 'knowledge/Avoid Tax Notices.html')
+
+
+
+def Tax_Deductions_At_Sources_TDS(request):
+
+    return render(request, 'knowledge/Tax_Deductions_At_Sources_TDS.html')
+
+
+
+def Tax_Collection_At_Sources_TCS(request):
+
+    return render(request, 'knowledge/Tax_Collection_At_Sources_TCS.html')
+
+def Due_Dates(request):
+
+    return render(request, 'knowledge/Due_Dates.html')
+
+

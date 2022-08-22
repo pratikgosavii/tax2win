@@ -295,54 +295,55 @@ update.<br> <a href="guide/crypto-assets-taxation.html" title="Taxation Guide">R
             <div class="col-md-12">
                 <div class="wrapper">
                     <div class="box">
-                        <figure><img src="{% static 'img/calculators/e-ca.png' %}" alt="" loading="lazy"></figure>
+                        <figure style="width: 107px;height: 103px;" style="width: 107px;height: 103px;"><img src="{% static 'img/calculators/e-ca.png' %}" alt="" loading="lazy"></figure>
                         <h3>Income From Salary</h3>
-                        <p>If you have paid more income tax, you are eligible for a tax refund </p>
+
+                        <a href="{% url 'Income_From_Salary' %}" style="color:#0186d7;"> Read  <i class="fa-solid fa-arrow-right" style="margin-left: 10px;color: #0186d7;"></i></a>
                     </div>
                     <div class="box">
-                        <figure><img style="width: 51px;" src="{% static '' %}new/late_fee.jpeg" alt="">
+                        <figure style="width: 107px;height: 103px;"><img style="width: 51px;" src="{% static '' %}new/late_fee.jpeg" alt="">
                         </figure>
                         <h3>Income From House Propety</h3>
-                        <p>A delay in filing ITR makes you liable to pay a fee of up to Rs. 5,000</p>
+                        <a href="{% url 'Income_From_House_Propety' %}" style="color:#0186d7;"> Read  <i class="fa-solid fa-arrow-right" style="margin-left: 10px;color: #0186d7;"></i></a>
                     </div>
                     <div class="box">
-                        <figure><img src="{% static '' %}img/calculators/file-itself.png" loading="lazy" alt=""></figure>
+                        <figure style="width: 107px;height: 103px;"><img src="{% static '' %}img/calculators/file-itself.png" loading="lazy" alt=""></figure>
                         <h3>Income From Propery Gain</h3>
-                        <p>If you have incurred capital losses, you can carry forward it and settle in future</p>
+                        <a href="{% url 'Income_From_Propery_Gain' %}" style="color:#0186d7;"> Read  <i class="fa-solid fa-arrow-right" style="margin-left: 10px;color: #0186d7;"></i></a> 
                     </div>
                     <div class="box">
-                        <figure><img src="{% static '' %}new/visa.png" alt=""></figure>
+                        <figure style="width: 107px;height: 103px;"><img src="{% static '' %}new/visa.png" alt=""></figure>
                         <h3>Income From Business & Profession</h3>
-                        <p>Foreign consulates may ask you to furnish your income tax returns for obtaining Visa</p>
+                        <a href="{% url 'Income_From_Busines_Profession' %}" style="color:#0186d7;"> Read  <i class="fa-solid fa-arrow-right" style="margin-left: 10px;color: #0186d7;"></i></a>
                     </div>
                     <div class="box">
-                        <figure><img src="{% static '' %}img/calculators/plan-tax-file-itr.png" alt=""></figure>
+                        <figure style="width: 107px;height: 103px;"><img src="{% static '' %}img/calculators/plan-tax-file-itr.png" alt=""></figure>
                         <h3>Income From Other Source</h3>
-                        <p>The income tax return serves as an important document for loan approval</p>
+                        <a href="{% url 'Income_From_Other_Source' %}" style="color:#0186d7;"> Read  <i class="fa-solid fa-arrow-right" style="margin-left: 10px;color: #0186d7;"></i></a>
                     </div>
                     <div class="box">
-                        <figure><img style="width:51px;" src="{% static '' %}new/taxnotice.jpg" alt="" loading="lazy"></figure>
+                        <figure style="width: 107px;height: 103px;"><img style="width:51px;" src="{% static '' %}new/taxnotice.jpg" alt="" loading="lazy"></figure>
                         
                         <h3>Avoid Tax Notices</h3>
-                        <p>Filing tax returns is a must to avoid late filing notices from the IT department</p>
+                        <a href="{% url 'Avoid_Tax_Notices' %}" style="color:#0186d7;"> Read  <i class="fa-solid fa-arrow-right" style="margin-left: 10px;color: #0186d7;"></i></a>
                     </div>
                     <div class="box">
-                        <figure><img style="width:51px;" src="{% static '' %}new/taxnotice.jpg" alt="" loading="lazy"></figure>
+                        <figure style="width: 107px;height: 103px;"><img style="width:51px;" src="{% static '' %}new/taxnotice.jpg" alt="" loading="lazy"></figure>
                         
                         <h3>Tax Deductions At Sources (TDS)</h3>
-                        <p>Filing tax returns is a must to avoid late filing notices from the IT department</p>
+                        <a href="{% url 'TTax_Deductions_At_Sources_TDS' %}" style="color:#0186d7;"> Read  <i class="fa-solid fa-arrow-right" style="margin-left: 10px;color: #0186d7;"></i></a>
                     </div>
                     <div class="box">
-                        <figure><img style="width:51px;" src="{% static '' %}new/taxnotice.jpg" alt="" loading="lazy"></figure>
+                        <figure style="width: 107px;height: 103px;"><img style="width:51px;" src="{% static '' %}new/taxnotice.jpg" alt="" loading="lazy"></figure>
                         
                         <h3>Tax Collection At Sources (TCS)</h3>
-                        <p>Filing tax returns is a must to avoid late filing notices from the IT department</p>
+                        <a href="{% url 'Tax_Collection_At_Sources_TCS' %}" style="color:#0186d7;"> Read  <i class="fa-solid fa-arrow-right" style="margin-left: 10px;color: #0186d7;"></i></a>
                     </div>
                     <div class="box">
-                        <figure><img style="width:51px;" src="{% static '' %}new/taxnotice.jpg" alt="" loading="lazy"></figure>
+                        <figure style="width: 107px;height: 103px;"><img style="width:51px;" src="{% static '' %}new/taxnotice.jpg" alt="" loading="lazy"></figure>
                         
                         <h3>Due Dates</h3>
-                        <p>Filing tax returns is a must to avoid late filing notices from the IT department</p>
+                        <a href="{% url 'Due_Dates' %}" style="color:#0186d7;"> Read  <i class="fa-solid fa-arrow-right" style="margin-left: 10px;color: #0186d7;"></i></a>
                     </div>
                 </div>
             </div>
@@ -871,7 +872,7 @@ More → </a> -->
    
 
     // ITR filing days remaining alert-popup 
-    var endTime = '31/07/2022 23:59';
+    var endTime = '31/08/2022 23:59';
     endTime = endTime.match(/(\d+)\/(\d+)\/(\d+)\s*(\d+):(\d+)/);
     var target_date = new Date(endTime[3], endTime[2] - 1, endTime[1], endTime[4], endTime[5], 0, 0);
 

@@ -1,4 +1,18 @@
-{% extends 'base.html' %} {% load static %} {% block head %} {% endblock head %} {% block content %}
+{% extends 'base.html' %} {% load static %} {% block head %} 
+
+
+<style>
+
+    .banner{
+        padding : 192px  0px 0px 0px !important;
+    }
+</style>
+
+
+
+
+
+{% endblock head %} {% block content %}
 <section class="banner site-login-signup" style="height:100vh;">
     <div class="banner">
         <div class="top-relement"></div>
@@ -11,7 +25,9 @@
                 <div class="row calculator-wrapper">
 
                     {% if error %}
+
                         <p style="color:red;"> *Wrong Credentials </p>
+                    
                     {% endif %}
 
                     <div class="col-md-6 col-sm-5 col-xs-12 left">

@@ -14490,9 +14490,10 @@ body {
 }
 
 .home-services .card img {
-    margin-top: 40px;
-    margin-left: 10px;
+    margin-top: 15px !important;
+    /* margin-left: 24px; */
     transition: 0.5s;
+    margin: auto;
 }
 
 .home-services .card h3 {
@@ -14654,7 +14655,7 @@ body {
 }
 
 .t2w_services .box figure img {
-    width: 45px;
+    width: 75px !important;
 }
 
 .t2w_services .box h3 {

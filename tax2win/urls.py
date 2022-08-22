@@ -44,6 +44,18 @@ urlpatterns = [
     path('terms-condtion', terms_condition, name="terms_condition"),
     
     path('admin-view-categories', admin_view, name="admin_view"),
+    
+    path('knowledge-is-power/Income-From-Salary', Income_From_Salary,name="Income_From_Salary"),
+    path('knowledge-is-power/Income-From-House-Propety', Income_From_House_Propety,name="Income_From_House_Propety"),
+    path('knowledge-is-power/Income-From-Propery-Gain', Income_From_Propery_Gain,name="Income_From_Propery_Gain"),
+
+    path('knowledge-is-power/Income-From-Business-Profession', Income_From_Busines_Profession,name="Income_From_Busines_Profession"),
+    path('knowledge-is-power/Income-From-Other-Source', Income_From_Other_Source,name="Income_From_Other_Source"),
+    path('knowledge-is-power/Avoid-Tax-Notices', Avoid_Tax_Notices,name="Avoid_Tax_Notices"),
+
+    path('knowledge-is-power/Tax-Deductions-At-Sources-TDS', Tax_Deductions_At_Sources_TDS,name="TTax_Deductions_At_Sources_TDS"),
+    path('knowledge-is-power/Tax-Collection-At-Sources-TCS', Tax_Collection_At_Sources_TCS,name="Tax_Collection_At_Sources_TCS"),
+    path('knowledge-is-power/Due-Dates', Due_Dates,name="Due_Dates"),
 
 
 
