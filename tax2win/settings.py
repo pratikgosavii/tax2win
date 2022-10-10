@@ -24,7 +24,7 @@ mimetypes.add_type("text/css", ".css", True)
 SECRET_KEY = 'chq(kv%iunep+wl2defzgc7gvpqr9vuhnemaam#o2h_y&z*k@v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
