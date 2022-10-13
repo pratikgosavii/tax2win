@@ -101,15 +101,15 @@
                                                         <div class="right-arrow pull-right"><i class="fa fa-angle-right"></i></div>
                                                         <div class="accordian_laptop">
                                                         <p> Name:- {{ i.name }}<p>
-                                                        <p> Mobile:-{{ i.mobile }}<p>
+                                                        <p> Mobile:- {{ i.mobile }}<p>
                                                         <p> Status:- {{ i.status }}<p>
                                                         </div>
                                                 </div>
                                             </div>
                                             <div id="collapse1" class="panel-collapse collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                                                 <div class="panel-body" itemprop="text">
-                                                    <p>Call Requested Date:-<br> {{ i.date_time }}</p>
-                                                    <p>{{ i.comment }}</p>
+                                                    <p>Call Requested Date:- <br> {{ i.date_time }}</p>
+                                                    <p>Comment:- {{ i.comment }}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -146,14 +146,17 @@
                                                     <div class="panel-heading">
                                                         <div itemprop="name" data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
                                                             <div class="right-arrow pull-right"><i class="fa fa-angle-right"></i></div>
-                                                            <a href="#"> What is e-Filing of income tax returns?</a>
+                                                            <div class="accordian_laptop">
+                                                            <p> Name:- {{ i.name }}<p>
+                                                            <p> Mobile:- {{ i.mobile }}<p>
+                                                            <p> Status:- {{ i.status }}<p>
+                                                            </div>
                                                     </div>
                                                 </div>
                                                 <div id="collapse1" class="panel-collapse collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                                                     <div class="panel-body" itemprop="text">
-                                                        <p>E-filing of Income-tax return is nothing but filing your Income-tax return online. As per the latest announcement by the income tax department, at present income tax returns can be filed through the online method only.
-                                                            However, the super senior citizens who are filing ITR 1 or ITR 4 are allowed to use the offline paper mode.
-                                                        </p>
+                                                        <p>Call Requested Date:- <br> {{ i.date_time }}</p>
+                                                        <p>Comment:- {{ i.comment }}</p>
                                                     </div>
                                                 </div>
                                             
@@ -184,23 +187,26 @@
                                 <div id="company" class="container" style="display:none;">
                                     <div class="clearfix"></div>
                                         <div class="clearfix"></div>
-                                            {% if company %}
-                                                {% for i in company %}
-                                            <div class="panel-group" id="accordion" itemscope itemtype="https://schema.org/FAQPage">
-                                                <div class="panel panel-default" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                                                <div class="panel-heading">
-                                                    <div itemprop="name" data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
-                                                        <div class="right-arrow pull-right"><i class="fa fa-angle-right"></i></div>
-                                                        <a href="#"> What is e-Filing of income tax returns?</a>
+                                            {% if company_tax %}
+                                                {% for i in company_tax %}
+                                                <div class="panel-group" id="accordion" itemscope itemtype="https://schema.org/FAQPage">
+                                                    <div class="panel panel-default" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                                                    <div class="panel-heading">
+                                                        <div itemprop="name" data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
+                                                            <div class="right-arrow pull-right"><i class="fa fa-angle-right"></i></div>
+                                                            <div class="accordian_laptop">
+                                                            <p> Name:- {{ i.name }}<p>
+                                                            <p> Mobile:- {{ i.mobile }}<p>
+                                                            <p> Status:- {{ i.status }}<p>
+                                                            </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div id="collapse1" class="panel-collapse collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                                <div class="panel-body" itemprop="text">
-                                                    <p>E-filing of Income-tax return is nothing but filing your Income-tax return online. As per the latest announcement by the income tax department, at present income tax returns can be filed through the online method only.
-                                                        However, the super senior citizens who are filing ITR 1 or ITR 4 are allowed to use the offline paper mode.
-                                                    </p>
+                                                <div id="collapse1" class="panel-collapse collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                                    <div class="panel-body" itemprop="text">
+                                                        <p>Call Requested Date:- <br> {{ i.date_time }}</p>
+                                                        <p>Comment:- {{ i.comment }}</p>
+                                                    </div>
                                                 </div>
-                                            </div>
                                         </div>
                                     </div>
 
@@ -228,23 +234,26 @@
                                 <div id="virtual" class="container" style="display:none;">
                                     <div class="clearfix"></div>
                                         <div class="clearfix"></div>
-                                                {% if virtual %}
-                                                {% for i in virtual %}
-                                            <div class="panel-group" id="accordion" itemscope itemtype="https://schema.org/FAQPage">
-                                                <div class="panel panel-default" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                                                <div class="panel-heading">
-                                                    <div itemprop="name" data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
-                                                        <div class="right-arrow pull-right"><i class="fa fa-angle-right"></i></div>
-                                                        <a href="#"> What is e-Filing of income tax returns?</a>
+                                                {% if virtual_tax %}
+                                                {% for i in virtual_tax %}
+                                                <div class="panel-group" id="accordion" itemscope itemtype="https://schema.org/FAQPage">
+                                                    <div class="panel panel-default" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                                                    <div class="panel-heading">
+                                                        <div itemprop="name" data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="panel-title expand">
+                                                            <div class="right-arrow pull-right"><i class="fa fa-angle-right"></i></div>
+                                                            <div class="accordian_laptop">
+                                                            <p> Name:- {{ i.name }}<p>
+                                                            <p> Mobile:- {{ i.mobile }}<p>
+                                                            <p> Status:- {{ i.status }}<p>
+                                                            </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div id="collapse1" class="panel-collapse collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                                <div class="panel-body" itemprop="text">
-                                                    <p>E-filing of Income-tax return is nothing but filing your Income-tax return online. As per the latest announcement by the income tax department, at present income tax returns can be filed through the online method only.
-                                                        However, the super senior citizens who are filing ITR 1 or ITR 4 are allowed to use the offline paper mode.
-                                                    </p>
+                                                <div id="collapse1" class="panel-collapse collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                                    <div class="panel-body" itemprop="text">
+                                                        <p>Call Requested Date:- <br> {{ i.date_time }}</p>
+                                                        <p>Comment:- {{ i.comment }}</p>
+                                                    </div>
                                                 </div>
-                                            </div>
                                         </div>
                                     </div>
 

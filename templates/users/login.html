@@ -55,10 +55,10 @@
                                 <input type="hidden" value="{{ request.GET.next }}" name="next">
                             {% endif %}
                             <div class="form-group">
-                                <label for="login">Email or Mobile Number</label><input type="text" name="email" value="" id="login" class="textBoxes required form-control" maxlength="125" />
+                                <label for="login">Email or Mobile Number</label><input type="text" name="email" value="" id="login" class="textBoxes required form-control" maxlength="125" required/>
                             </div>
                             <div class="form-group loginPswrd">
-                                <label for="password">Password</label><input type="password" name="password" value="" class="textBoxes required form-control" id="password" />
+                                <label for="password">Password</label><input type="password" name="password" value="" class="textBoxes required form-control" id="password" required/>
                             </div>
 
                             <button name="button" type="Submit" class="loginBtn form-control" id="button" value="true"><i class="icon-menu2"></i> Sign in</button>

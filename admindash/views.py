@@ -149,7 +149,7 @@ def update_direct_tax(request, request_id):
         from_date_time = d.strftime("%Y-%m-%d %H:%M:%S")
 
         post = request.POST.copy() 
-        post.update({"date_time" : from_date_time})
+        post.update({"date_time" : from_date_time, 'user' : instance.user})
         request.POST = post
 
 
@@ -195,7 +195,7 @@ def update_indirect_tax(request, request_id):
         from_date_time = d.strftime("%Y-%m-%d %H:%M:%S")
 
         post = request.POST.copy() 
-        post.update({"date_time" : from_date_time})
+        post.update({"date_time" : from_date_time, 'user' : instance.user})
         request.POST = post
 
         form = indirect_taxcation_Form(request.POST, instance = instance)
@@ -234,7 +234,7 @@ def update_comapny_tax(request, request_id):
         from_date_time = d.strftime("%Y-%m-%d %H:%M:%S")
 
         post = request.POST.copy() 
-        post.update({"date_time" : from_date_time})
+        post.update({"date_time" : from_date_time, 'user' : instance.user})
         request.POST = post
 
         form = company_llp_Form(request.POST, instance = instance)
@@ -274,7 +274,7 @@ def update_virtual_tax(request, request_id):
         from_date_time = d.strftime("%Y-%m-%d %H:%M:%S")
 
         post = request.POST.copy() 
-        post.update({"date_time" : from_date_time})
+        post.update({"date_time" : from_date_time, 'user' : instance.user})
         request.POST = post
 
         form = virtual_book_Form(request.POST, instance = instance)

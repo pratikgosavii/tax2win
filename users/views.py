@@ -132,7 +132,7 @@ def your_requests(request):
     indirect_tax = indirect_taxcation.objects.filter(user = request.user)
     company_tax = company_llp_questions.objects.filter(user = request.user)
     virtual_tax = virtual_book_questions.objects.filter(user = request.user)
-    print(direct_tax)
+    print(virtual_tax)
     context = {
         'direct_tax' : direct_tax,
         'indirect_tax' : indirect_tax,
